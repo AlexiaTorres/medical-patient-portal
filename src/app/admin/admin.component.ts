@@ -1,26 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+    selector: 'app-admin',
+    templateUrl: './admin.component.html',
+    styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  bodyClasses:string = "skin-blue sidebar-mini";
-  body = document.getElementsByTagName('body')[0];
-  
-  constructor() { }
+    bodyClasses: string = 'skin-blue sidebar-mini';
+    body = document.getElementsByTagName('body')[0];
 
-  ngOnInit() {
-    //add the the body classes
-    this.body.classList.add("skin-blue");
-    this.body.classList.add("sidebar-mini");
-  }
+    constructor() {
+    }
 
-   ngOnDestroy() {
-    //remove the the body classes
-    this.body.classList.remove("skin-blue");
-    this.body.classList.remove("sidebar-mini");
-  }
+    ngOnInit() {
+        // add the the body classes
+        this.body.classList.add('skin-blue');
+        this.body.classList.add('sidebar-mini');
+    }
+
+    ngOnDestroy() {
+        // remove the the body classes
+        this.body.classList.remove('skin-blue');
+        this.body.classList.remove('sidebar-mini');
+    }
 
 }

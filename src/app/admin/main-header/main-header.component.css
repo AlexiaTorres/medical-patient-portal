@@ -1,0 +1,22 @@
+.skin-blue .main-header .navbar {
+    background-color: #f3f3f4 !important;
+}
+
+.skin-blue .main-header .logo {
+    background-color: #222d32 !important;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #79a3d8 !important;
+    height: auto;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle {
+    background-color: rgba(26, 179, 148, 0.79) !important;
+}
+
+.skin-blue .main-header .navbar .nav > li > a {
+    color: #888888 !important;
+}

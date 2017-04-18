@@ -1,0 +1,12 @@
+.font-bold {
+    font-weight: 600;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+body{
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+    border-left: 4px solid #19aa8d !important;
+}

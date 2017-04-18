@@ -1,2 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "app/login/login.component.css";
+@import "app/admin/main-header/main-header.component.css";
+@import "app/admin/main-side/main-side.component.css";
+@import "app/admin/dashboard1/dashboard1.component.css";
