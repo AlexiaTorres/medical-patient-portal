@@ -8,9 +8,7 @@ import {MainHeaderComponent} from './main-header/main-header.component';
 import {FooterComponent} from './footer/footer.component';
 import {ControlSidebarComponent} from './control-sidebar/control-sidebar.component';
 import {Dashboard1Component} from './dashboard1/dashboard1.component';
-/*
-import {DataFormComponent as UserData} from './user-data/data-form.component';
-*/
+import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
 
 @NgModule({
     imports: [
@@ -23,10 +21,8 @@ import {DataFormComponent as UserData} from './user-data/data-form.component';
         MainHeaderComponent,
         FooterComponent,
         ControlSidebarComponent,
-        Dashboard1Component
-/*
-        UserData
-*/
+        Dashboard1Component,
+        PersonalData
     ],
     exports: [AdminComponent]
 })

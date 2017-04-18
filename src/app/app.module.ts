@@ -4,12 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
-import {TransLabelComponent} from './trans-label.component';
-import { TRANSLATION_PROVIDERS }   from './translate/translations';
-import { TranslatePipe }   from './translate/translate.pipe';
-import { TranslateService }   from './translate/translate.service';
-
-
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 // import { AdminComponent} from './admin/admin.component';
@@ -21,9 +15,7 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     TestComponent,
-    LoginComponent,
-    TransLabelComponent,
-    TranslatePipe
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +25,6 @@ import { LoginComponent } from './login/login.component';
     RouterModule,
     AppRoutingModule
   ],
-  providers:    [ TRANSLATION_PROVIDERS, TranslateService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
