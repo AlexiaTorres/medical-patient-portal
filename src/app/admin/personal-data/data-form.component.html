@@ -5,150 +5,167 @@
         {{ lang.display }}
     </button>
 </div>-->
-
-<div [hidden]="submitted">
-    <br/><br/>
-    <hr/>
-
-    <form (ngSubmit)="onSubmit()" #dataForm="ngForm">
-            <h3 class="center">Personal Data</h3>
-            <hr/>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="first_name">First name</label>
-                        <input type="text" class="form-control" id="first_name"
-                               required
-                               [(ngModel)]="model.first_name" name="first_name"
-                               #first_name="ngModel"
-                               placeholder="your first name...">
-                        <div [hidden]="first_name.valid || first_name.pristine"
-                             class="alert alert-danger">
-                            field required
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="last_name">Last name</label>
-                        <input type="text" class="form-control" id="last_name"
-                               required
-                               [(ngModel)]="model.last_name" name="last_name"
-                               #last_name="ngModel"
-                               placeholder="your last name...">
-                        <div [hidden]="last_name.valid || last_name.pristine"
-                             class="alert alert-danger">
-                            field required
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="birthday">
-                            Date of Birth
-                            <i class="fa fa-birthday-cake"></i>
-                        </label>
-                        <input id="birthday"
-                               type="date"
-                               class="form-control"
-                               uib-datepicker-popup
-                               [(ngModel)]="model.birthday" name="birthday"
-                               #birthday="ngModel"
-                        />
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="phone">Gender</label>
-                        <select class="form-control" id="gender"
-                                [(ngModel)]="model.gender" name="gender">
-                            <option value=''>- Please choose -</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="unknown">Unknown</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="doc_type">Document Type</label>
-                        <select class="form-control" id="doc_type"
-                               [(ngModel)]="model.doc_type" name="doc_type">
-                            <option value=''>- DNI/NIE -</option>
-                            <option value="DNI">DNI</option>
-                            <option value="NIE">NIE</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="doc_num">Document number</label>
-                        <input type="text" class="form-control" id="doc_num"
-                               [(ngModel)]="model.doc_num" name="doc_num">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!--Address-->
-                <div class="col-md-6">
-                    <h3>Address</h3>
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div [hidden]="submitted">
+            <form (ngSubmit)="onSubmit()" #dataForm="ngForm">
+                <div class="box box-default">
+                    <h3 class="center">Personal Data</h3>
                     <hr/>
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <select class="form-control" id="city"
-                                required
-                                [(ngModel)]="model.city" name="city"
-                                #city="ngModel">
-                            <option *ngFor="let city of cities" [value]="city">{{city}}</option>
-                        </select>
-                        <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
-                            City is required
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box-solid box-default">
+                                <div class="box-header"></div>
+                                <div class="form-group">
+                                    <label for="first_name">First name</label>
+                                    <input type="text" class="form-control" id="first_name"
+                                           required
+                                           [(ngModel)]="model.first_name" name="first_name"
+                                           #first_name="ngModel"
+                                           placeholder="your first name...">
+                                    <div [hidden]="first_name.valid"
+                                         class="alert alert-danger">
+                                        field required
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last_name">Last name</label>
+                                    <input type="text" class="form-control" id="last_name"
+                                           required
+                                           [(ngModel)]="model.last_name" name="last_name"
+                                           #last_name="ngModel"
+                                           placeholder="your last name...">
+                                    <div [hidden]="last_name.valid"
+                                         class="alert alert-danger">
+                                        field required
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthday">
+                                        Date of Birth
+                                        <i class="fa fa-birthday-cake"></i>
+                                    </label>
+                                    <input id="birthday"
+                                           type="date"
+                                           class="form-control"
+                                           uib-datepicker-popup
+                                           [(ngModel)]="model.birthday" name="birthday"
+                                           #birthday="ngModel"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="box box-solid box-default">
+                                <div class="box-header"></div>
+                                <div class="form-group">
+                                    <label for="phone">Gender</label>
+                                    <select class="form-control" id="gender"
+                                            [(ngModel)]="model.gender" name="gender">
+                                        <option value=''>- Please choose -</option>
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                        <option value="unknown">Unknown</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="doc_type">Document Type</label>
+                                    <select class="form-control" id="doc_type"
+                                            [(ngModel)]="model.doc_type" name="doc_type">
+                                        <option value=''>- DNI/NIE -</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="NIE">NIE</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="doc_num">Document number</label>
+                                    <input type="text" class="form-control" id="doc_num"
+                                           [(ngModel)]="model.doc_num" name="doc_num">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="pc">Postal Code</label>
-                        <input type="text" class="form-control" id="pc"
-                               [(ngModel)]="model.pc" name="pc">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address"
-                               [(ngModel)]="model.address" name="address">
+                </div>
+
+                <div class="box box-default">
+                    <div class="row">
+                        <!--Address-->
+                        <div class="col-md-6">
+                            <h3 class="center"> Address</h3>
+                            <hr/>
+                            <div class="box box-solid box-default">
+                                <div class="box-header"></div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <select class="form-control" id="city"
+                                            required
+                                            [(ngModel)]="model.city" name="city"
+                                            #city="ngModel">
+                                        <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                                    </select>
+                                    <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+                                        City is required
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pc">Postal Code</label>
+                                    <input type="text" class="form-control" id="pc"
+                                           [(ngModel)]="model.pc" name="pc">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address"
+                                           [(ngModel)]="model.address" name="address">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Contact Data-->
+                        <div class="col-md-6">
+                            <h3 class="center"> Contact Data</h3>
+                            <hr/>
+                            <div class="box box-solid box-default">
+                                <div class="box-header"></div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email"
+                                           [(ngModel)]="model.email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone"
+                                           [(ngModel)]="model.phone" name="phone" placeholder="your phone (optional)">
+                                </div>
+                            </div>
+                            <br/>
+                            <button type="submit" class="btn btn-sbm" [disabled]="!dataForm.form.valid">Submit</button>
+                            <button type="reset" class="btn btn-default">Clear</button>
+
+                        </div>
                     </div>
                 </div>
 
-                <!--Contact Data-->
-                <div class="col-md-6">
-                    <h3>Contact Data</h3>
-                    <hr/>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email"
-                               [(ngModel)]="model.email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="text" class="form-control" id="phone"
-                               [(ngModel)]="model.phone" name="phone" placeholder="your phone (optional)">
-                    </div>
+            </form>
+            <div [hidden]="!submitted">
+                {{console.log('foo')}}
+                <h2>Personal Data:</h2>
+                <div class="row">
+                    <div class="col-xs-3">Name</div>
+                    <div class="col-xs-9  pull-left">{{ model.first_name }}</div>
                 </div>
+                <div class="row" [hidden]="!model.phone.length > 0">
+                    <div class="col-xs-3">Phone</div>
+                    <div class="col-xs-9 pull-left">{{ model.phone }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">City</div>
+                    <div class="col-xs-9 pull-left">{{ model.city }}</div>
+                </div>
+                <br>
+                <button class="btn btn-sbm" (click)="submitted=false">Edit</button>
             </div>
-
-            <button type="submit" class="btn btn-info" [disabled]="!dataForm.form.valid">Submit</button>
-            <button type="reset" class="btn btn-default">Clear</button>
-
-    </form>
-    <div [hidden]="!submitted">
-        {{console.log('foo')}}
-        <h2>Personal Data:</h2>
-        <div class="row">
-            <div class="col-xs-3">Name</div>
-            <div class="col-xs-9  pull-left">{{ model.first_name }}</div>
         </div>
-        <div class="row" [hidden]="!model.phone.length > 0">
-            <div class="col-xs-3">Phone</div>
-            <div class="col-xs-9 pull-left">{{ model.phone }}</div>
-        </div>
-        <div class="row">
-            <div class="col-xs-3">City</div>
-            <div class="col-xs-9 pull-left">{{ model.city }}</div>
-        </div>
-        <br>
-        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
-    </div>
+    </section>
 </div>

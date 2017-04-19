@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Data} from './data';
+// import {TranslateService} from './translate/translate.service';
+import {Data}    from './data';
 
 @Component({
     selector: 'data-form',
@@ -13,7 +14,14 @@ export class DataFormComponent implements OnInit {
     model = new Data(1, '', '' , '', '', '', '', this.cities[0], '', '', '', '');
 
     submitted = false;
-    login_form = false;
+    // login_form = false;
+
+    // TRANSLATION DECLARATIONS
+    // public translatedText: string;
+    // public supportedLanguages: any[];
+
+    // constructor(private _translate: TranslateService) {
+    // }
 
     // FORM DATA
     onSubmit() {
@@ -26,13 +34,37 @@ export class DataFormComponent implements OnInit {
 
     // Reveal in html:
     //   Name via form.controls = {{showFormControls(dataForm)}}
-    showFormControls(form: any) {
+    /*showFormControls(form: any) {
         return form && form.controls['first_name'] &&
             form.controls['first_name'].value; // Dr. IQ
-    }
+    }*/
 
     /////////////////////////////
     // TRANSLATE FUNCTIONALITY
     ngOnInit() {
+        // standing data
+        // this.supportedLanguages = [
+        //     {display: 'English', value: 'en'},
+        //     {display: 'Español', value: 'es'},
+        // ];
+
+        // // set current language
+        // this.selectLang('es');
     }
+
+    // isCurrentLang(lang: string) {
+    //     // check if the selected lang is current lang
+    //     return lang === this._translate.currentLang;
+    // }
+
+    // selectLang(lang: string) {
+    //     // set current lang;
+    //     this._translate.use(lang);
+    //     this.refreshText();
+    // }
+
+    // refreshText() {
+        // refresh translation when language change
+    //     this.translatedText = this._translate.instant('hello world');
+    // }
 }

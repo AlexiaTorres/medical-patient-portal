@@ -3,3 +3,33 @@
 @import "app/admin/main-header/main-header.component.css";
 @import "app/admin/main-side/main-side.component.css";
 @import "app/admin/dashboard1/dashboard1.component.css";
+
+.center{
+    text-align: center;
+}
+label{
+    margin-left: 1em !important;
+}
+input, select{
+    margin-left: 1em !important;
+    width: 90% !important;
+}
+.box-header{
+    margin-bottom: 1em !important;
+    background: rgb(70, 191, 168) !important;
+}
+.box-default{
+    border-color: rgb(70, 191, 168) !important;
+    background: transparent !important;
+}
+hr{
+    color: rgb(70, 191, 168) !important;
+    background-color: /*#d2d6de*/rgb(70, 191, 168) !important;
+    height: 2px !important;
+    width: 30% !important;
+    text-align: center !important;
+}
+.btn-sbm{
+    background: rgb(70, 191, 168) !important;
+    color: #fff !important;
+}

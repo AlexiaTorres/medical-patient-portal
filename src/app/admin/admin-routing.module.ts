@@ -23,7 +23,7 @@ import {DataFormComponent as PersonalData} from './personal-data/data-form.compo
                     {
                         path: 'personal-data',
                         component: PersonalData
-                    }
+                    },
                 ]
             }
         ])

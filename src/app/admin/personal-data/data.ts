@@ -14,7 +14,8 @@ export class Data {
                 public address: string,
                 // contact data
                 public email: string,
-                public phone: string,) {
+                public phone: string,
+    ) {
     }
 
 }
