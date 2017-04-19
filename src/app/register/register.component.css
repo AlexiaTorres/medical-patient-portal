@@ -1,0 +1,134 @@
+.register-page, .register-page {
+    background: #fff !important;
+}
+
+label {
+    margin-left: 1em !important;
+}
+
+input, select {
+    margin-left: 1em !important;
+    width: 90% !important;
+}
+
+.box-header {
+    margin-bottom: 1em !important;
+    background: rgb(70, 191, 168) !important;
+}
+
+.box-default {
+    border-color: rgb(70, 191, 168) !important;
+    background: transparent !important;
+}
+
+hr {
+    color: rgb(70, 191, 168) !important;
+    background-color: /*#d2d6de*/ rgb(70, 191, 168) !important;
+    height: 2px !important;
+    width: 30% !important;
+    text-align: center !important;
+}
+
+.btn-sbm {
+    background: rgb(70, 191, 168) !important;
+    color: #fff !important;
+}
+
+.ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 15px 15px 7px;
+    min-height: 48px;
+}
+
+.ibox-tools {
+    display: block;
+    float: none;
+    margin-top: 0;
+    position: relative;
+    padding: 0;
+    text-align: right;
+}
+
+.ibox-tools a {
+    cursor: pointer;
+    margin-left: 5px;
+    color: #c4c4c4;
+}
+
+.dropdown-menu {
+    border: medium none;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(86, 96, 117, 0.7);
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none outside none;
+    padding: 0;
+    position: absolute;
+    text-shadow: none;
+    top: 100%;
+    z-index: 1000;
+    margin: 2px 0 0;
+    background: #fff;
+}
+
+.ibox-content {
+    clear: both;
+}
+
+.ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+
+.ibox-title > h4 {
+    display: inline-block;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+    color: rgb(70, 191, 168);
+}
+.ibox-title > h2 {
+    text-overflow: ellipsis;
+    color: rgb(70, 191, 168);
+}
+
+.ibox-center{
+    margin-left: 25%;
+}
+
+.register-desc{
+    background: rgba(70, 191, 168, 0.35);
+    opacity: 0.7;
+}
+.register-desc > p{
+    margin: 1.5em;
+}
+.form-title > h3, .form-title > h4{
+    color: rgb(70, 191, 168) !important;
+    border-bottom: 2px solid rgb(70, 191, 168);
+}

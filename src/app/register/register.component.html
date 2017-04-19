@@ -1,0 +1,156 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #dataForm="ngForm">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <div class="login-logo">
+                            <a href="/admin">
+                                <img src="/assets/img/logos/logo_2.png"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <p class="register-desc">
+                            Indique a continuación los datos de la persona que se va a conectar al portal de paciente.
+                            Si se trata de un padre que va a acceder a los datos de un hijo menor de 16 años, deberá
+                            indicar los datos del padre. Una vez el usuario se ha registrado, podrá añadir tantos
+                            pacientes como desee.
+                        </p>
+                        <div class="col-md-6">
+                            <div class="form-title">
+                                <h3>User Data</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 b-r">
+                                    <div class="form-group">
+                                        <label for="first_name">First name</label>
+                                        <input type="text" class="form-control" id="first_name"
+                                               required
+                                               name="first_name"
+                                               placeholder="your first name...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthday">
+                                            Date of Birth
+                                            <i class="fa fa-birthday-cake"></i>
+                                        </label>
+                                        <input id="birthday"
+                                               type="date"
+                                               class="form-control"
+                                               uib-datepicker-popup
+                                               name="birthday"
+                                        >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="doc_type">Document Type</label>
+                                        <select class="form-control" id="doc_type"
+                                                name="doc_type">
+                                            <option value=''>- DNI/NIE -</option>
+                                            <option value="DNI">DNI</option>
+                                            <option value="NIE">NIE</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                               required
+                                               name="email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="last_name">Last name</label>
+                                        <input type="text" class="form-control" id="last_name"
+                                               required
+                                               name="last_name"
+                                               placeholder="your last name...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <select class="form-control" id="gender"
+                                                name="gender">
+                                            <option value=''>- Please choose -</option>
+                                            <option value="female">Female</option>
+                                            <option value="male">Male</option>
+                                            <option value="unknown">Unknown</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="doc_num">Document number</label>
+                                        <input type="text" class="form-control" id="doc_num"
+                                               name="doc_num">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password"
+                                               required
+                                               name="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="photo">Photography</label>
+                                        <input type="file" id="photo">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" class="form-control" id="phone"
+                                               name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-title">
+                                <h3>Patient Data</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 b-r">
+                                    <label for="patient">Who is the patient?</label>
+                                    <select class="form-control" id="patient"
+                                            name="patient">
+                                        <option value=''>- Me/Other -</option>
+                                        <option value="me">Me</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-title">
+                                        <h4>Address</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-title">
+                                        <h4>Preferences</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div class="col-md-6">
+
+                            <button type="submit" class="btn btn-sbm" [disabled]="!dataForm.form.valid">Submit
+                            </button>
+                            <button type="reset" class="btn btn-default">Clear</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

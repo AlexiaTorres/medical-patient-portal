@@ -10,3 +10,7 @@ body{
 .skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
     border-left: 4px solid #19aa8d !important;
 }
+
+li > a > i.fa.fa-plus-square-o.new-patient{
+    font-size: 20px !important;
+}
