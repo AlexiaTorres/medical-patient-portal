@@ -8,7 +8,7 @@ label {
 
 input, select {
     margin-left: 1em !important;
-    width: 90% !important;
+    width: 75% !important;
 }
 
 .box-header {
@@ -132,3 +132,4 @@ hr {
     color: rgb(70, 191, 168) !important;
     border-bottom: 2px solid rgb(70, 191, 168);
 }
+
