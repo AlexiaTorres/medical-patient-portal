@@ -9,3 +9,7 @@
 .center{
     text-align: center;
 }
+.form-control:focus {
+    border: 2px solid #46bfa8 !important;
+    box-shadow: none;
+}

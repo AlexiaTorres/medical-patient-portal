@@ -1,14 +1,22 @@
 .register-page, .register-page {
-    background: #fff !important;
+    background: #f3f3f4 !important;
 }
 
 label {
     margin-left: 1em !important;
 }
 
+.register-label{
+    color: #c4c4c4;
+}
+
 input, select {
     margin-left: 1em !important;
     width: 75% !important;
+}
+
+input.input-address{
+    width: 90% !important;
 }
 
 .box-header {
@@ -41,13 +49,13 @@ hr {
     padding: 0;
 }
 
-.ibox-title {
+.register-ibox-title {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background-color: #ffffff;
-    border-color: #e7eaec;
+    background-color: #f3f3f4;
+    border-color: #f3f3f4;
     border-image: none;
     border-style: solid solid none;
     border-width: 2px 0 0;
@@ -121,15 +129,34 @@ hr {
     margin-left: 25%;
 }
 
-.register-desc{
-    background: rgba(70, 191, 168, 0.35);
-    opacity: 0.7;
-}
 .register-desc > p{
     margin: 1.5em;
+    color: rgb(70, 191, 168);
 }
 .form-title > h3, .form-title > h4{
     color: rgb(70, 191, 168) !important;
-    border-bottom: 2px solid rgb(70, 191, 168);
+    /*border-bottom: 2px solid rgb(70, 191, 168);*/
 }
 
+.register-form-title{
+    background: #fff;
+}
+
+.register-float-e-margins{
+    background: #fff;
+}
+
+.ibox-title h4 {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+    color: rgb(70, 191, 168);
+    font-weight: bold;
+}
+
+.ibox-title.no-border-color{
+    border: none !important;
+}
