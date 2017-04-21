@@ -16,6 +16,12 @@ export class RegisterComponent implements OnInit {
     counties = ['-Choose your county-', 'Galapagar', 'Las Rozas', 'Majadahonda'];
     phone_types_1 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
     phone_types_2 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
+
+    patient_countries = ['-Choose your country-', 'Spain', 'United States'];
+    patient_cities = ['-Choose your city-', 'Madrid', 'Valencia'];
+    patient_counties = ['-Choose your county-', 'Galapagar', 'Las Rozas', 'Majadahonda'];
+    patient_phone_types_1 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
+    patient_phone_types_2 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
     model = new Data(
         this.patients[0],
         this.countries[0],
@@ -26,6 +32,16 @@ export class RegisterComponent implements OnInit {
         '',
         this.phone_types_1[0],
         this.phone_types_2[0],
+        '',
+        '',
+        this.patient_countries[0],
+        this.patient_cities[0],
+        this.patient_counties[0],
+        '',
+        '',
+        '',
+        this.patient_phone_types_1[0],
+        this.patient_phone_types_2[0],
         '',
         ''
     );

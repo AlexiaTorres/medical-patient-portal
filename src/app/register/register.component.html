@@ -255,164 +255,257 @@
                                         <!-- OTHER PATIENT DATA -->
                                         <div class="ibox register-float-e-margins">
                                             <div class="col-sm-12">
-                                                <div class="ibox-title no-border-color">
-                                                    <h4>Personal Patient Data</h4>
-                                                </div>
-                                                <div class="ibox-content">
-                                                    <div class="row">
-                                                        <!-- first step -->
-                                                        <div class="ibox-content">
-                                                            <div class="row">
-                                                                <div class="col-sm-6 b-r"
-                                                                     [hidden]="finished_first_step">
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="first_patient_name">First
-                                                                            name</label>
-                                                                        <input type="text" class="form-control"
-                                                                               id="first_patient_name"
-                                                                               required
-                                                                               name="first_patient_name"
-                                                                               placeholder="your first name...">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="patient_birthday">
-                                                                            Date of Birth
-                                                                            <i class="fa fa-birthday-cake"></i>
-                                                                        </label>
-                                                                        <input id="patient_birthday"
-                                                                               type="date"
-                                                                               class="form-control"
-                                                                               uib-datepicker-popup
-                                                                               name="patient_birthday"
-                                                                        >
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="patient_doc_type">Document
-                                                                            Type</label>
-                                                                        <select class="form-control"
-                                                                                id="patient_doc_type"
-                                                                                name="patient_doc_type">
-                                                                            <option value=''>- DNI/NIE -</option>
-                                                                            <option value="DNI">DNI</option>
-                                                                            <option value="NIE">NIE</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6"
-                                                                     [hidden]="finished_first_step">
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="last_patient_name">Last
-                                                                            name</label>
-                                                                        <input type="text" class="form-control"
-                                                                               id="last_patient_name"
-                                                                               required
-                                                                               name="last_patient_name"
-                                                                               placeholder="your last name...">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="patient_gender">Gender</label>
-                                                                        <select class="form-control" id="patient_gender"
-                                                                                name="patient_gender">
-                                                                            <option value=''>- Please choose -</option>
-                                                                            <option value="female">Female</option>
-                                                                            <option value="male">Male</option>
-                                                                            <option value="unknown">Unknown</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="patient_doc_num">Document
-                                                                            number</label>
-                                                                        <input type="text" class="form-control"
-                                                                               id="patient_doc_num"
-                                                                               name="patient_doc_num">
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-sm-6 b-r center"
-                                                                     [hidden]="finished_first_step">
-                                                                    <button type="button" class="btn btn-sbm"
-                                                                            (click)="onFirstNextStep()">
-                                                                        NEXT
-                                                                    </button>
-                                                                </div>
-                                                                <!-- second step -->
-                                                                <div class="col-sm-6 b-r"
-                                                                     [hidden]="!finished_first_step">
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="phone_type_1">Phone Type 1</label>
-                                                                        <select class="form-control" id="phone_type_1"
-                                                                                name="phone_type_1"
-                                                                                [(ngModel)]="model.phone_type_1"
-                                                                                #phone_type_1="ngModel"
-                                                                                (change)="onChange($event.target.value)"
-                                                                        >
-                                                                            <option *ngFor="let phone_type_1 of phone_types_1"
-                                                                                    [value]="phone_type_1">
-                                                                                {{phone_type_1}}
-                                                                            </option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="register-label"
-                                                                               for="phone_type_2">Phone Type 2</label>
-                                                                        <select class="form-control" id="phone_type_2"
-                                                                                name="phone_type_2"
-                                                                                [(ngModel)]="model.phone_type_2"
-                                                                                #phone_type_2="ngModel"
-                                                                                (change)="onChange($event.target.value)"
-                                                                        >
-                                                                            <option *ngFor="let phone_type_2 of phone_types_2"
-                                                                                    [value]="phone_type_2">
-                                                                                {{phone_type_2}}
-                                                                            </option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6 b-r"
-                                                                     [hidden]="!finished_first_step">
-                                                                    <div class="form-group">
-                                                                        <label class="register-label" for="phone_1">Phone 1</label>
-                                                                        <input type="text" class="form-control" id="phone_1"
-                                                                               name="phone_1"
-                                                                               [(ngModel)]="model.phone_1"
-                                                                               #phone_1="ngModel"
-                                                                        >
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="register-label" for="phone_2">Phone 2</label>
-                                                                        <input type="text" class="form-control" id="phone_2"
-                                                                               name="phone_2"
-                                                                               [(ngModel)]="model.phone_2"
-                                                                               #phone_2="ngModel"
-                                                                        >
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="row" [hidden]="!finished_first_step">
-                                                                    <div class="col-sm-12">
+                                                <div class="tabbable tabs-below">
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a href="#tab1" data-toggle="tab">Step
+                                                            1</a></li>
+                                                        <li><a href="#tab2" data-toggle="tab">Step 2</a></li>
+                                                        <li><a href="#tab3" data-toggle="tab">Step 3</a></li>
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div class="ibox-title no-border-color">
+                                                            <h4>Personal Patient Data</h4>
+                                                        </div>
+                                                        <div class="tab-pane active" id="tab1">
+                                                            <!-- first step -->
+                                                            <div class="ibox-content">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 b-r">
                                                                         <div class="form-group">
-                                                                            <label class="register-label" for="photo">Photography</label>
-                                                                            <input type="file" id="photo">
+                                                                            <label class="register-label"
+                                                                                   for="first_patient_name">First
+                                                                                name</label>
+                                                                            <input type="text"
+                                                                                   class="form-control"
+                                                                                   id="first_patient_name"
+                                                                                   required
+                                                                                   name="first_patient_name"
+                                                                                   placeholder="your first name...">
                                                                         </div>
-                                                                        <div class="col-sm-12 b-r center">
-                                                                            <button type="button" class="btn btn-sbm"
-                                                                                    (click)="onFirstBackStep()">
-                                                                                Back
-                                                                            </button>
-                                                                            <button type="button" class="btn btn-sbm"
-                                                                                    (click)="onFirstNextStep()">
-                                                                                Next
-                                                                            </button>
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_birthday">
+                                                                                Date of Birth
+                                                                                <i class="fa fa-birthday-cake"></i>
+                                                                            </label>
+                                                                            <input id="patient_birthday"
+                                                                                   type="date"
+                                                                                   class="form-control"
+                                                                                   uib-datepicker-popup
+                                                                                   name="patient_birthday"
+                                                                            >
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_doc_type">Document
+                                                                                Type</label>
+                                                                            <select class="form-control"
+                                                                                    id="patient_doc_type"
+                                                                                    name="patient_doc_type">
+                                                                                <option value=''>- DNI/NIE -
+                                                                                </option>
+                                                                                <option value="DNI">DNI</option>
+                                                                                <option value="NIE">NIE</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="last_patient_name">Last
+                                                                                name</label>
+                                                                            <input type="text"
+                                                                                   class="form-control"
+                                                                                   id="last_patient_name"
+                                                                                   required
+                                                                                   name="last_patient_name"
+                                                                                   placeholder="your last name...">
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_gender">Gender</label>
+                                                                            <select class="form-control"
+                                                                                    id="patient_gender"
+                                                                                    name="patient_gender">
+                                                                                <option value=''>- Please choose
+                                                                                    -
+                                                                                </option>
+                                                                                <option value="female">Female
+                                                                                </option>
+                                                                                <option value="male">Male
+                                                                                </option>
+                                                                                <option value="unknown">
+                                                                                    Unknown
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_doc_num">Document
+                                                                                number</label>
+                                                                            <input type="text"
+                                                                                   class="form-control"
+                                                                                   id="patient_doc_num"
+                                                                                   name="patient_doc_num">
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="tab2">
+                                                            <!-- second step -->
+                                                            <div class="ibox-content">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 b-r">
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_phone_type_1">Phone
+                                                                                Type
+                                                                                1</label>
+                                                                            <select class="form-control"
+                                                                                    id="patient_phone_type_1"
+                                                                                    name="patient_phone_type_1"
+                                                                                    [(ngModel)]="model.patient_phone_type_1"
+                                                                                    #patient_phone_type_1="ngModel"
+                                                                                    (change)="onChange($event.target.value)"
+                                                                            >
+                                                                                <option *ngFor="let patient_phone_type_1 of patient_phone_types_1"
+                                                                                        [value]="patient_phone_type_1">
+                                                                                    {{patient_phone_type_1}}
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="phone_type_2">Phone
+                                                                                Type
+                                                                                2</label>
+                                                                            <select class="form-control"
+                                                                                    id="patient_phone_type_2"
+                                                                                    name="patient_phone_type_2"
+                                                                                    [(ngModel)]="model.patient_phone_type_2"
+                                                                                    #patient_phone_type_2="ngModel"
+                                                                                    (change)="onChange($event.target.value)"
+                                                                            >
+                                                                                <option *ngFor="let patient_phone_type_2 of patient_phone_types_2"
+                                                                                        [value]="patient_phone_type_2">
+                                                                                    {{patient_phone_type_2}}
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6 b-r">
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_phone_1">Phone
+                                                                                1</label>
+                                                                            <input type="text"
+                                                                                   class="form-control"
+                                                                                   id="patient_phone_1"
+                                                                                   name="patient_phone_1"
+                                                                                   [(ngModel)]="model.patient_phone_1"
+                                                                                   #patient_phone_1="ngModel"
+                                                                            >
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label class="register-label"
+                                                                                   for="patient_phone_2">Phone
+                                                                                2</label>
+                                                                            <input type="text"
+                                                                                   class="form-control"
+                                                                                   id="patient_phone_2"
+                                                                                   name="patient_phone_2"
+                                                                                   [(ngModel)]="model.patient_phone_2"
+                                                                                   #patient_phone_2="ngModel"
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <label class="register-label"
+                                                                                       for="patient_photo">Photography</label>
+                                                                                <input type="file"
+                                                                                       id="patient_photo">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="tab3">
+                                                            <!-- third step -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="register-label" for="patient_country">Country</label>
+                                                                    <select class="form-control" id="patient_country"
+                                                                            name="patient_country"
+                                                                            [(ngModel)]="model.patient_country"
+                                                                            #patient_country="ngModel"
+                                                                            (change)="onChange($event.target.value)"
+                                                                    >
+                                                                        <option *ngFor="let patient_country of patient_countries"
+                                                                                [value]="patient_country">{{patient_country}}
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="register-label" for="patient_county">County</label>
+                                                                    <select class="form-control" id="patient_county"
+                                                                            name="patient_county"
+                                                                            [(ngModel)]="model.patient_county"
+                                                                            #patient_county="ngModel"
+                                                                            (change)="onChange($event.target.value)"
+                                                                    >
+                                                                        <option *ngFor="let patient_county of patient_counties"
+                                                                                [value]="patient_county">{{patient_county}}
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label class="register-label" for="patient_city">City</label>
+                                                                    <select class="form-control" id="patient_city"
+                                                                            name="patient_city"
+                                                                            [(ngModel)]="model.patient_city"
+                                                                            #patient_city="ngModel"
+                                                                            (change)="onChange($event.target.value)"
+                                                                    >
+                                                                        <option *ngFor="let patient_city of patient_cities" [value]="patient_city">
+                                                                            {{patient_city}}
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="register-label" for="patient_pc">Postal Code</label>
+                                                                    <input type="text" class="form-control" id="patient_pc"
+                                                                           [(ngModel)]="model.patient_pc" name="patient_pc">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label class="register-label" for="patient_ad1">Address Line
+                                                                        1*</label>
+                                                                    <input type="text" class="form-control input-address"
+                                                                           id="patient_ad1"
+                                                                           [(ngModel)]="model.patient_ad1" name="patient_ad1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label class="register-label" for="patient_ad2">Address Line
+                                                                        2</label>
+                                                                    <input type="text" class="form-control input-address"
+                                                                           id="patient_ad2"
+                                                                           [(ngModel)]="model.patient_ad2" name="patient_ad2">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 form-group">
+                                                                <button type="submit" class="btn btn-sbm"
+                                                                        [disabled]="!dataForm.form.valid">Submit
+                                                                </button>
+                                                                <button type="reset" class="btn btn-default">Clear</button>
                                                             </div>
                                                         </div>
                                                     </div>

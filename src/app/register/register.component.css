@@ -6,7 +6,7 @@ label {
     margin-left: 1em !important;
 }
 
-.register-label{
+.register-label {
     color: #c4c4c4;
 }
 
@@ -15,7 +15,7 @@ input, select {
     width: 75% !important;
 }
 
-input.input-address{
+input.input-address {
     width: 90% !important;
 }
 
@@ -120,29 +120,31 @@ hr {
     float: left;
     color: rgb(70, 191, 168);
 }
+
 .ibox-title > h2 {
     text-overflow: ellipsis;
     color: rgb(70, 191, 168);
 }
 
-.ibox-center{
+.ibox-center {
     margin-left: 25%;
 }
 
-.register-desc > p{
+.register-desc > p {
     margin: 1.5em;
     color: rgb(70, 191, 168);
 }
-.form-title > h3, .form-title > h4{
+
+.form-title > h3, .form-title > h4 {
     color: rgb(70, 191, 168) !important;
     /*border-bottom: 2px solid rgb(70, 191, 168);*/
 }
 
-.register-form-title{
+.register-form-title {
     background: #fff;
 }
 
-.register-float-e-margins{
+.register-float-e-margins {
     background: #fff;
 }
 
@@ -157,6 +159,31 @@ hr {
     font-weight: bold;
 }
 
-.ibox-title.no-border-color{
+.ibox-title.no-border-color {
     border: none !important;
+}
+.nav-tabs > li > a {
+    color: rgb(70, 191, 168);
+    letter-spacing: 2px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #868889;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: default;
+    border: 3px solid rgb(70, 191, 168);
+    border-bottom-color: transparent;
+
+    background: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 30px,
+            rgba(70, 191, 168, 0.45) 10px,
+            rgba(70, 191, 168, 0.49) 20px
+    ),
+    linear-gradient(
+            to bottom,
+            rgba(70, 191, 168, 0.38),
+            #fff
+    );
 }
