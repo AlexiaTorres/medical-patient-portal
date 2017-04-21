@@ -72,6 +72,17 @@ export class RegisterComponent implements OnInit {
             increaseArea: '20%' // optional
         });
 
+        var selector = '.nav-tabs li';
+
+        $('#changetabbutton').click(function(e){
+            e.preventDefault();
+            $('#navtabs a[href="#tab2"]').tab('show');
+            console.log(selector);
+
+            $(selector).addClass('active');
+        });
+
+
     }
 
     onChange(selectedValue) {
