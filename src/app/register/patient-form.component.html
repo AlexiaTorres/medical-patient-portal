@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="ibox register-float-e-margins">
+        <div class="col-sm-12">
+            <div class="ibox-title no-border-color">
+                <h4>Address</h4>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="register-label" for="patient_country">Country</label>
+                    <select class="form-control" id="patient_country"
+                            name="patient_country"
+                            [(ngModel)]="model.patient_country"
+                            #patient_country="ngModel"
+                            (change)="onChange($event.target.value)"
+                    >
+                        <option *ngFor="let patient_country of patient_countries"
+                                [value]="patient_country">{{patient_country}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="register-label" for="patient_county">County</label>
+                    <select class="form-control" id="patient_county"
+                            name="patient_county"
+                            [(ngModel)]="model.patient_county"
+                            #patient_county="ngModel"
+                            (change)="onChange($event.target.value)"
+                    >
+                        <option *ngFor="let patient_county of patient_counties"
+                                [value]="patient_county">{{patient_county}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="register-label"
+                           for="patient_city">City</label>
+                    <select class="form-control" id="patient_city"
+                            name="patient_city"
+                            [(ngModel)]="model.patient_city"
+                            #patient_city="ngModel"
+                            (change)="onChange($event.target.value)"
+                    >
+                        <option *ngFor="let patient_city of patient_cities"
+                                [value]="patient_city">
+                            {{patient_city}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="register-label" for="patient_pc">Postal
+                        Code</label>
+                    <input type="text" class="form-control" id="patient_pc"
+                           [(ngModel)]="model.patient_pc" name="patient_pc">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="register-label" for="patient_ad1">Address
+                        Line
+                        1*</label>
+                    <input type="text"
+                           class="form-control input-address"
+                           id="patient_ad1"
+                           [(ngModel)]="model.patient_ad1" name="patient_ad1">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="register-label" for="patient_ad2">Address
+                        Line
+                        2</label>
+                    <input type="text"
+                           class="form-control input-address"
+                           id="patient_ad2"
+                           [(ngModel)]="model.patient_ad2" name="patient_ad2">
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <button type="submit" class="btn btn-sbm"
+                        [disabled]="!dataForm.form.valid">Submit
+                </button>
+                <button type="reset" class="btn btn-default">Clear
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

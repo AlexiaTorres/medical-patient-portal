@@ -13,8 +13,8 @@
             <div class="col-md-8 register-tab">
                 <div class="tabbable tabs-below">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab1" data-toggle="tab">User Data</a></li>
-                        <li><a href="#tab2" data-toggle="tab">Patient Data</a></li>
+                        <li class="active user_li"><a href="#tab1" data-toggle="tab">User Data</a></li>
+                        <li class="patient_li"><a href="#tab2" data-toggle="tab">Patient Data</a></li>
                     </ul>
                     <div id="navtabs" class="tab-content">
                         <div class="tab-pane active" id="tab1">
@@ -115,14 +115,9 @@
                                                     <input type="text" class="form-control" id="doc_num"
                                                            name="doc_num">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="register-label" for="phone_1">Phone 1</label>
-                                                    <input type="text" class="form-control" id="phone_1"
-                                                           name="phone_1"
-                                                           [(ngModel)]="model.phone_1"
-                                                           #phone_1="ngModel"
-                                                    >
-                                                </div>
+                                                <!--<div class="form-group"
+                                                     [innerHtml]="showFormInputGroup('register-label', 'Phone 1', 'form-control', 'phone_1')">
+                                                </div>-->
                                                 <div class="form-group">
                                                     <label class="register-label" for="phone_2">Phone 2</label>
                                                     <input type="text" class="form-control" id="phone_2"
@@ -164,7 +159,8 @@
                                         </div>
                                         <div class="col-sm-6 b-r form-group">
                                             <a href="#tab2" data-toggle="tab">
-                                                <button type="button" id="changetabbutton" class="btn btn-sbm user-next-step">
+                                                <button type="button" id="changetabbutton"
+                                                        class="btn btn-sbm user-next-step">
                                                     Patient data
                                                     <i class="fa fa-arrow-right"></i>
                                                 </button>
@@ -175,6 +171,41 @@
                             </div>
                         </div>
                         <div class="tab-pane tab-2" id="tab2">
+                            <!-- PATIENT DATA -->
+                            <div class="col-md-12">
+                                <div class="register-desc" [hidden]="!selected_none">
+                                    <p>
+                                        Indique a continuación los datos de la persona que se va a conectar al portal de
+                                        paciente.
+                                        Si se trata de un padre que va a acceder a los datos de un hijo menor de 16
+                                        años, deberá
+                                        indicar los datos del padre. Una vez el usuario se ha registrado, podrá añadir
+                                        tantos
+                                        pacientes como desee.
+                                    </p>
+                                </div>
+                                <div class="ibox register-float-e-margins">
+                                    <div class="ibox-title">
+                                        <h4>Patient Data</h4>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="row">
+                                            <div class="col-sm-12 b-r">
+                                                <div [hidden]="!selected_me">
+                                                    <!--If selected Me -->
+                                                    <patient-form></patient-form>
+                                                    <!-- End If Selected Me-->
+                                                </div>
+                                                <div [hidden]="!selected_other">
+                                                    <!-- OTHER PATIENT DATA -->
+                                                    <new-user></new-user>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END PATIENT DATA -->
                         </div>
                     </div>
                 </div>

@@ -1,70 +1,80 @@
 import {Component, OnInit} from '@angular/core';
-// import {TranslateService} from './translate/translate.service';
+import {Router}   from '@angular/router';
 import {Data}    from './data';
 
 @Component({
     selector: 'data-form',
-    templateUrl: './data-form.component.html'
+    templateUrl: './data-form.component.html',
+    styleUrls: ['./data-form.component.css']
 })
 export class DataFormComponent implements OnInit {
     // FORM DATA
-    cities = ['', 'Madrid', 'Las Rozas',
-        'Majadahonda', 'Brunete'];
+    countries = ['-Choose your country-', 'Spain', 'United States'];
+    cities = ['-Choose your city-', 'Madrid', 'Valencia'];
+    counties = ['-Choose your county-', 'Galapagar', 'Las Rozas', 'Majadahonda'];
+    doc_types = ['DNI'];
+    phone_types_1 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
+    phone_types_2 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
 
-    model = new Data(1, '', '' , '', '', '', '', this.cities[0], '', '', '', '');
+    showing = true;
+    editing = false;
 
-    submitted = false;
-    // login_form = false;
+    model = new Data(
+        1,
+        'Alexia',
+        'Torres',
+        '1993/11/20',
+        'Female',
+        this.doc_types[0],
+        '',
+        this.countries[0],
+        this.cities[0],
+        this.counties[0],
+        '',
+        '',
+        '',
+        this.phone_types_1[0],
+        this.phone_types_2[0],
+        '',
+        '',
+        ''
+    );
+    bodyClasses = 'data-form';
+    body = document.getElementsByTagName('body')[0];
+    icheck: JQuery;
 
-    // TRANSLATION DECLARATIONS
-    // public translatedText: string;
-    // public supportedLanguages: any[];
-
-    // constructor(private _translate: TranslateService) {
-    // }
-
-    // FORM DATA
-    onSubmit() {
-        this.submitted = true;
+    constructor(private router: Router) {
     }
 
-
-
-    //////// NOT SHOWN IN DOCS ////////
-
-    // Reveal in html:
-    //   Name via form.controls = {{showFormControls(dataForm)}}
-    /*showFormControls(form: any) {
-        return form && form.controls['first_name'] &&
-            form.controls['first_name'].value; // Dr. IQ
-    }*/
-
-    /////////////////////////////
-    // TRANSLATE FUNCTIONALITY
     ngOnInit() {
-        // standing data
-        // this.supportedLanguages = [
-        //     {display: 'English', value: 'en'},
-        //     {display: 'Español', value: 'es'},
-        // ];
+        // Add the register-page class to the body
+        // $('body').addClass(this.bodyClasses);
+        this.body.classList.add(this.bodyClasses);   //add the class
 
-        // // set current language
-        // this.selectLang('es');
+        this.icheck = jQuery('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
     }
 
-    // isCurrentLang(lang: string) {
-    //     // check if the selected lang is current lang
-    //     return lang === this._translate.currentLang;
-    // }
+    onEdit() {
+        this.editing = true;
+        this.showing = false;
+        document.getElementsByTagName('input')[0].removeAttribute('disabled');
+    }
 
-    // selectLang(lang: string) {
-    //     // set current lang;
-    //     this._translate.use(lang);
-    //     this.refreshText();
-    // }
+    ngOnDestroy() {
+        // remove the register-page class to the body
+        // $('body').removeClass(this.bodyClasses);
+        this.body.classList.remove(this.bodyClasses);
+    }
 
-    // refreshText() {
-        // refresh translation when language change
-    //     this.translatedText = this._translate.instant('hello world');
-    // }
+    ngAfterViewInit() {
+    }
+
+    gotoAdmin() {
+        this.router.navigate(['/admin']);
+    }
+
 }

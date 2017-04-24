@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Router}   from '@angular/router';
-
 import {Data}    from './data';
 
 @Component({
@@ -72,14 +71,15 @@ export class RegisterComponent implements OnInit {
             increaseArea: '20%' // optional
         });
 
-        var selector = '.nav-tabs li';
+        let patient_selector = '.nav-tabs li.patient_li';
+        let user_selector = '.nav-tabs li.user_li';
 
         $('#changetabbutton').click(function(e){
             e.preventDefault();
             $('#navtabs a[href="#tab2"]').tab('show');
-            console.log(selector);
 
-            $(selector).addClass('active');
+            $(user_selector).removeClass('active');
+            $(patient_selector).addClass('active');
         });
 
 
@@ -119,6 +119,16 @@ export class RegisterComponent implements OnInit {
     onSubmit() {
         this.submitted = true;
     }
+    showFormInputGroup(labelClass, label, className, name) {
+        return '<label class="' + labelClass + '" for="' + name + '">' + label + '</label>' +
+            '<input type="text" class="' + className + '" ' +
+            'id="' + name + '" ' +
+            'name="' + name + '" ' +
+            '[(ngModel)]="model.' + name + '" ' +
+            '#' + name + '="ngModel">';
+    }
+
+
 
     ngOnDestroy() {
         // remove the register-page class to the body

@@ -9,12 +9,18 @@ export class Data {
                 public doc_type: string,
                 public doc_num: string,
                 // patient address
+                public country: string,
                 public city: string,
+                public county: string,
                 public pc: string,
-                public address: string,
+                public ad1: string,
+                public ad2: string,
                 // contact data
-                public email: string,
-                public phone: string,
+                public phone_type_1: string,
+                public phone_type_2: string,
+                public phone_1: string,
+                public phone_2: string,
+                public email: string
     ) {
     }
 
