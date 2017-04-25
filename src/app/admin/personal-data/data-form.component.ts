@@ -9,6 +9,7 @@ import {Data}    from './data';
 })
 export class DataFormComponent implements OnInit {
     // FORM DATA
+    submitted = false;
     countries = ['-Choose your country-', 'Spain', 'United States'];
     cities = ['-Choose your city-', 'Madrid', 'Valencia'];
     counties = ['-Choose your county-', 'Galapagar', 'Las Rozas', 'Majadahonda'];
@@ -17,7 +18,6 @@ export class DataFormComponent implements OnInit {
     phone_types_2 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
 
     editing = false;
-
     model = {
         first_name: 'Alexiaa',
         last_name: 'Torres',
@@ -42,12 +42,41 @@ export class DataFormComponent implements OnInit {
         });
     }
 
+    // FORM DATA
+    onSubmit() {
+        this.submitted = true;
+    }
+
     onEdit() {
         this.editing = true;
         $('.disabled-input').removeAttr('disabled');
         $('.disabled-select').removeAttr('disabled');
     }
 
+    public toUser(model: string) {
+        let jsonData = JSON.parse(model);
+        this.model = new Data(
+            jsonData.id,
+            jsonData.first_name,
+            jsonData.last_name,
+            jsonData.birthday,
+            jsonData.gender,
+            jsonData.doc_type,
+            jsonData.doc_num,
+            jsonData.country,
+            jsonData.city,
+            jsonData.county,
+            jsonData.pc,
+            jsonData.ad1,
+            jsonData.ad2,
+            jsonData.phone_type_1,
+            jsonData.phone_type_2,
+            jsonData.phone_1,
+            jsonData.phone_2,
+            jsonData.email
+        );
+        console.log(this.model);
+    }
     ngOnDestroy() {
         // remove the register-page class to the body
         // $('body').removeClass(this.bodyClasses);

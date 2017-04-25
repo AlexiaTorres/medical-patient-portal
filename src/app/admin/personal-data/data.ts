@@ -23,5 +23,4 @@ export class Data {
                 public email: string
     ) {
     }
-
 }

@@ -63,7 +63,7 @@ export class RegisterComponent implements OnInit {
     ngOnInit() {
         // Add the register-page class to the body
         // $('body').addClass(this.bodyClasses);
-        this.body.classList.add(this.bodyClasses);   //add the class
+        this.body.classList.add(this.bodyClasses);   // add the class
 
         this.icheck = jQuery('input').iCheck({
             checkboxClass: 'icheckbox_square-blue',

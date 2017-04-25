@@ -303,7 +303,12 @@
                     </div>
 
                     <div [hidden]="!editing">
-                        <button type="submit" class="btn btn-sbm" [disabled]="dataForm.form.valid">Submit
+                        <button
+                                type="submit"
+                                (click)="toUser(model.first_name)"
+                                class="btn btn-sbm"
+                                [disabled]="dataForm.form.valid"
+                        >Submit
                         </button>
                         <button type="reset" class="btn btn-default">Clear</button>
                     </div>
