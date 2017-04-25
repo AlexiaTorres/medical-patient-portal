@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from 'angular2-schema-form';
 
 import {AdminRoutingModule} from './admin-routing.module';
 import {AdminComponent} from './admin.component';
@@ -10,12 +11,14 @@ import {FooterComponent} from './footer/footer.component';
 import {ControlSidebarComponent} from './control-sidebar/control-sidebar.component';
 import {Dashboard1Component} from './dashboard1/dashboard1.component';
 import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
+import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
     imports: [
         CommonModule,
         AdminRoutingModule,
-        FormsModule
+        FormsModule,
+        SchemaFormModule
     ],
     declarations: [
         AdminComponent,
@@ -24,8 +27,10 @@ import {DataFormComponent as PersonalData} from './personal-data/data-form.compo
         FooterComponent,
         ControlSidebarComponent,
         Dashboard1Component,
-        PersonalData
+        PersonalData,
+        TestFormComponent
     ],
+    providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
     exports: [AdminComponent]
 })
 export class AdminModule {

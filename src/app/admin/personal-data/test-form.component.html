@@ -1,0 +1,12 @@
+<div class="content-wrapper">
+    <section class="content">
+        <sf-form
+                [schema]="mySchema"
+                [model]="myModel"
+                [actions]="myActions"
+                (onChange)="value=$event.value"
+        ></sf-form>
+    </section>
+</div>
+<!--
+<sf-form [schema]="mySchema" (onChange)="value=$event.value"></sf-form>{{value | json}}-->

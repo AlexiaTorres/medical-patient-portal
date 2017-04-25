@@ -16,29 +16,13 @@ export class DataFormComponent implements OnInit {
     phone_types_1 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
     phone_types_2 = ['-Mobile/Home/Work-', 'Mobile', 'Home', 'Work'];
 
-    showing = true;
     editing = false;
 
-    model = new Data(
-        1,
-        'Alexia',
-        'Torres',
-        '1993/11/20',
-        'Female',
-        this.doc_types[0],
-        '',
-        this.countries[0],
-        this.cities[0],
-        this.counties[0],
-        '',
-        '',
-        '',
-        this.phone_types_1[0],
-        this.phone_types_2[0],
-        '',
-        '',
-        ''
-    );
+    model = {
+        first_name: 'Alexiaa',
+        last_name: 'Torres',
+        birthday: '1993-11-20'
+    };
     bodyClasses = 'data-form';
     body = document.getElementsByTagName('body')[0];
     icheck: JQuery;
@@ -49,7 +33,7 @@ export class DataFormComponent implements OnInit {
     ngOnInit() {
         // Add the register-page class to the body
         // $('body').addClass(this.bodyClasses);
-        this.body.classList.add(this.bodyClasses);   //add the class
+        this.body.classList.add(this.bodyClasses);   // add the class
 
         this.icheck = jQuery('input').iCheck({
             checkboxClass: 'icheckbox_square-blue',
@@ -60,8 +44,8 @@ export class DataFormComponent implements OnInit {
 
     onEdit() {
         this.editing = true;
-        this.showing = false;
-        document.getElementsByTagName('input')[0].removeAttribute('disabled');
+        $('.disabled-input').removeAttr('disabled');
+        $('.disabled-select').removeAttr('disabled');
     }
 
     ngOnDestroy() {
