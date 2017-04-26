@@ -1,18 +1,13 @@
 <div class="content-wrapper">
-    <section class="content">
+    <!--<section class="content">
         <sf-form
                 [schema]="mySchema"
-                [model]="myModel"
+                [model]="myStringify(patient)"
                 [actions]="myActions"
                 (onChange)="value=$event.value"
         ></sf-form>
-        <sf-form
-                [schema]="mySchema"
-                [model]="myModel"
-                [actions]="myActions"
-                (onChange)="value=$event.value"
-        ></sf-form>
-    </section>
+    </section>-->
+    <pre>{{myStringify(patient)}}</pre>
 </div>
 <!--
 <sf-form [schema]="mySchema" (onChange)="value=$event.value"></sf-form>{{value | json}}-->
