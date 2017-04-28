@@ -1,0 +1,57 @@
+body{
+    background: url(../img/content/bg-6.jpg)no-repeat center center fixed; -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.c-content-feature-home{
+    width: 200px !important;
+    height: 200px !important;
+    background-color: #8cb4e3;
+    opacity: 0.8;
+    border-radius: 50%;
+    text-align: center;
+    margin: 2em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+
+.c-content-feature-home:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+.c-content-feature-home > a > h1{
+    color: #fff;
+    margin-top:51%;
+    font-family: "Roboto Condensed";
+}
+
+.little-circle{
+    background: #00ca00;
+    opacity: 1;
+    width: 11%;
+    height: 11%;
+    border-radius: 50%;
+    position: absolute;
+    top: 23%;
+    left: 23%;
+}
+
+.circle-features{
+    display: flex;
+    justify-content: center;
+}
+
+.c-brand{
+    margin: 1em;
+}

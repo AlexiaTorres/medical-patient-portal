@@ -1,0 +1,39 @@
+<div class="c-layout-page">
+    <div class="c-brand c-pull-left">
+        <a href="/" class="c-logo">
+            <img src="../assets/base/img/layout/logos/logo-2.png" alt="COMMON">
+        </a>
+    </div>
+
+    <div class="caption randomrotateout tp-resizeme tp-caption start" data-x="center" data-y="center" data-hoffset="0"
+         data-voffset="120" data-speed="300" data-start="2000" data-easing="Back.easeOut"
+         style="margin-left: 1em; left: 19.5px; top: 99.1774px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
+        <div class="c-content-box c-size-md center">
+            <div class="container">
+                <div class="c-content-feature-2-grid" data-auto-height="true" data-mode="base-height">
+                    <div class="row text-center circle-features">
+                        <div class="col-md-4 col-sm-6 c-content-feature-home">
+                            <div class="little-circle"></div>
+                            <a href="/login" (click)="showStyle = true;"><h1>Login</h1></a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 c-content-feature-home">
+                            <div class="little-circle"></div>
+                            <a href="/register"><h1>Register</h1></a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 c-content-feature-home">
+                            <div class="little-circle"></div>
+                            <a href=""><h1>Appointment</h1></a>
+                        </div>
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+
+
+                <!-- <div class="login" [style.display]="getStyle()">
+                     <data-form></data-form>
+                 </div>-->
+            </div>
+        </div>
+    </div>
+
+</div>

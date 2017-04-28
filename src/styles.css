@@ -5,7 +5,7 @@
 @import "app/admin/dashboard1/dashboard1.component.css";
 @import "app/admin/personal-data/data-form.component.css";
 @import "app/register/register.component.css";
-
+@import "assets/base/css/custom.css";
 .center{
     text-align: center;
 }

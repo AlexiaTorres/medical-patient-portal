@@ -6,14 +6,13 @@ import {RouterModule}   from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {AdminModule} from './admin/admin.module';
-// import { AdminComponent} from './admin/admin.component';
 import {TestComponent} from './test/test.component';
 import {AppRoutingModule} from './app-routing.module';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {NewUserComponent} from './register/new-user.component';
 import {PatientFormComponent} from './register/patient-form.component';
-
+import {HomeModule} from './home.module';
 @NgModule({
     declarations: [
         AppComponent,
@@ -29,7 +28,8 @@ import {PatientFormComponent} from './register/patient-form.component';
         HttpModule,
         AdminModule,
         RouterModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HomeModule
     ],
     bootstrap: [AppComponent]
 })

@@ -18,7 +18,7 @@ import {TestFormComponent} from './personal-data/test-form.component';
                         component: Dashboard1Component
                     },
                     {
-                        path: 'dashboard1',
+                        path: 'dashboard',
                         component: Dashboard1Component
                     },
                     {
