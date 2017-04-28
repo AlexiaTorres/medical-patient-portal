@@ -13,8 +13,7 @@ import {DataFormComponent as PersonalData} from './admin/personal-data/data-form
             {path: '', component: HomeComponent},
             {path: 'login', component: LoginComponent},
             {path: 'register', component: RegisterComponent},
-            {path: 'admin', component: AdminComponent},
-            {path: 'personal-data', component: PersonalData}
+            {path: 'admin', component: AdminComponent}
         ])
     ],
     exports: [

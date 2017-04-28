@@ -19,9 +19,20 @@ export class DataFormComponent implements OnInit {
 
     editing = false;
     model = {
-        first_name: 'Alexiaa',
+        first_name: 'Alexia',
         last_name: 'Torres',
-        birthday: '1993-11-20'
+        birthday: '1993-11-20',
+        gender: 'female',
+        doc_type: 'DNI',
+        doc_num: '05467807V',
+        country: 'Spain',
+        city: 'Madrid',
+        county: 'Galapagar',
+        ad1: 'C/San Gregorio 29',
+        pc: '28260',
+        phone_type_1: 'Mobile',
+        phone_1: '611489220',
+        email: 'alexia.torres@commonms.com'
     };
     bodyClasses = 'data-form';
     body = document.getElementsByTagName('body')[0];

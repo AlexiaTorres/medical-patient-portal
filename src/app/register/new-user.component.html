@@ -1,259 +1,246 @@
 <div class="ibox register-float-e-margins">
     <div class="col-sm-12">
-        <div class="tabbable tabs-below">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab1" data-toggle="tab">Step
-                    1</a></li>
-                <li><a href="#tab2" data-toggle="tab">Step 2</a></li>
-                <li><a href="#tab3" data-toggle="tab">Step 3</a></li>
-            </ul>
-            <div class="tab-content">
-                <div class="ibox-title no-border-color">
-                    <h4>Personal Patient Data</h4>
-                </div>
-                <div class="tab-pane active" id="tab1">
-                    <!-- first step -->
-                    <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-sm-6 b-r">
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="first_name">First
-                                        name</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           id="first_name"
-                                           required
-                                           name="first_name"
-                                           placeholder="your first name...">
-                                </div>
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="birthday">
-                                        Date of Birth
-                                        <i class="fa fa-birthday-cake"></i>
-                                    </label>
-                                    <input id="birthday"
-                                           type="date"
-                                           class="form-control"
-                                           uib-datepicker-popup
-                                           name="birthday"
-                                    >
-                                </div>
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="doc_type">Document
-                                        Type</label>
-                                    <select class="form-control"
-                                            id="doc_type"
-                                            name="doc_type">
-                                        <option value=''>- DNI/NIE -
-                                        </option>
-                                        <option value="DNI">DNI</option>
-                                        <option value="NIE">NIE</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="last_name">Last
-                                        name</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           id="last_name"
-                                           required
-                                           name="last_name"
-                                           placeholder="your last name...">
-                                </div>
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="gender">Gender</label>
-                                    <select class="form-control"
-                                            id="gender"
-                                            name="gender">
-                                        <option value=''>- Please choose
-                                            -
-                                        </option>
-                                        <option value="female">Female
-                                        </option>
-                                        <option value="male">Male
-                                        </option>
-                                        <option value="unknown">
-                                            Unknown
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="doc_num">Document
-                                        number</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           id="doc_num"
-                                           name="doc_num">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab2">
-                    <!-- second step -->
-                    <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-sm-6 b-r">
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="phone_type_1">Phone
-                                        Type
-                                        1</label>
-                                    <select class="form-control"
-                                            id="phone_type_1"
-                                            name="phone_type_1"
-                                            [(ngModel)]="model.phone_type_1"
-                                            #phone_type_1="ngModel"
-                                            (change)="onChange($event.target.value)"
-                                    >
-                                        <option *ngFor="let phone_type_1 of phone_types_1"
-                                                [value]="phone_type_1">
-                                            {{phone_type_1}}
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="phone_type_2">Phone
-                                        Type
-                                        2</label>
-                                    <select class="form-control"
-                                            id="phone_type_2"
-                                            name="phone_type_2"
-                                            [(ngModel)]="model.phone_type_2"
-                                            #phone_type_2="ngModel"
-                                            (change)="onChange($event.target.value)"
-                                    >
-                                        <option *ngFor="let phone_type_2 of phone_types_2"
-                                                [value]="phone_type_2">
-                                            {{phone_type_2}}
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 b-r">
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="phone_1">Phone
-                                        1</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           id="phone_1"
-                                           name="phone_1"
-                                           [(ngModel)]="model.phone_1"
-                                           #phone_1="ngModel"
-                                    >
-                                </div>
-                                <div class="form-group">
-                                    <label class="register-label"
-                                           for="phone_2">Phone
-                                        2</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           id="phone_2"
-                                           name="phone_2"
-                                           [(ngModel)]="model.phone_2"
-                                           #phone_2="ngModel"
-                                    >
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label class="register-label"
-                                               for="photo">Photography</label>
-                                        <input type="file"
-                                               id="photo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab3">
-                    <!-- third step -->
-                    <div class="col-md-6">
+        <div class="ibox-title no-border-color">
+            <h4>Personal Patient Data</h4>
+        </div>
+        <div class="tab-pane active" id="tab1">
+            <!-- first step -->
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6 b-r">
                         <div class="form-group">
-                            <label class="register-label" for="country">Country</label>
-                            <select class="form-control" id="country"
-                                    name="country"
-                                    [(ngModel)]="model.country"
-                                    #country="ngModel"
-                                    (change)="onChange($event.target.value)"
+                            <label class="register-label"
+                                   for="first_name">First
+                                name</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="first_name"
+                                   required
+                                   name="first_name"
+                                   placeholder="your first name...">
+                        </div>
+                        <div class="form-group">
+                            <label class="register-label"
+                                   for="birthday">
+                                Date of Birth
+                                <i class="fa fa-birthday-cake"></i>
+                            </label>
+                            <input id="birthday"
+                                   type="date"
+                                   class="form-control"
+                                   uib-datepicker-popup
+                                   name="birthday"
                             >
-                                <option *ngFor="let country of countries"
-                                        [value]="country">{{country}}
+                        </div>
+                        <div class="form-group">
+                            <label class="register-label"
+                                   for="doc_type">Document
+                                Type</label>
+                            <select class="form-control"
+                                    id="doc_type"
+                                    name="doc_type">
+                                <option value=''>- DNI/NIE -
+                                </option>
+                                <option value="DNI">DNI</option>
+                                <option value="NIE">NIE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="register-label"
+                                   for="last_name">Last
+                                name</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="last_name"
+                                   required
+                                   name="last_name"
+                                   placeholder="your last name...">
+                        </div>
+                        <div class="form-group">
+                            <label class="register-label"
+                                   for="gender">Gender</label>
+                            <select class="form-control"
+                                    id="gender"
+                                    name="gender">
+                                <option value=''>- Please choose
+                                    -
+                                </option>
+                                <option value="female">Female
+                                </option>
+                                <option value="male">Male
+                                </option>
+                                <option value="unknown">
+                                    Unknown
                                 </option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="register-label" for="county">County</label>
-                            <select class="form-control" id="county"
-                                    name="county"
-                                    [(ngModel)]="model.county"
-                                    #county="ngModel"
-                                    (change)="onChange($event.target.value)"
-                            >
-                                <option *ngFor="let county of counties"
-                                        [value]="county">{{county}}
-                                </option>
-                            </select>
+                            <label class="register-label"
+                                   for="doc_num">Document
+                                number</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="doc_num"
+                                   name="doc_num">
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="register-label" for="city">City</label>
-                            <select class="form-control" id="city"
-                                    name="city"
-                                    [(ngModel)]="model.city"
-                                    #city="ngModel"
-                                    (change)="onChange($event.target.value)"
-                            >
-                                <option *ngFor="let city of cities" [value]="city">
-                                    {{city}}
-                                </option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="register-label" for="pc">Postal Code</label>
-                            <input type="text" class="form-control" id="pc"
-                                   [(ngModel)]="model.pc" name="pc">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="register-label" for="ad1">Address Line
-                                1*</label>
-                            <input type="text" class="form-control input-address"
-                                   id="ad1"
-                                   [(ngModel)]="model.ad1" name="ad1">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="register-label" for="ad2">Address Line
-                                2</label>
-                            <input type="text" class="form-control input-address"
-                                   id="ad2"
-                                   [(ngModel)]="model.ad2" name="ad2">
-                        </div>
-                    </div>
-       a             <div class="col-md-6 form-group">
-                        <button type="submit" class="btn btn-sbm"
-                                [disabled]="!dataForm.form.valid">Submit
-                        </button>
-                        <button type="reset" class="btn btn-default">Clear</button>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- second step -->
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <div class="form-group">
+                        <label class="register-label"
+                               for="phone_type_1">Phone
+                            Type
+                            1</label>
+                        <select class="form-control"
+                                id="phone_type_1"
+                                name="phone_type_1"
+                                [(ngModel)]="model.phone_type_1"
+                                #phone_type_1="ngModel"
+                                (change)="onChange($event.target.value)"
+                        >
+                            <option *ngFor="let phone_type_1 of phone_types_1"
+                                    [value]="phone_type_1">
+                                {{phone_type_1}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="register-label"
+                               for="phone_type_2">Phone
+                            Type
+                            2</label>
+                        <select class="form-control"
+                                id="phone_type_2"
+                                name="phone_type_2"
+                                [(ngModel)]="model.phone_type_2"
+                                #phone_type_2="ngModel"
+                                (change)="onChange($event.target.value)"
+                        >
+                            <option *ngFor="let phone_type_2 of phone_types_2"
+                                    [value]="phone_type_2">
+                                {{phone_type_2}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6 b-r">
+                    <div class="form-group">
+                        <label class="register-label"
+                               for="phone_1">Phone
+                            1</label>
+                        <input type="text"
+                               class="form-control"
+                               id="phone_1"
+                               name="phone_1"
+                               [(ngModel)]="model.phone_1"
+                               #phone_1="ngModel"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label class="register-label"
+                               for="phone_2">Phone
+                            2</label>
+                        <input type="text"
+                               class="form-control"
+                               id="phone_2"
+                               name="phone_2"
+                               [(ngModel)]="model.phone_2"
+                               #phone_2="ngModel"
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="register-label"
+                                   for="photo">Photography</label>
+                            <input type="file"
+                                   id="photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- third step -->
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="register-label" for="country">Country</label>
+                <select class="form-control" id="country"
+                        name="country"
+                        [(ngModel)]="model.country"
+                        #country="ngModel"
+                        (change)="onChange($event.target.value)"
+                >
+                    <option *ngFor="let country of countries"
+                            [value]="country">{{country}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="register-label" for="county">County</label>
+                <select class="form-control" id="county"
+                        name="county"
+                        [(ngModel)]="model.county"
+                        #county="ngModel"
+                        (change)="onChange($event.target.value)"
+                >
+                    <option *ngFor="let county of counties"
+                            [value]="county">{{county}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="register-label" for="city">City</label>
+                <select class="form-control" id="city"
+                        name="city"
+                        [(ngModel)]="model.city"
+                        #city="ngModel"
+                        (change)="onChange($event.target.value)"
+                >
+                    <option *ngFor="let city of cities" [value]="city">
+                        {{city}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="register-label" for="pc">Postal Code</label>
+                <input type="text" class="form-control" id="pc"
+                       [(ngModel)]="model.pc" name="pc">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="register-label" for="ad1">Address Line
+                    1*</label>
+                <input type="text" class="form-control input-address"
+                       id="ad1"
+                       [(ngModel)]="model.ad1" name="ad1">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="register-label" for="ad2">Address Line
+                    2</label>
+                <input type="text" class="form-control input-address"
+                       id="ad2"
+                       [(ngModel)]="model.ad2" name="ad2">
+            </div>
+        </div>
+        a
+        <div class="col-md-6 form-group">
+            <button type="submit" class="btn btn-sbm"
+                    [disabled]="!dataForm.form.valid">Submit
+            </button>
+            <button type="reset" class="btn btn-default">Clear</button>
         </div>
     </div>
 </div>

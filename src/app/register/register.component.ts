@@ -61,6 +61,7 @@ export class RegisterComponent implements OnInit {
     }
 
     ngOnInit() {
+        // TODO: nested forms http://stackoverflow.com/questions/43270564/dividing-a-form-into-multiple-components-with-validation
         // Add the register-page class to the body
         // $('body').addClass(this.bodyClasses);
         this.body.classList.add(this.bodyClasses);   // add the class

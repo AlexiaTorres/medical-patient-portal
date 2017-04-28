@@ -64,7 +64,9 @@
                                         <div class="form-group">
                                             <label for="gender">Gender</label>
                                             <select class="form-control disabled-select" id="gender"
-                                                    [(ngModel)]="model.gender" name="gender"
+                                                    [(ngModel)]="model.gender"
+                                                    name="gender"
+                                                    #gender="ngModel"
                                                     disabled>
                                                 <option value=''>- Please choose -</option>
                                                 <option value="female">Female</option>
@@ -139,13 +141,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="patient_ad1">Address
+                                            <label for="ad1">Address
                                                 Line 1</label>
                                             <input type="text"
                                                    class="form-control disabled-input"
-                                                   id="patient_ad1"
+                                                   id="ad1"
                                                    disabled
-                                                   [(ngModel)]="model.patient_ad1" name="patient_ad1">
+                                                   [(ngModel)]="model.ad1" name="ad1">
                                         </div>
                                     </div>
                                     <div class="col-sm-6 b-r">
