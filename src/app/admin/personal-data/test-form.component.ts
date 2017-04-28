@@ -12,28 +12,77 @@ export class TestFormComponent {
     // The schema that will be used to generate a form
     mySchema = {
         properties: {
-            fullUrl: 'http://fhirtest.uhn.ca/baseDstu2/Patient/27944',
+            fullUrl: {
+                'type': 'string',
+                'description': 'url'
+            },
             resource: {
-                resourceType: 'Patient',
-                id: '27944',
-                meta: {
-                    versionId: '4'
+                'type': 'object',
+                resourceType: {
+                    'type': 'string',
+                    'description': 'Patient'
                 },
-                lastUpdated: '2017-04-23T23:05:15.587-04:00'
+                id: {
+                    'type': 'number',
+                    'description': '27944'
+                },
+                meta: {
+                    'type': 'object',
+                    versionId: {
+                        'type': 'string',
+                        'description': '4'
+                    },
+                    lastUpdated: {
+                        'type': 'string',
+                        'description': '2017-04-23T23:05:15.587-04:00'
+                    }
+                },
+                text: {
+                    'type': 'object',
+                    status: {
+                        'type': 'string',
+                        'description': 'generated'
+                    },
+                    div: {
+                        'type': 'string',
+                        'description': 'div'
+                    }
+                },
+                name: [
+                    {
+                        use: 'official',
+                        text: 'SANTIAGO KUROWSKI',
+                        family: [
+                            'KUROWSKI'
+                        ],
+                        given: [
+                            'SANTIAGO'
+                        ]
+                    },
+                    {
+                        family: {
+                            'type': 'array',
+                        },
+                        given: {
+                            'type': 'array'
+                        }
+                    }
+                ],
+                gender: {
+                    'type': 'string',
+                    'description': 'gender'
+                }
+                ,
+                birthDate: {
+                    'type': 'date',
+                    'description': 'BirthDate'
+                }
             },
-            text: {
-                status: 'generated',
-                div: '<div xmlns="http://www.w3.org/1999/xhtml">SANTIAGO KUROWSKI</div>'
-            },
-            name: [{
-                use: 'official',
-                text: 'SANTIAGO KUROWSKI',
-                family: ['KUROWSKI'],
-                given: ['SANTIAGO']
-            }],
-            gender: 'female',
-            birthDate: '1937-05-14',
-            search: {'mode': 'match'}
+
+
+            search: {
+                'mode': 'match'
+            }
         }
     };
     myActions = {
@@ -58,7 +107,7 @@ export class TestFormComponent {
         this.client = new FhirClient(this.config);
         this.client.search({type: 'Patient', query: {}}).then((response) => {
             if (response.data) {
-                this.patient = (response.data.entry[0]);
+                this.patient = (response.data.entry[0].resource);
             }
         }, (err) => {
             console.log(err);
