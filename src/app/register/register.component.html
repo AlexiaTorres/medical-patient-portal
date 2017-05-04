@@ -145,18 +145,6 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-12 b-r">
-                                            <label class="register-label" for="patient">Who is the patient?</label>
-                                            <select class="form-control" id="patient"
-                                                    name="patient"
-                                                    [(ngModel)]="model.patient"
-                                                    #patient="ngModel"
-                                                    (change)="onChange($event.target.value)"
-                                            >
-                                                <option *ngFor="let patient of patients" [value]="patient">{{patient}}
-                                                </option>
-                                            </select>
-                                        </div>
                                         <div class="col-sm-6 b-r form-group">
                                             <a href="#tab2" data-toggle="tab">
                                                 <button type="button" id="changetabbutton"
@@ -186,7 +174,18 @@
                                 </div>
                                 <div class="ibox register-float-e-margins">
                                     <div class="ibox-title">
-                                        <h4>Patient Data</h4>
+                                        <div class="col-sm-12 b-r">
+                                            <label class="register-label" for="patient">Who is the patient?</label>
+                                            <select class="form-control" id="patient"
+                                                    name="patient"
+                                                    [(ngModel)]="model.patient"
+                                                    #patient="ngModel"
+                                                    (change)="onChange($event.target.value)"
+                                            >
+                                                <option *ngFor="let patient of patients" [value]="patient">{{patient}}
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="ibox-content">
                                         <div class="row">
