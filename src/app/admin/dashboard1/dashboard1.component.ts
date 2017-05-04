@@ -11,9 +11,9 @@ export class Dashboard1Component implements OnInit {
     // areaChart: morris.GridChart;
     // donutChart: morris.DonutChart;
     // knob: JQuery;
-    // calendar: JQuery;
+     calendar: JQuery;
     //
-     ngOnInit() { }
+     ngOnInit() {
     //     this.areaChart = Morris.Area({
     //         element: 'revenue-chart',
     //         resize: true,
@@ -79,7 +79,7 @@ export class Dashboard1Component implements OnInit {
     //     });
     //
     //     this.knob = jQuery('.knob').knob();
-    //     this.calendar = jQuery('#calendar').datepicker();
+         this.calendar = jQuery('#calendar').datepicker();
     //
     //     jQuery('.connectedSortable').sortable({
     //         placeholder: 'sort-highlight',
@@ -97,6 +97,7 @@ export class Dashboard1Component implements OnInit {
     //         zIndex: 999999
     //     });
     //
-    // }
+     }
 
 }
+

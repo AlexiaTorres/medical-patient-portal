@@ -1,6 +1,32 @@
 .skin-blue .content-header {
     background: #fff !important;
 }
-section.content{
+
+section.content {
     background: #f3f3f4 !important;
+}
+
+.bg-calendar {
+    border: 2px solid #46bfa8 !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ca6d', endColorstr='#00a65a', GradientType=0) !important;
+    color: #222d32;
+    background: transparent;
+}
+
+.btn-dark-blue{
+    background: rgba(255, 255, 255, 0.69);
+    color: #222d32;
+}
+
+.small-box > .inner {
+    padding: 10px;
+    height: 111px !important;
+}
+
+.small-box.bg-aqua{
+    background: #d2d6de !important;
+    /*background: #46bfa8 !important;*/
+}
+.small-box .icon {
+    position: relative !important;
 }

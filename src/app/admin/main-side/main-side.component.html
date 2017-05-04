@@ -8,48 +8,58 @@
             </div>
             <div class="pull-left info">
                 <p>Alexia Torres</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <a [routerLink]="['']"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li>
-                <a href="/admin/dashboard">
+            <li routerLinkActive="active">
+                <a [routerLink]="['/admin/dashboard']">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
-            <li class="treeview active">
-                <a href="/admin/personal-data">
+            <li class="treeview" routerLinkActive="active">
+                <a [routerLink]="['/admin/personal-data']">
                     <i class="fa fa-user"></i>
                     <span>User Data</span>
                     <span class="pull-right-container"></span>
                 </a>
-                <!--<ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed
-                        Sidebar</a></li>
-                </ul>-->
             </li>
-            <li>
-                <a href="#">
+            <li routerLinkActive="active">
+                <a [routerLink]="['/admin']">
                     <i class="fa fa-users"></i> <span>Patients</span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Patient 1</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Patient 2</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Patient 3</a></li>
-                    <li><a href="#"><i class="fa fa-plus-square-o new-patient"></i></a></li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]="['/admin']">
+                            <i class="fa fa-circle-o"></i> Patient 1
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]="['/admin']">
+                            <i class="fa fa-circle-o"></i> Patient 2
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]="['/admin']">
+                            <i class="fa fa-circle-o"></i> Patient 3
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]="['/admin']">
+                            <i class="fa fa-plus-square-o new-patien
+                            t"></i>
+                        </a>
+                    </li>
                 </ul>
             </li>
-            <li>
-                <a href="#">
+            <li routerLinkActive="active">
+                <a [routerLink]="['/admin']">
                     <i class="fa fa-phone"></i> <span>Emergency Contact</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li routerLinkActive="active">
+                <a [routerLink]="['/admin']">
                     <i class="fa fa-calendar"></i> <span>Calendar</span>
                     <span class="pull-right-container">
             </span>

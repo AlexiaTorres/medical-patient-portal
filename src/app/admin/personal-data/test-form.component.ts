@@ -93,7 +93,7 @@ export class TestFormComponent {
             property.reset();
         }
     };
-// Fhir
+    // Fhir
     private client: FhirClient;
 
     private config: any = {
