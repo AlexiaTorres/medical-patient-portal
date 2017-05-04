@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FhirClient} from 'ng-fhir/FhirClient';
-
 @Component({
     selector: 'data-form',
     templateUrl: './data-form.component.html',
@@ -105,6 +104,7 @@ export class DataFormComponent implements OnInit {
             property.reset();
         }
     };
+
     // Fhir
     private client: FhirClient;
 
@@ -112,14 +112,17 @@ export class DataFormComponent implements OnInit {
         'baseUrl': 'http://fhirtest.uhn.ca/baseDstu2',
         'credentials': 'same-origin',
     };
-    public patient: any = {};
 
+    public patient: any = {};
+    public patient_name: any = {};
     constructor() {
 
         this.client = new FhirClient(this.config);
         this.client.search({type: 'Patient', query: {}}).then((response) => {
             if (response.data) {
                 this.patient = (response.data.entry[0].resource);
+                this.patient_name = (response.data.entry[0].resource.name);
+                console.log(this.patient_name);
             }
         }, (err) => {
             console.log(err);
@@ -153,4 +156,11 @@ export class DataFormComponent implements OnInit {
         $('.disabled-select').removeAttr('disabled');
     }
 
+    // onSave(model) {
+    //     this.model.last_name = model.last_name;
+    //     this.editing = false;
+    //     $('.disabled-input').attr('disabled', 'disabled');
+    //     $('.disabled-select').attr('disabled', 'disabled');
+    //     console.log(this.model.last_name);
+    // }
 }

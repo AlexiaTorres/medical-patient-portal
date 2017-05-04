@@ -24,40 +24,40 @@
                                             <input type="text" class="form-control disabled-input" id="first_name"
                                                    required
                                                    disabled
-                                                   [(ngModel)]="patient.birthDate" name="first_name"
-                                                   placeholder="{{patient.birthDate}}">
+                                                   [(ngModel)]="patient_name.given" name="first_name"
+                                                   placeholder="{{patient_name.given}}">
                                             <!--<div [hidden]="!first_name.valid || !first_name.disabled"-->
                                                  <!--class="alert alert-danger">-->
                                                 <!--field required-->
                                             <!--</div>-->
                                         </div>
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="last_name">Last name</label>-->
-                                            <!--<input type="text" class="form-control disabled-input" id="last_name"-->
-                                                   <!--required-->
-                                                   <!--disabled-->
-                                                   <!--[(ngModel)]="model.last_name" name="last_name"-->
-                                                   <!--#last_name="ngModel"-->
-                                                   <!--placeholder="your last name...">-->
+                                        <div class="form-group">
+                                            <label for="last_name">Last name</label>
+                                            <input type="text" class="form-control disabled-input" id="last_name"
+                                                   required
+                                                   disabled
+                                                   [(ngModel)]="patient_name.family" name="last_name"
+                                                   #last_name="ngModel"
+                                                   placeholder="{{patient_name.family}}">
                                             <!--<div [hidden]="last_name.valid || last_name.disabled"-->
                                                  <!--class="alert alert-danger">-->
                                                 <!--field required-->
                                             <!--</div>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="birthday">-->
-                                                <!--Date of Birth-->
-                                                <!--<i class="fa fa-birthday-cake"></i>-->
-                                            <!--</label>-->
-                                            <!--<input id="birthday"-->
-                                                   <!--type="date"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--disabled-->
-                                                   <!--uib-datepicker-popup-->
-                                                   <!--[(ngModel)]="model.birthday" name="birthday"-->
-                                                   <!--#birthday="ngModel"-->
-                                            <!--&gt;-->
-                                        <!--</div>-->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday">
+                                                Date of Birth
+                                                <i class="fa fa-birthday-cake"></i>
+                                            </label>
+                                            <input id="birthday"
+                                                   type="date"
+                                                   class="form-control disabled-input"
+                                                   disabled
+                                                   uib-datepicker-popup
+                                                   [(ngModel)]="patient.birthDate" name="birthday"
+                                                   #birthday="ngModel"
+                                            >
+                                        </div>
                                     </div>
                                     <!--<div class="col-sm-6">-->
                                         <!--<div class="form-group">-->
@@ -305,8 +305,8 @@
 
                     <div [hidden]="!editing">
                         <button
-                                type="submit"
-                                (click)="toUser(model.first_name)"
+                                type="button"
+                                (click)="onSave(model)"
                                 class="btn btn-sbm"
                                 [disabled]="dataForm.form.valid"
                         >Submit
