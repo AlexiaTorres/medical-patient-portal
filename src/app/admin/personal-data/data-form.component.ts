@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FhirClient} from 'ng-fhir/FhirClient';
+// import {FhirClient} from 'ng-fhir/FhirClient';
+
 @Component({
     selector: 'data-form',
     templateUrl: './data-form.component.html',
@@ -21,7 +22,7 @@ export class DataFormComponent implements OnInit {
     icheck: JQuery;
 
     // The schema that will be used to generate a form
-    mySchema = {
+    /*mySchema = {
         properties: {
             fullUrl: {
                 'type': 'string',
@@ -103,10 +104,28 @@ export class DataFormComponent implements OnInit {
         'reset': (property) => {
             property.reset();
         }
+    };*/
+
+    // only design data
+    model = {
+        first_name: 'Alexia',
+        last_name: 'Torres',
+        birthday: '1993-11-20',
+        gender: 'female',
+        doc_type: 'DNI',
+        doc_num: '05467807V',
+        country: 'Spain',
+        city: 'Madrid',
+        county: 'Galapagar',
+        ad1: 'C/San Gregorio 29',
+        pc: '28260',
+        phone_type_1: 'Mobile',
+        phone_1: '611489220',
+        email: 'alexia.torres@commonms.com'
     };
 
     // Fhir
-    private client: FhirClient;
+   /* private client: FhirClient;
 
     private config: any = {
         'baseUrl': 'http://fhirtest.uhn.ca/baseDstu2',
@@ -115,6 +134,7 @@ export class DataFormComponent implements OnInit {
 
     public patient: any = {};
     public patient_name: any = {};
+
     constructor() {
 
         this.client = new FhirClient(this.config);
@@ -132,7 +152,7 @@ export class DataFormComponent implements OnInit {
     myStringify(obj: any): string {
         return JSON.stringify(obj, null, '  ');
     }
-
+*/
     ngOnInit() {
         // Add the register-page class to the body
         // $('body').addClass(this.bodyClasses);
@@ -156,11 +176,10 @@ export class DataFormComponent implements OnInit {
         $('.disabled-select').removeAttr('disabled');
     }
 
-    // onSave(model) {
-    //     this.model.last_name = model.last_name;
-    //     this.editing = false;
-    //     $('.disabled-input').attr('disabled', 'disabled');
-    //     $('.disabled-select').attr('disabled', 'disabled');
-    //     console.log(this.model.last_name);
-    // }
+    onSave(model) {
+        this.model.last_name = model.last_name;
+        this.editing = false;
+        $('.disabled-input').attr('disabled', 'disabled');
+        $('.disabled-select').attr('disabled', 'disabled');
+    }
 }

@@ -24,25 +24,25 @@
                                             <input type="text" class="form-control disabled-input" id="first_name"
                                                    required
                                                    disabled
-                                                   [(ngModel)]="patient_name.given" name="first_name"
-                                                   placeholder="{{patient_name.given}}">
-                                            <!--<div [hidden]="!first_name.valid || !first_name.disabled"-->
-                                                 <!--class="alert alert-danger">-->
-                                                <!--field required-->
-                                            <!--</div>-->
+                                                   [(ngModel)]="model.first_name" name="first_name"
+                                                   placeholder="{{model.first_name}}">
+                                            <div [hidden]="!model.first_name.valid || !model.first_name.disabled"
+                                                 class="alert alert-danger">
+                                                field required
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="last_name">Last name</label>
                                             <input type="text" class="form-control disabled-input" id="last_name"
                                                    required
                                                    disabled
-                                                   [(ngModel)]="patient_name.family" name="last_name"
+                                                   [(ngModel)]="model.last_name" name="last_name"
                                                    #last_name="ngModel"
-                                                   placeholder="{{patient_name.family}}">
-                                            <!--<div [hidden]="last_name.valid || last_name.disabled"-->
-                                                 <!--class="alert alert-danger">-->
-                                                <!--field required-->
-                                            <!--</div>-->
+                                                   placeholder="{{model.last_name}}">
+                                            <div [hidden]="last_name.valid || last_name.disabled"
+                                                 class="alert alert-danger">
+                                                field required
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="birthday">
@@ -54,247 +54,247 @@
                                                    class="form-control disabled-input"
                                                    disabled
                                                    uib-datepicker-popup
-                                                   [(ngModel)]="patient.birthDate" name="birthday"
+                                                   [(ngModel)]="model.birthDate" name="birthday"
                                                    #birthday="ngModel"
                                             >
                                         </div>
                                     </div>
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="gender">Gender</label>-->
-                                            <!--<select class="form-control disabled-select" id="gender"-->
-                                                    <!--[(ngModel)]="model.gender"-->
-                                                    <!--name="gender"-->
-                                                    <!--#gender="ngModel"-->
-                                                    <!--disabled>-->
-                                                <!--<option value=''>- Please choose -</option>-->
-                                                <!--<option value="female">Female</option>-->
-                                                <!--<option value="male">Male</option>-->
-                                                <!--<option value="unknown">Unknown</option>-->
-                                            <!--</select>-->
-                                        <!--</div>-->
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label>
+                                            <select class="form-control disabled-select" id="gender"
+                                                    [(ngModel)]="model.gender"
+                                                    name="gender"
+                                                    #gender="ngModel"
+                                                    disabled>
+                                                <option value=''>- Please choose -</option>
+                                                <option value="female">Female</option>
+                                                <option value="male">Male</option>
+                                                <option value="unknown">Unknown</option>
+                                            </select>
+                                        </div>
 
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="doc_type">Document Type</label>-->
-                                            <!--<select class="form-control disabled-select" id="doc_type"-->
-                                                    <!--[(ngModel)]="model.doc_type"-->
-                                                    <!--name="doc_type"-->
-                                                    <!--disabled>-->
-                                                <!--<option value=''>- DNI/NIE -</option>-->
-                                                <!--<option value="DNI">DNI</option>-->
-                                                <!--<option value="NIE">NIE</option>-->
-                                            <!--</select>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="doc_num">Document number</label>-->
-                                            <!--<input type="text"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--id="doc_num"-->
-                                                   <!--[(ngModel)]="model.doc_num"-->
-                                                   <!--name="doc_num"-->
-                                                   <!--disabled>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
+                                        <div class="form-group">
+                                            <label for="doc_type">Document Type</label>
+                                            <select class="form-control disabled-select" id="doc_type"
+                                                    [(ngModel)]="model.doc_type"
+                                                    name="doc_type"
+                                                    disabled>
+                                                <option value=''>- DNI/NIE -</option>
+                                                <option value="DNI">DNI</option>
+                                                <option value="NIE">NIE</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="doc_num">Document number</label>
+                                            <input type="text"
+                                                   class="form-control disabled-input"
+                                                   id="doc_num"
+                                                   [(ngModel)]="model.doc_num"
+                                                   name="doc_num"
+                                                   disabled>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!--<div class="col-md-6">-->
-                        <!--<div class="ibox float-e-margins">-->
-                            <!--<div class="ibox-title">-->
-                                <!--<h4>Address</h4>-->
-                            <!--</div>-->
-                            <!--<div class="ibox-content">-->
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-6 b-r">-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="city">Country</label>-->
-                                            <!--<select class="form-control disabled-select" id="country"-->
-                                                    <!--required-->
-                                                    <!--disabled-->
-                                                    <!--[(ngModel)]="model.country" name="country"-->
-                                                    <!--#country="ngModel">-->
-                                                <!--<option *ngFor="let country of countries" [value]="country">-->
-                                                    <!--{{country}}-->
-                                                <!--</option>-->
-                                            <!--</select>-->
-                                            <!--<div [hidden]="country.valid || country.pristine"-->
-                                                 <!--class="alert alert-danger">-->
-                                                <!--Country is required-->
-                                            <!--</div>-->
-                                        <!--</div>-->
+                    <div class="col-md-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h4>Address</h4>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-6 b-r">
+                                        <div class="form-group">
+                                            <label for="city">Country</label>
+                                            <select class="form-control disabled-select" id="country"
+                                                    required
+                                                    disabled
+                                                    [(ngModel)]="model.country" name="country"
+                                                    #country="ngModel">
+                                                <option *ngFor="let country of countries" [value]="country">
+                                                    {{country}}
+                                                </option>
+                                            </select>
+                                            <div [hidden]="country.valid || country.pristine"
+                                                 class="alert alert-danger">
+                                                Country is required
+                                            </div>
+                                        </div>
 
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="city">County</label>-->
-                                            <!--<select class="form-control disabled-select" id="county"-->
-                                                    <!--required-->
-                                                    <!--disabled-->
-                                                    <!--[(ngModel)]="model.county" name="county"-->
-                                                    <!--#county="ngModel">-->
-                                                <!--<option *ngFor="let county of counties" [value]="county">{{county}}-->
-                                                <!--</option>-->
-                                            <!--</select>-->
-                                            <!--<div [hidden]="county.valid || county.pristine" class="alert alert-danger">-->
-                                                <!--County is required-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="ad1">Address-->
-                                                <!--Line 1</label>-->
-                                            <!--<input type="text"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--id="ad1"-->
-                                                   <!--disabled-->
-                                                   <!--[(ngModel)]="model.ad1" name="ad1">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-sm-6 b-r">-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="city">City</label>-->
-                                            <!--<select class="form-control disabled-select" id="city"-->
-                                                    <!--required-->
-                                                    <!--disabled-->
-                                                    <!--[(ngModel)]="model.city" name="city"-->
-                                                    <!--#city="ngModel">-->
-                                                <!--<option *ngFor="let city of cities" [value]="city">{{city}}</option>-->
-                                            <!--</select>-->
-                                            <!--<div [hidden]="city.valid || city.pristine" class="alert alert-danger">-->
-                                                <!--City is required-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="pc">Postal Code</label>-->
-                                            <!--<input type="text"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--id="pc"-->
-                                                   <!--[(ngModel)]="model.pc"-->
-                                                   <!--name="pc"-->
-                                                   <!--disabled>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="patient_ad2">Address-->
-                                                <!--Line 2</label>-->
-                                            <!--<input type="text"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--id="patient_ad2"-->
-                                                   <!--[(ngModel)]="model.patient_ad2"-->
-                                                   <!--name="patient_ad2"-->
-                                                   <!--disabled>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                                        <div class="form-group">
+                                            <label for="city">County</label>
+                                            <select class="form-control disabled-select" id="county"
+                                                    required
+                                                    disabled
+                                                    [(ngModel)]="model.county" name="county"
+                                                    #county="ngModel">
+                                                <option *ngFor="let county of counties" [value]="county">{{county}}
+                                                </option>
+                                            </select>
+                                            <div [hidden]="county.valid || county.pristine" class="alert alert-danger">
+                                                County is required
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ad1">Address
+                                                Line 1</label>
+                                            <input type="text"
+                                                   class="form-control disabled-input"
+                                                   id="ad1"
+                                                   disabled
+                                                   [(ngModel)]="model.ad1" name="ad1">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 b-r">
+                                        <div class="form-group">
+                                            <label for="city">City</label>
+                                            <select class="form-control disabled-select" id="city"
+                                                    required
+                                                    disabled
+                                                    [(ngModel)]="model.city" name="city"
+                                                    #city="ngModel">
+                                                <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                                            </select>
+                                            <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+                                                City is required
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pc">Postal Code</label>
+                                            <input type="text"
+                                                   class="form-control disabled-input"
+                                                   id="pc"
+                                                   [(ngModel)]="model.pc"
+                                                   name="pc"
+                                                   disabled>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="patient_ad2">Address
+                                                Line 2</label>
+                                            <input type="text"
+                                                   class="form-control disabled-input"
+                                                   id="patient_ad2"
+                                                   [(ngModel)]="model.patient_ad2"
+                                                   name="patient_ad2"
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
-                <!--<div class="row">-->
-                    <!--<div class="col-md-6">-->
-                        <!--<div class="ibox float-e-margins">-->
-                            <!--<div class="ibox-title">-->
-                                <!--<h4>Contact Data</h4>-->
-                            <!--</div>-->
-                            <!--<div class="ibox-content">-->
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-6 b-r">-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label-->
-                                                    <!--for="phone_type_1">Phone-->
-                                                <!--Type-->
-                                                <!--1</label>-->
-                                            <!--<select class="form-control disabled-select"-->
-                                                    <!--disabled-->
-                                                    <!--id="phone_type_1"-->
-                                                    <!--name="phone_type_1"-->
-                                                    <!--[(ngModel)]="model.phone_type_1"-->
-                                                    <!--#phone_type_1="ngModel"-->
-                                                    <!--(change)="onChange($event.target.value)"-->
-                                            <!--&gt;-->
-                                                <!--<option *ngFor="let phone_type_1 of phone_types_1"-->
-                                                        <!--[value]="phone_type_1">-->
-                                                    <!--{{phone_type_1}}-->
-                                                <!--</option>-->
-                                            <!--</select>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label-->
-                                                    <!--for="phone_type_2">Phone-->
-                                                <!--Type-->
-                                                <!--2</label>-->
-                                            <!--<select class="form-control disabled-select"-->
-                                                    <!--disabled-->
-                                                    <!--id="phone_type_2"-->
-                                                    <!--name="phone_type_2"-->
-                                                    <!--[(ngModel)]="model.phone_type_2"-->
-                                                    <!--#phone_type_2="ngModel"-->
-                                                    <!--(change)="onChange($event.target.value)"-->
-                                            <!--&gt;-->
-                                                <!--<option *ngFor="let phone_type_2 of phone_types_2"-->
-                                                        <!--[value]="phone_type_2">-->
-                                                    <!--{{phone_type_2}}-->
-                                                <!--</option>-->
-                                            <!--</select>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-sm-6 b-r">-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label-->
-                                                    <!--for="phone_1">Phone-->
-                                                <!--1</label>-->
-                                            <!--<input type="text"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--id="phone_1"-->
-                                                   <!--name="phone_1"-->
-                                                   <!--disabled-->
-                                                   <!--[(ngModel)]="model.phone_1"-->
-                                                   <!--#phone_1="ngModel"-->
-                                            <!--&gt;-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label-->
-                                                    <!--for="phone_2">Phone-->
-                                                <!--2</label>-->
-                                            <!--<input type="text"-->
-                                                   <!--class="form-control disabled-input"-->
-                                                   <!--id="phone_2"-->
-                                                   <!--name="phone_2"-->
-                                                   <!--disabled-->
-                                                   <!--[(ngModel)]="model.phone_2"-->
-                                                   <!--#phone_2="ngModel"-->
-                                            <!--&gt;-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h4>Contact Data</h4>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-6 b-r">
+                                        <div class="form-group">
+                                            <label
+                                                    for="phone_type_1">Phone
+                                                Type
+                                                1</label>
+                                            <select class="form-control disabled-select"
+                                                    disabled
+                                                    id="phone_type_1"
+                                                    name="phone_type_1"
+                                                    [(ngModel)]="model.phone_type_1"
+                                                    #phone_type_1="ngModel"
+                                                    (change)="onChange($event.target.value)"
+                                            >
+                                                <option *ngFor="let phone_type_1 of phone_types_1"
+                                                        [value]="phone_type_1">
+                                                    {{phone_type_1}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label
+                                                    for="phone_type_2">Phone
+                                                Type
+                                                2</label>
+                                            <select class="form-control disabled-select"
+                                                    disabled
+                                                    id="phone_type_2"
+                                                    name="phone_type_2"
+                                                    [(ngModel)]="model.phone_type_2"
+                                                    #phone_type_2="ngModel"
+                                                    (change)="onChange($event.target.value)"
+                                            >
+                                                <option *ngFor="let phone_type_2 of phone_types_2"
+                                                        [value]="phone_type_2">
+                                                    {{phone_type_2}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 b-r">
+                                        <div class="form-group">
+                                            <label
+                                                    for="phone_1">Phone
+                                                1</label>
+                                            <input type="text"
+                                                   class="form-control disabled-input"
+                                                   id="phone_1"
+                                                   name="phone_1"
+                                                   disabled
+                                                   [(ngModel)]="model.phone_1"
+                                                   #phone_1="ngModel"
+                                            >
+                                        </div>
+                                        <div class="form-group">
+                                            <label
+                                                    for="phone_2">Phone
+                                                2</label>
+                                            <input type="text"
+                                                   class="form-control disabled-input"
+                                                   id="phone_2"
+                                                   name="phone_2"
+                                                   disabled
+                                                   [(ngModel)]="model.phone_2"
+                                                   #phone_2="ngModel"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!--<div class="col-md-6">-->
-                        <!--<div class="ibox float-e-margins">-->
-                            <!--<div class="ibox-title">-->
-                                <!--<h4>Account Data</h4>-->
-                            <!--</div>-->
-                            <!--<div class="ibox-content">-->
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-6 b-r">-->
-                                        <!--<div class="form-group">-->
-                                            <!--<label for="email">Email</label>-->
-                                            <!--<input type="email"-->
-                                                   <!--disabled-->
-                                                   <!--class="form-control"-->
-                                                   <!--id="email"-->
-                                                   <!--[(ngModel)]="model.email"-->
-                                                   <!--name="email">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<br/>-->
+                    <div class="col-md-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h4>Account Data</h4>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-6 b-r">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email"
+                                                   disabled
+                                                   class="form-control"
+                                                   id="email"
+                                                   [(ngModel)]="model.email"
+                                                   name="email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
 
                 <div class="form-group center">
                     <div [hidden]="editing">
@@ -308,7 +308,6 @@
                                 type="button"
                                 (click)="onSave(model)"
                                 class="btn btn-sbm"
-                                [disabled]="dataForm.form.valid"
                         >Submit
                         </button>
                         <button type="reset" class="btn btn-default">Clear</button>
