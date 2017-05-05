@@ -12,6 +12,7 @@ import {ControlSidebarComponent} from './control-sidebar/control-sidebar.compone
 import {Dashboard1Component} from './dashboard1/dashboard1.component';
 import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
 import {AppointmentsComponent} from './appointments/appointments.component';
+import {CalendarComponent} from './calendar/calendar.component';
 import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import {TestFormComponent} from './personal-data/test-form.component';
         Dashboard1Component,
         PersonalData,
         AppointmentsComponent,
+        CalendarComponent,
         TestFormComponent
     ],
     providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
