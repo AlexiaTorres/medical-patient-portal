@@ -23,9 +23,29 @@ section.content {
     height: 111px !important;
 }
 
-.small-box.bg-aqua{
+.bg-aqua{
+    background: #46bfa8 !important;
+}
+.bg-aqua > div > .icon{
+    position: relative;
+    margin-left: 2%;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+.bg-aqua > .text{
+    color: #fff;
+    opacity: 0.5;
+    font-size: 20px;
+    margin-top: 5%;
+    font-weight: 200;
+}
+
+.bg-aqua > .text > p{
+    text-align: center;
+}
+.small-box.bg-light-grey{
     background: #d2d6de !important;
-    /*background: #46bfa8 !important;*/
 }
 .small-box .icon {
     position: relative !important;
