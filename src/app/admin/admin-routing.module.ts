@@ -5,6 +5,7 @@ import {AdminComponent} from './admin.component';
 import {Dashboard1Component} from './dashboard1/dashboard1.component';
 import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
 import {AppointmentsComponent} from './appointments/appointments.component';
+import {NewAppointmentComponent} from './appointments/new-appointment.component';
 import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
@@ -29,6 +30,10 @@ import {TestFormComponent} from './personal-data/test-form.component';
                     {
                         path: 'appointments',
                         component: AppointmentsComponent
+                    },
+                    {
+                        path: 'new-appointment',
+                        component: NewAppointmentComponent
                     }
                     ,
                     {
