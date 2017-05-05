@@ -11,6 +11,7 @@ import {FooterComponent} from './footer/footer.component';
 import {ControlSidebarComponent} from './control-sidebar/control-sidebar.component';
 import {Dashboard1Component} from './dashboard1/dashboard1.component';
 import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
+import {AppointmentsComponent} from './appointments/appointments.component';
 import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import {TestFormComponent} from './personal-data/test-form.component';
         ControlSidebarComponent,
         Dashboard1Component,
         PersonalData,
+        AppointmentsComponent,
         TestFormComponent
     ],
     providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
