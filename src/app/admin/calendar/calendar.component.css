@@ -1,11 +1,3 @@
-.skin-blue .content-header {
-    background: #fff !important;
-}
-
-section.content {
-    background: #f3f3f4 !important;
-}
-
 .bg-calendar {
     border: 2px solid #46bfa8 !important;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ca6d', endColorstr='#00a65a', GradientType=0) !important;
@@ -16,37 +8,4 @@ section.content {
 .btn-dark-blue{
     background: rgba(255, 255, 255, 0.69);
     color: #222d32;
-}
-
-.small-box > .inner {
-    padding: 10px;
-    height: 111px !important;
-}
-
-.bg-aqua{
-    background: #46bfa8 !important;
-}
-.bg-aqua > div > .icon{
-    position: relative;
-    margin-left: 2%;
-    z-index: 0;
-    font-size: 90px;
-    color: rgba(0, 0, 0, 0.15);
-}
-.bg-aqua > .text{
-    color: #fff;
-    opacity: 0.5;
-    font-size: 20px;
-    margin-top: 5%;
-    font-weight: 200;
-}
-
-.bg-aqua > .text > p{
-    text-align: center;
-}
-.small-box.bg-light-grey{
-    background: #d2d6de !important;
-}
-.small-box .icon {
-    position: relative !important;
 }
