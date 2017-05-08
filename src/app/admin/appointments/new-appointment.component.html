@@ -1,8 +1,175 @@
 <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
-        
+        <div class="appointment_searcher">
+            <!--<div class="row">
+                <div class="col-md-12 appointment_labels">
+                    <label>Hospital</label>
+                    <label>Speciality</label>
+                    <label>Department</label>
+                    <label>Gender</label>
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="col-md-12 appointment_labels">
+                    <label>Hospital</label>
+                    <ss-multiselect-dropdown [options]="hospital" [texts]="myTexts" [settings]="mySettings"
+                                             [(ngModel)]="hospital_model"></ss-multiselect-dropdown>
+                    <label>Speciality</label>
+                    <ss-multiselect-dropdown [options]="speciality" [texts]="myTexts" [settings]="mySettings"
+                                             [(ngModel)]="speciality_model"></ss-multiselect-dropdown>
+                    <label>Department</label>
+                    <ss-multiselect-dropdown [options]="department" [texts]="myTexts" [settings]="mySettings"
+                                             [(ngModel)]="department_model"></ss-multiselect-dropdown>
+                    <label>Gender</label>
+                    <ss-multiselect-dropdown [options]="gender" [texts]="genderTexts" [settings]="genderSettings"
+                                             [(ngModel)]="gender_model"></ss-multiselect-dropdown>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Date and time range -->
+        <!--<input type="text" name="daterange" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM"/>-->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="flexbox">
+                    <div class="result_div">
+                        <div class="result_list">
+                            <a class="result_line" href="#">
+                                <div class="img_block"
+                                     style="background-image: url('/assets/img/dr_1.jpg'); background-size: auto 80px;"></div>
+                                <div class="name">
+                                    Dr. Kadar
+                                </div>
+                                <div class="speciality">
+                                    Cardiac - Gynaecological - Surgery
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Wednesday 13:</div>
+                                    <div class="appointment_hours">
+                                        11:11 <span class="hour_separator">|</span> 11:31 <span
+                                            class="hour_separator">|</span> 14:23
+                                    </div>
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Tuesday 14:</div>
+                                    <div class="appointment_hours">
+                                        11:13 <span class="hour_separator">|</span> 11:48 <span
+                                            class="hour_separator">|</span> 13:17
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="result_line" href="#">
+                                <div class="img_block"
+                                     style="background-image: url('/assets/img/dr_2.jpg'); background-size: auto 80px;"></div>
+                                <div class="name">
+                                    Dr. Jhonson
+                                </div>
+                                <div class="speciality">
+                                    Ophthalmology - Laryngological - Gynaecological
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Wednesday 13:</div>
+                                    <div class="appointment_hours">
+                                        11:11 <span class="hour_separator">|</span> 11:31 <span
+                                            class="hour_separator">|</span> 14:23
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="result_line" href="#">
+                                <div class="img_block"
+                                     style="background-image: url('/assets/img/dr_3.jpg'); background-size: auto 80px;"></div>
+                                <div class="name">
+                                    Dr. Kyle
+                                </div>
+                                <div class="speciality">
+                                    Dental - Cardiac - Health Care
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Monday 11:</div>
+                                    <div class="appointment_hours">
+                                        16:11 <span class="hour_separator">|</span> 16:37 <span
+                                            class="hour_separator">|</span> 17:21
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="flexbox">
+                    <div class="result_div">
+                        <div class="result_list">
+                            <a class="result_line" href="#">
+                                <div class="img_block"
+                                     style="background-image: url('/assets/img/dr_2.jpg'); background-size: auto 80px;"></div>
+                                <div class="name">
+                                    Dr. Jhonson
+                                </div>
+                                <div class="speciality">
+                                    Ophthalmology - Laryngological - Gynaecological
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Wednesday 13:</div>
+                                    <div class="appointment_hours">
+                                        11:11 <span class="hour_separator">|</span> 11:31 <span
+                                            class="hour_separator">|</span> 14:23
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="result_line" href="#">
+                                <div class="img_block"
+                                     style="background-image: url('/assets/img/dr_1.jpg'); background-size: auto 80px;"></div>
+                                <div class="name">
+                                    Dr. Kadar
+                                </div>
+                                <div class="speciality">
+                                    Cardiac - Gynaecological - Surgery
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Wednesday 13:</div>
+                                    <div class="appointment_hours">
+                                        11:11 <span class="hour_separator">|</span> 11:31 <span
+                                            class="hour_separator">|</span> 14:23
+                                    </div>
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Tuesday 14:</div>
+                                    <div class="appointment_hours">
+                                        11:13 <span class="hour_separator">|</span> 11:48 <span
+                                            class="hour_separator">|</span> 13:17
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="result_line" href="#">
+                                <div class="img_block"
+                                     style="background-image: url('/assets/img/dr_3.jpg'); background-size: auto 80px;"></div>
+                                <div class="name">
+                                    Dr. Kyle
+                                </div>
+                                <div class="speciality">
+                                    Dental - Cardiac - Health Care
+                                </div>
+                                <div class="flexbox">
+                                    <div class="appointment_month">Monday 11:</div>
+                                    <div class="appointment_hours">
+                                        16:11 <span class="hour_separator">|</span> 16:37 <span
+                                            class="hour_separator">|</span> 17:21
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- /.content -->
 </div>
-

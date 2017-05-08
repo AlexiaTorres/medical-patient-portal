@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from 'angular2-schema-form';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 
 import {AdminRoutingModule} from './admin-routing.module';
 import {AdminComponent} from './admin.component';
@@ -21,7 +22,8 @@ import {TestFormComponent} from './personal-data/test-form.component';
         CommonModule,
         AdminRoutingModule,
         FormsModule,
-        SchemaFormModule
+        SchemaFormModule,
+        MultiselectDropdownModule
     ],
     declarations: [
         AdminComponent,
