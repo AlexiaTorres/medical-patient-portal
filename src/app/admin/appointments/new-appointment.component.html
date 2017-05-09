@@ -2,14 +2,6 @@
     <!-- Main content -->
     <section class="content">
         <div class="appointment_searcher">
-            <!--<div class="row">
-                <div class="col-md-12 appointment_labels">
-                    <label>Hospital</label>
-                    <label>Speciality</label>
-                    <label>Department</label>
-                    <label>Gender</label>
-                </div>
-            </div>-->
             <div class="row">
                 <div class="col-md-12 appointment_labels">
                     <label>Hospital</label>
@@ -49,27 +41,54 @@
                                     </div>
                                 </a>
                                 <div class="result_body">
-
+                                    <strong class="month_divider">April 2017</strong>
                                     <div class="flexbox">
-                                        <div class="appointment_month">Wednesday 13:</div>
+                                        <div class="appointment_day">Wednesday 13th</div>
                                         <div class="appointment_hours">
-                                            11:11 <span class="hour_separator">|</span> 11:31 <span
-                                                class="hour_separator">|</span> 14:23
+                                            <a>11:11</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>11:31</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>14:23</a>
                                         </div>
                                     </div>
                                     <div class="flexbox">
-                                        <div class="appointment_month">Tuesday 14:</div>
-                                        1
+                                        <div class="appointment_day">Tuesday 14th</div>
                                         <div class="appointment_hours">
-                                            11:13 <span class="hour_separator">|</span> 11:48 <span
-                                                class="hour_separator">|</span> 13:17
+                                            <a>11:13</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>11:48</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>13:17</a>
+                                        </div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="appointment_day">Monday 18th</div>
+                                        <div class="appointment_hours">
+                                            <a>11:11</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>11:31</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>14:23</a>
+                                        </div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="appointment_day">Thursday 19th</div>
+                                        <div class="appointment_hours">
+                                            <a>11:13</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>11:48</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>13:17</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>14:01</a>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
 
-                            <div [hidden]="displaying_hours">
+                            <div>
                                 <a class="result_line" [hidden]="displaying_hours">
                                     <div class="img_block"
                                          style="background-image: url('../../../assets/img/dr_2.jpg'); background-size: auto 80px;"></div>
@@ -79,17 +98,22 @@
                                     <div class="speciality">
                                         Ophthalmology - Laryngological - Gynaecological
                                     </div>
+                                </a>
+                                <div class="result_body">
                                     <div class="flexbox">
-                                        <div class="appointment_month">Wednesday 13:</div>
+                                        <div class="appointment_day">Wednesday 13:</div>
                                         <div class="appointment_hours">
-                                            11:11 <span class="hour_separator">|</span> 11:31 <span
-                                                class="hour_separator">|</span> 14:23
+                                            <a>11:11</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>11:31</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>14:23</a>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
 
-                            <div [hidden]="displaying_hours">
+                            <div>
                                 <a class="result_line">
                                     <div class="img_block"
                                          style="background-image: url('../../../assets/img/dr_3.jpg'); background-size: auto 80px;"></div>
@@ -99,18 +123,27 @@
                                     <div class="speciality">
                                         Dental - Cardiac - Health Care
                                     </div>
+                                </a>
+                                <div class="result_body">
                                     <div class="flexbox">
-                                        <div class="appointment_month">Monday 11:</div>
+                                        <div class="appointment_day">Monday 11:</div>
                                         <div class="appointment_hours">
-                                            16:11 <span class="hour_separator">|</span> 16:37 <span
-                                                class="hour_separator">|</span> 17:21
+                                            <a>16:11</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>16:37</a>
+                                            <span class="hour_separator">|</span>
+                                            <a>17:21</a>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive logo-searcher" src="../../../assets/img/logos/logo_3.png">
+                <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
             </div>
             <!--<div class="col-md-6" [hidden]="displaying_hours">
                 <div class="flexbox">
@@ -126,7 +159,7 @@
                                     Ophthalmology - Laryngological - Gynaecological
                                 </div>
                                 <div class="flexbox">
-                                    <div class="appointment_month">Wednesday 13:</div>
+                                    <div class="appointment_day">Wednesday 13:</div>
                                     <div class="appointment_hours">
                                         11:11 <span class="hour_separator">|</span> 11:31 <span
                                             class="hour_separator">|</span> 14:23
@@ -144,14 +177,14 @@
                                     Cardiac - Gynaecological - Surgery
                                 </div>
                                 <div class="flexbox">
-                                    <div class="appointment_month">Wednesday 13:</div>
+                                    <div class="appointment_day">Wednesday 13:</div>
                                     <div class="appointment_hours">
                                         11:11 <span class="hour_separator">|</span> 11:31 <span
                                             class="hour_separator">|</span> 14:23
                                     </div>
                                 </div>
                                 <div class="flexbox">
-                                    <div class="appointment_month">Tuesday 14:</div>
+                                    <div class="appointment_day">Tuesday 14:</div>
                                     1
                                     <div class="appointment_hours">
                                         11:13 <span class="hour_separator">|</span> 11:48 <span
@@ -170,7 +203,7 @@
                                     Dental - Cardiac - Health Care
                                 </div>
                                 <div class="flexbox">
-                                    <div class="appointment_month">Monday 11:</div>
+                                    <div class="appointment_day">Monday 11:</div>
                                     <div class="appointment_hours">
                                         16:11 <span class="hour_separator">|</span> 16:37 <span
                                             class="hour_separator">|</span> 17:21

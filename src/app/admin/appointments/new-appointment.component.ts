@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
+import {NgbPaginationConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'new-appointment',
     templateUrl: './new-appointment.component.html',
-    styleUrls: ['./appointments.component.css']
+    styleUrls: ['./appointments.component.css'],
+    providers: [NgbPaginationConfig]
 })
 export class NewAppointmentComponent implements OnInit {
     hospital_model: number[];
@@ -20,6 +22,12 @@ export class NewAppointmentComponent implements OnInit {
     genderTexts: IMultiSelectTexts;
     myTexts: IMultiSelectTexts;
     displaying_hours = false;
+    page = 2;
+
+    constructor(config: NgbPaginationConfig) {
+        config.size = 'sm';
+        config.boundaryLinks = true;
+    }
 
     ngOnInit() {
 

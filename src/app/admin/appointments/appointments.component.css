@@ -1,6 +1,7 @@
-.bg-aqua{
+.bg-aqua {
     background: #46bfa8 !important;
 }
+
 .small-box:hover .icon {
     font-size: 90px !important;
     transform: rotateX(40deg);
@@ -11,10 +12,12 @@
 .small-box > .small-box-footer {
     font-size: 16px;
 }
-section.appointments-section{
+
+section.appointments-section {
     margin-top: 5%;
 }
-ss-multiselect-dropdown{
+
+ss-multiselect-dropdown {
     margin-left: 1em;
     margin-bottom: 2em;
 }
@@ -41,12 +44,12 @@ hr.style15:after {
 }
 
 .check_block {
-    background-position:4px center;
-    background-repeat:no-repeat;
-    border:1px solid #46bfa8;
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    border: 1px solid #46bfa8;
     text-align: right;
     padding: 1px;
-    padding-right:5px;
+    padding-right: 5px;
     height: 19px;
     width: 85px;
 }
@@ -55,7 +58,7 @@ hr.style15:after {
     min-width: 0;
 }
 
-.result_list > div{
+.result_list > div {
     margin-bottom: 0.5em;
 }
 
@@ -85,16 +88,16 @@ hr.style15:after {
 
 .img_block {
     background-color: lightgrey;
-    background-position:50% 50%;
-    background-repeat:no-repeat;
-    border:1px solid #46bfa8;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #46bfa8;
     border-radius: 5px;
-    height:80px;
-    left:10px;
-    margin-top:-41px;
-    position:absolute;
-    top:50%;
-    width:80px;
+    height: 80px;
+    left: 10px;
+    margin-top: -41px;
+    position: absolute;
+    top: 50%;
+    width: 80px;
 }
 
 .name {
@@ -102,11 +105,12 @@ hr.style15:after {
     font-size: 16px;
 }
 
-.appointment_month {
+.appointment_day {
     font-style: italic;
     width: 150px;
     margin-right: 0.5em;
     font-weight: bold;
+    margin-left: 1em;
 }
 
 .appointment_hours {
@@ -119,34 +123,52 @@ hr.style15:after {
     margin-right: 0.5em;
 }
 
+.month_divider{
+    margin-left: 0.5em;
+    border-bottom: 1px solid black;
+}
+
 .speciality {
     margin-top: 10px;
     margin-right: 10px;
     color: #46bfa8;
+    font-weight: bold;
 }
 
-.appointment_labels > label{
+.appointment_labels > label {
     font-size: 14px;
     color: #46bfa8;
     margin-left: 1.5em !important;
 }
 
-.appointment_searcher{
+.appointment_searcher {
     border: 1px solid #46bfa8;
     margin-bottom: 1.5em;
 }
 
-.appointment_searcher > div.row{
+.appointment_searcher > div.row {
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
-.appointment_hours > a{
+.appointment_hours > a {
     cursor: pointer;
 }
 
-.result_body{
+
+.result_body {
     border-left: 1px solid #2c3b41 !important;
     border-right: 1px solid #2c3b41 !important;
     border-bottom: 1px solid #2c3b41 !important;
+}
+
+img.logo-searcher {
+    margin-top: 7%;
+    opacity: 0.3;
+    width: 267px;
+    height: 267px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background: #46bfa8 !important;
 }
