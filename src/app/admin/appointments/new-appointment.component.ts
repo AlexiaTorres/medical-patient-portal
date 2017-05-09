@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
-// declare let $: JQueryStatic;
 
 @Component({
     selector: 'new-appointment',
@@ -20,6 +19,7 @@ export class NewAppointmentComponent implements OnInit {
     genderSettings: IMultiSelectSettings;
     genderTexts: IMultiSelectTexts;
     myTexts: IMultiSelectTexts;
+    displaying_hours = false;
 
     ngOnInit() {
 
@@ -36,7 +36,7 @@ export class NewAppointmentComponent implements OnInit {
             buttonClasses: 'btn btn-default btn-block',
             dynamicTitleMaxItems: 3,
             displayAllSelectedText: true
-        }
+        };
 
         // Text configuration
         this.myTexts = {
@@ -61,21 +61,21 @@ export class NewAppointmentComponent implements OnInit {
         // Labels / Parents
         this.hospital = [
             {id: 1, name: 'A Coruña', isLabel: true},
-            {id: 2, name: 'HOSPITAL QUIRÓNSALUD A CORUÑA', parentId: 1},
+            {id: 2, name: 'Hospital Quirónsalud A Coruña', parentId: 1},
             {id: 3, name: 'Ciudad Real', isLabel: true},
-            {id: 4, name: 'CLÍNICA QUIRÓNSALUD ALCÁZAR', parentId: 3},
-            {id: 5, name: 'HOSPITAL QUIRÓNSALUD CIUDAD REAL', parentId: 3},
+            {id: 4, name: 'Clínica Quirónsalud Alcázar', parentId: 3},
+            {id: 5, name: 'Hospital Quirónsalud Ciudad Real', parentId: 3},
             {id: 6, name: 'Madrid', isLabel: true},
-            {id: 7, name: 'CENTRO MÉDICO TRES CANTOS', parentId: 6},
-            {id: 8, name: 'HOSPITAL DE DÍA QUIRÓNSALUD ALCALÁ DE HENARES', parentId: 6},
-            {id: 9, name: 'HOSPITAL GENERAL DE VILLALBA', parentId: 6},
-            {id: 10, name: 'HOSPITAL LA LUZ', parentId: 6},
-            {id: 11, name: 'HOSPITAL QUIRÓNSALUD SAN JOSÉ', parentId: 6},
-            {id: 12, name: 'HOSPITAL QUIRÓNSALUD SUR', parentId: 6},
-            {id: 13, name: 'HOSPITAL UNIVERSITARIO REY JUAN CARLOS', parentId: 6},
+            {id: 7, name: 'Centro Médico Tres Cantos', parentId: 6},
+            {id: 8, name: 'Hospital de día Quirónsalud Alcalá de Henares', parentId: 6},
+            {id: 9, name: 'Hospital General de Villalba', parentId: 6},
+            {id: 10, name: 'Hospital la Luz', parentId: 6},
+            {id: 11, name: 'Hospital Quirónsalud San José', parentId: 6},
+            {id: 12, name: 'Hospital Quirónsalud Sur', parentId: 6},
+            {id: 13, name: 'Hospital Universitario Rey Juan Carlos', parentId: 6},
             {id: 14, name: 'Toledo', isLabel: true},
-            {id: 15, name: 'HOSPITAL DE DÍA QUIRÓNSALUD TALAVERA', parentId: 14},
-            {id: 16, name: 'HOSPITAL QUIRÓNSALUD TOLEDO', parentId: 14}
+            {id: 15, name: 'Hospital de día Quirónsalud Talavera', parentId: 14},
+            {id: 16, name: 'Hospital Quirónsalud Toledo', parentId: 14}
         ];
         this.department = [
             {id: 1, name: 'Cardial'},
@@ -109,10 +109,15 @@ export class NewAppointmentComponent implements OnInit {
                 format: 'MM/DD/YYYY h:mm A'
             }
         });*/
+       console.log(this.displaying_hours);
     }
 
     onChange() {
         console.log(this.hospital_model);
+    }
+    onDisplayHours() {
+     this.displaying_hours = true;
+     console.log(this.displaying_hours);
     }
 }
 

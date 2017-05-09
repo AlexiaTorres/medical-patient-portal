@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule}   from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AppComponent} from './app.component';
 import {AdminModule} from './admin/admin.module';
@@ -29,7 +30,8 @@ import {HomeModule} from './home.module';
         AdminModule,
         RouterModule,
         AppRoutingModule,
-        HomeModule
+        HomeModule,
+        NgbModule.forRoot()
     ],
     bootstrap: [AppComponent]
 })

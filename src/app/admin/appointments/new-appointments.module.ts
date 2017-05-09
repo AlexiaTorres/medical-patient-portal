@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from 'angular2-schema-form';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AdminRoutingModule} from '../admin-routing.module';
 import {NewAppointmentComponent} from './new-appointment.component';
 
@@ -13,7 +13,8 @@ import {NewAppointmentComponent} from './new-appointment.component';
         AdminRoutingModule,
         FormsModule,
         SchemaFormModule,
-        MultiselectDropdownModule
+        MultiselectDropdownModule,
+        NgbModule.forRoot()
     ],
     declarations: [
         NewAppointmentComponent

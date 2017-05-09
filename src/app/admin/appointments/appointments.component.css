@@ -55,6 +55,10 @@ hr.style15:after {
     min-width: 0;
 }
 
+.result_list > div{
+    margin-bottom: 0.5em;
+}
+
 .result_line {
     display: block;
     color: black;
@@ -74,6 +78,9 @@ hr.style15:after {
 
 .result_line {
     background-color: #D7EAF7;
+    border-left: 1px solid #2c3b41 !important;
+    border-right: 1px solid #2c3b41 !important;
+    border-top: 1px solid #2c3b41 !important;
 }
 
 .img_block {
@@ -109,6 +116,7 @@ hr.style15:after {
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0;
+    margin-right: 0.5em;
 }
 
 .speciality {
@@ -131,4 +139,14 @@ hr.style15:after {
 .appointment_searcher > div.row{
     margin-bottom: 1em;
     margin-top: 1em;
+}
+
+.appointment_hours > a{
+    cursor: pointer;
+}
+
+.result_body{
+    border-left: 1px solid #2c3b41 !important;
+    border-right: 1px solid #2c3b41 !important;
+    border-bottom: 1px solid #2c3b41 !important;
 }
