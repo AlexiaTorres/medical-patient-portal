@@ -1,31 +1,43 @@
 <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
-        <div class="appointment_searcher">
-            <div class="row">
-                <div class="col-md-12 appointment_labels">
-                    <label>Hospital</label>
-                    <ss-multiselect-dropdown [options]="hospital" [texts]="myTexts" [settings]="mySettings"
-                                             [(ngModel)]="hospital_model"></ss-multiselect-dropdown>
-                    <label>Speciality</label>
-                    <ss-multiselect-dropdown [options]="speciality" [texts]="myTexts" [settings]="mySettings"
-                                             [(ngModel)]="speciality_model"></ss-multiselect-dropdown>
-                    <label>Department</label>
-                    <ss-multiselect-dropdown [options]="department" [texts]="myTexts" [settings]="mySettings"
-                                             [(ngModel)]="department_model"></ss-multiselect-dropdown>
-                    <label>Gender</label>
-                    <ss-multiselect-dropdown [options]="gender" [texts]="genderTexts" [settings]="genderSettings"
-                                             [(ngModel)]="gender_model"></ss-multiselect-dropdown>
-                </div>
-            </div>
+        <div class="top_searcher">
+            <h3 class="appointment_title"><i class="fa fa-stethoscope"></i> Appointment Request <i class="fa fa-stethoscope"></i></h3>
+<!--
+            <img class="img-responsive center-block appointment_logo" src="../../../assets/img/logos/logo_2.png">
+-->
         </div>
-
 
         <!-- Date and time range -->
         <!--<input type="text" name="daterange" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM"/>-->
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <div class="appointment_searcher">
+                    <div class="appointment_labels">
+                        <label>Hospital</label>
+                        <br/>
+                        <ss-multiselect-dropdown [options]="hospital" [texts]="myTexts" [settings]="mySettings"
+                                                 [(ngModel)]="hospital_model"></ss-multiselect-dropdown>
+                        <br/>
+                        <label>Speciality</label>
+                        <br/>
+                        <ss-multiselect-dropdown [options]="speciality" [texts]="myTexts" [settings]="mySettings"
+                                                 [(ngModel)]="speciality_model"></ss-multiselect-dropdown>
+                        <br/>
+                        <label>Department</label>
+                        <br/>
+                        <ss-multiselect-dropdown [options]="department" [texts]="myTexts" [settings]="mySettings"
+                                                 [(ngModel)]="department_model"></ss-multiselect-dropdown>
+                        <br/>
+                        <label>Gender</label>
+                        <br/>
+                        <ss-multiselect-dropdown [options]="gender" [texts]="genderTexts" [settings]="mySettings"
+                                                 [(ngModel)]="gender_model"></ss-multiselect-dropdown>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
                 <div class="flexbox">
                     <div class="result_div">
                         <div class="result_list">
@@ -41,50 +53,65 @@
                                     </div>
                                 </a>
                                 <div class="result_body">
-                                    <strong class="month_divider">April 2017</strong>
-                                    <div class="flexbox">
-                                        <div class="appointment_day">Wednesday 13th</div>
-                                        <div class="appointment_hours">
-                                            <a>11:11</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>11:31</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>14:23</a>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <strong class="month_divider">April 2017</strong>
+                                            <div class="flexbox">
+                                                <div class="appointment_day">Wednesday 13th</div>
+                                                <div class="appointment_hours">
+                                                    <a (click)="showMorningAvailability()">Morning</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showNightAvailability()">Night</a>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="appointment_day">Tuesday 14th</div>
+                                                <div class="appointment_hours">
+                                                    <a (click)="showMorningAvailability()">Morning</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showNightAvailability()">Night</a>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="appointment_day">Monday 18th</div>
+                                                <div class="appointment_hours">
+                                                    <a (click)="showMorningAvailability()">Morning</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showNightAvailability()">Night</a>
+                                                </div>
+                                            </div>
+                                            <div class="flexbox">
+                                                <div class="appointment_day">Thursday 19th</div>
+                                                <div class="appointment_hours">
+                                                    <a (click)="showMorningAvailability()">Morning</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showNightAvailability()">Night</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 availability">
+                                            <strong>{{availability_moment}}</strong>
+                                            <div class="flexbox">
+                                                <div class="appointment_hours availability-list">
+                                                    <a *ngFor="let hour of availability_hours; let isLast = last"
+                                                       (click)="onHourSelected()">
+                                                        {{hour}}{{isLast ? '' : ' | ' }}
+                                                        <span *ngIf="availability_hours.indexOf(hour) === 2">
+                                                            <br/>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="flexbox">
-                                        <div class="appointment_day">Tuesday 14th</div>
-                                        <div class="appointment_hours">
-                                            <a>11:13</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>11:48</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>13:17</a>
-                                        </div>
-                                    </div>
-                                    <div class="flexbox">
-                                        <div class="appointment_day">Monday 18th</div>
-                                        <div class="appointment_hours">
-                                            <a>11:11</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>11:31</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>14:23</a>
-                                        </div>
-                                    </div>
-                                    <div class="flexbox">
-                                        <div class="appointment_day">Thursday 19th</div>
-                                        <div class="appointment_hours">
-                                            <a>11:13</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>11:48</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>13:17</a>
-                                            <span class="hour_separator">|</span>
-                                            <a>14:01</a>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
 
@@ -103,11 +130,11 @@
                                     <div class="flexbox">
                                         <div class="appointment_day">Wednesday 13:</div>
                                         <div class="appointment_hours">
-                                            <a>11:11</a>
+                                            <a (click)="onHourSelected()">11:11</a>
                                             <span class="hour_separator">|</span>
-                                            <a>11:31</a>
+                                            <a (click)="onHourSelected()">11:31</a>
                                             <span class="hour_separator">|</span>
-                                            <a>14:23</a>
+                                            <a (click)="onHourSelected()">14:23</a>
                                         </div>
                                     </div>
                                 </div>
@@ -128,11 +155,11 @@
                                     <div class="flexbox">
                                         <div class="appointment_day">Monday 11:</div>
                                         <div class="appointment_hours">
-                                            <a>16:11</a>
+                                            <a (click)="onHourSelected()">16:11</a>
                                             <span class="hour_separator">|</span>
-                                            <a>16:37</a>
+                                            <a (click)="onHourSelected()">16:37</a>
                                             <span class="hour_separator">|</span>
-                                            <a>17:21</a>
+                                            <a (click)="onHourSelected()">17:21</a>
                                         </div>
                                     </div>
                                 </div>
@@ -140,10 +167,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <img class="img-responsive logo-searcher" src="../../../assets/img/logos/logo_3.png">
-                <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
+                <ngb-pagination [pageSize]="10" [collectionSize]="80" [(page)]="page"></ngb-pagination>
             </div>
             <!--<div class="col-md-6" [hidden]="displaying_hours">
                 <div class="flexbox">

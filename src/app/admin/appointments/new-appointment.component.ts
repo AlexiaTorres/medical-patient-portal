@@ -21,9 +21,11 @@ export class NewAppointmentComponent implements OnInit {
     genderSettings: IMultiSelectSettings;
     genderTexts: IMultiSelectTexts;
     myTexts: IMultiSelectTexts;
-    displaying_hours = false;
+    separator = `<span class="hour_separator">|</span>`;
+    availability_moment: string;
+    availability_hours = [];
+    hour_selected = false;
     page = 2;
-
     constructor(config: NgbPaginationConfig) {
         config.size = 'sm';
         config.boundaryLinks = true;
@@ -35,14 +37,14 @@ export class NewAppointmentComponent implements OnInit {
         this.mySettings = {
             enableSearch: true,
             checkedStyle: 'fontawesome',
-            buttonClasses: 'btn btn-default btn-block',
-            dynamicTitleMaxItems: 3,
+            buttonClasses: 'btn btn-aqua btn-block',
+            dynamicTitleMaxItems: 1,
             displayAllSelectedText: true
         };
         this.genderSettings = {
             checkedStyle: 'fontawesome',
             buttonClasses: 'btn btn-default btn-block',
-            dynamicTitleMaxItems: 3,
+            dynamicTitleMaxItems: 1,
             displayAllSelectedText: true
         };
 
@@ -110,22 +112,42 @@ export class NewAppointmentComponent implements OnInit {
             {id: 2, name: 'Male doctor'}
         ];
 
-       /* $('input[name="daterange"]').daterangepicker({
-            timePicker: true,
-            timePickerIncrement: 30,
-            locale: {
-                format: 'MM/DD/YYYY h:mm A'
-            }
-        });*/
-       console.log(this.displaying_hours);
+        /* $('input[name="daterange"]').daterangepicker({
+         timePicker: true,
+         timePickerIncrement: 30,
+         locale: {
+         format: 'MM/DD/YYYY h:mm A'
+         }
+         });*/
     }
 
     onChange() {
         console.log(this.hospital_model);
     }
-    onDisplayHours() {
-     this.displaying_hours = true;
-     console.log(this.displaying_hours);
+
+    onHourSelected() {
+        this.hour_selected = true;
+        console.log(this.hour_selected);
+    }
+
+    showMorningAvailability() {
+        this.availability_hours = ['09:11', '09:48', '10:17', '11:13'];
+        this.availability_moment = 'Morning';
+    }
+
+    showAfternoonAvailability() {
+        this.availability_hours = ['12:17', '13:21', '14:39']
+        this.availability_moment = 'Afternoon';
+    }
+
+    showNightAvailability() {
+        this.availability_hours = [
+            '20:21', '20:29', '21:03', '21:11',
+            '20:21', '20:29', '21:03', '21:11',
+            '20:21', '20:29', '21:03', '21:11',
+            '20:21', '20:29', '21:03', '21:11',
+            '20:21', '20:29', '21:03', '21:11'];
+        this.availability_moment = 'Night';
     }
 }
 

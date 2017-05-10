@@ -55,7 +55,7 @@ hr.style15:after {
 }
 
 .result_div {
-    min-width: 0;
+    width: 100%;
 }
 
 .result_list > div {
@@ -123,7 +123,7 @@ hr.style15:after {
     margin-right: 0.5em;
 }
 
-.month_divider{
+.month_divider {
     margin-left: 0.5em;
     border-bottom: 1px solid black;
 }
@@ -135,26 +135,25 @@ hr.style15:after {
     font-weight: bold;
 }
 
-.appointment_labels > label {
+.appointment_labels {
     font-size: 14px;
     color: #46bfa8;
     margin-left: 1.5em !important;
 }
 
-.appointment_searcher {
-    border: 1px solid #46bfa8;
-    margin-bottom: 1.5em;
+.appointment_labels > label:first-child{
+    margin-top: 2em !important;
 }
-
-.appointment_searcher > div.row {
-    margin-bottom: 1em;
-    margin-top: 1em;
+.appointment_labels > .btn-aqua:last-child{
+    margin-bottom: 2em !important;
+}
+.appointment_labels > label {
+    margin-top: 0.5em;
 }
 
 .appointment_hours > a {
     cursor: pointer;
 }
-
 
 .result_body {
     border-left: 1px solid #2c3b41 !important;
@@ -169,6 +168,49 @@ img.logo-searcher {
     height: 267px;
 }
 
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
     background: #46bfa8 !important;
+}
+
+ngb-pagination {
+    margin-left: 12%;
+}
+
+img.appointment_logo, .appointment_title {
+    opacity: 0.4;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #46bfa8;
+}
+
+.btn-aqua {
+    border: 2px solid #46bfa8 !important;
+    background: rgba(255, 255, 255, 0.51);
+    width: 60%;
+}
+
+.dropdown-inline[_ngcontent-c7] {
+    width: 60%;
+}
+
+.availability{
+    margin-left: -10%;
+}
+
+.availability-list{
+    overflow-y: auto;
+    height: 60px;
+}
+@media (max-width: 1184px) {
+    .availability{
+        margin-left: 0.5em;
+        margin-top: 1em;
+    }
+    .result_div{
+        margin-top: 1em;
+    }
+}
+
+.hour_separator:last-child{
+    display: none;
 }
