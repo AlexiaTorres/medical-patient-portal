@@ -108,7 +108,6 @@ hr.style15:after {
 .appointment_day {
     font-style: italic;
     width: 150px;
-    margin-right: 0.5em;
     font-weight: bold;
     margin-left: 1em;
 }
@@ -155,6 +154,25 @@ hr.style15:after {
     cursor: pointer;
 }
 
+.appointment_hours.availability_mobile > a,
+.appointment_hours.availability_mobile > span{
+    display: none;
+}
+@media (max-width: 768px) {
+    .appointment_hours.availability_desktop > a,
+    .appointment_hours.availability_desktop > span {
+        display: none !important;
+    }
+    .appointment_hours.availability_mobile > a,
+    .appointment_hours.availability_mobile > span{
+        display: inline-flex !important;
+    }
+    .appointment_hours.availability_mobile{
+        position: absolute;
+        left: 8%;
+    }
+}
+
 .result_body {
     border-left: 1px solid #2c3b41 !important;
     border-right: 1px solid #2c3b41 !important;
@@ -172,9 +190,6 @@ img.logo-searcher {
     background: #46bfa8 !important;
 }
 
-ngb-pagination {
-    margin-left: 12%;
-}
 
 img.appointment_logo, .appointment_title {
     opacity: 0.4;

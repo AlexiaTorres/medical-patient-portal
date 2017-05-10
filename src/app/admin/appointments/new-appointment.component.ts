@@ -25,6 +25,7 @@ export class NewAppointmentComponent implements OnInit {
     availability_moment: string;
     availability_hours = [];
     hour_selected = false;
+    available_days = ['Wednesday 13th', 'Tuesday 14th', 'Monday 18th', 'Thursday 19th'];
     page = 2;
     constructor(config: NgbPaginationConfig) {
         config.size = 'sm';
@@ -140,14 +141,14 @@ export class NewAppointmentComponent implements OnInit {
         this.availability_moment = 'Afternoon';
     }
 
-    showNightAvailability() {
+    showEveningAvailability() {
         this.availability_hours = [
             '20:21', '20:29', '21:03', '21:11',
             '20:21', '20:29', '21:03', '21:11',
             '20:21', '20:29', '21:03', '21:11',
             '20:21', '20:29', '21:03', '21:11',
             '20:21', '20:29', '21:03', '21:11'];
-        this.availability_moment = 'Night';
+        this.availability_moment = 'Evening';
     }
 }
 

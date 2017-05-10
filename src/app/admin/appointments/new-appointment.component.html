@@ -2,10 +2,11 @@
     <!-- Main content -->
     <section class="content">
         <div class="top_searcher">
-            <h3 class="appointment_title"><i class="fa fa-stethoscope"></i> Appointment Request <i class="fa fa-stethoscope"></i></h3>
-<!--
-            <img class="img-responsive center-block appointment_logo" src="../../../assets/img/logos/logo_2.png">
--->
+            <h3 class="appointment_title"><i class="fa fa-stethoscope"></i> Appointment Request <i
+                    class="fa fa-stethoscope"></i></h3>
+            <!--
+                        <img class="img-responsive center-block appointment_logo" src="../../../assets/img/logos/logo_2.png">
+            -->
         </div>
 
         <!-- Date and time range -->
@@ -56,6 +57,28 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <strong class="month_divider">April 2017</strong>
+                                            <!--
+                                            <div *ngFor="let day of available_days">
+                                                <div class="flexbox">
+                                                    <div class="appointment_day">{{day}}</div>
+                                                    <div class="appointment_hours availability_desktop">
+                                                        <a (click)="showMorningAvailability()">Morning</a>
+                                                        <span class="hour_separator">|</span>
+                                                        <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                        <span class="hour_separator">|</span>
+                                                        <a (click)="showEveningAvailability()">Evening</a>
+                                                    </div>
+                                                    <div class="pull-left appointment_hours availability_mobile">
+                                                        <br/>
+                                                        <a (click)="showMorningAvailability()">Morning</a>
+                                                        <span class="hour_separator">|</span>
+                                                        <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                        <span class="hour_separator">|</span>
+                                                        <a (click)="showEveningAvailability()">Evening</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            -->
                                             <div class="flexbox">
                                                 <div class="appointment_day">Wednesday 13th</div>
                                                 <div class="appointment_hours">
@@ -63,7 +86,7 @@
                                                     <span class="hour_separator">|</span>
                                                     <a (click)="showAfternoonAvailability()">Afternoon</a>
                                                     <span class="hour_separator">|</span>
-                                                    <a (click)="showNightAvailability()">Night</a>
+                                                    <a (click)="showEveningAvailability()">Evening</a>
                                                 </div>
                                             </div>
                                             <div class="flexbox">
@@ -73,7 +96,7 @@
                                                     <span class="hour_separator">|</span>
                                                     <a (click)="showAfternoonAvailability()">Afternoon</a>
                                                     <span class="hour_separator">|</span>
-                                                    <a (click)="showNightAvailability()">Night</a>
+                                                    <a (click)="showEveningAvailability()">Evening</a>
                                                 </div>
                                             </div>
                                             <div class="flexbox">
@@ -83,17 +106,25 @@
                                                     <span class="hour_separator">|</span>
                                                     <a (click)="showAfternoonAvailability()">Afternoon</a>
                                                     <span class="hour_separator">|</span>
-                                                    <a (click)="showNightAvailability()">Night</a>
+                                                    <a (click)="showEveningAvailability()">Evening</a>
                                                 </div>
                                             </div>
                                             <div class="flexbox">
                                                 <div class="appointment_day">Thursday 19th</div>
-                                                <div class="appointment_hours">
+                                                <div class="appointment_hours availability_desktop">
                                                     <a (click)="showMorningAvailability()">Morning</a>
                                                     <span class="hour_separator">|</span>
                                                     <a (click)="showAfternoonAvailability()">Afternoon</a>
                                                     <span class="hour_separator">|</span>
-                                                    <a (click)="showNightAvailability()">Night</a>
+                                                    <a (click)="showEveningAvailability()">Evening</a>
+                                                </div>
+                                                <div class="pull-left appointment_hours availability_mobile">
+                                                    <br/>
+                                                    <a (click)="showMorningAvailability()">Morning</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showAfternoonAvailability()">Afternoon</a>
+                                                    <span class="hour_separator">|</span>
+                                                    <a (click)="showEveningAvailability()">Evening</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <ngb-pagination [pageSize]="10" [collectionSize]="80" [(page)]="page"></ngb-pagination>
+                <ngb-pagination [pageSize]="15" [collectionSize]="80" [(page)]="page"></ngb-pagination>
             </div>
             <!--<div class="col-md-6" [hidden]="displaying_hours">
                 <div class="flexbox">
