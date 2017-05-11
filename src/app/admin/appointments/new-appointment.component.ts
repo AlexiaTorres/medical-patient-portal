@@ -27,13 +27,25 @@ export class NewAppointmentComponent implements OnInit {
     hour_selected = false;
     available_days = ['Wednesday 13th', 'Tuesday 14th', 'Monday 18th', 'Thursday 19th'];
     page = 2;
+    mobile_query = window.matchMedia('(max-width: 768px)');
+    showing_searcher = false;
+
     constructor(config: NgbPaginationConfig) {
         config.size = 'sm';
         config.boundaryLinks = true;
     }
 
     ngOnInit() {
-
+        if (this.mobile_query.matches) {
+            $('div.appointment_hours.availability_mobile').addClass('availability_mobile').removeClass('availability_desktop');
+            $('button.searcher-btn').show();
+            if (!this.showing_searcher) {
+                $('.appointment_searcher').hide();
+            }
+        } else {
+            $('div.appointment_hours.availability_mobile').addClass('availability_desktop').removeClass('availability_mobile');
+            $('button.searcher-btn').hide();
+        }
         // Settings configuration
         this.mySettings = {
             enableSearch: true,
@@ -128,7 +140,6 @@ export class NewAppointmentComponent implements OnInit {
 
     onHourSelected() {
         this.hour_selected = true;
-        console.log(this.hour_selected);
     }
 
     showMorningAvailability() {
@@ -149,6 +160,16 @@ export class NewAppointmentComponent implements OnInit {
             '20:21', '20:29', '21:03', '21:11',
             '20:21', '20:29', '21:03', '21:11'];
         this.availability_moment = 'Evening';
+    }
+
+    showSearcher() {
+        this.showing_searcher ? this.showing_searcher = false : this.showing_searcher = true;
+
+        if (this.showing_searcher) {
+            $('.appointment_searcher').show();
+        } else {
+            $('.appointment_searcher').hide();
+        }
     }
 }
 
