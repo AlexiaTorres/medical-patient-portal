@@ -214,7 +214,7 @@ img.appointment_logo, .appointment_title {
 .btn-aqua {
     border: 2px solid #46bfa8 !important;
     background: rgba(255, 255, 255, 0.51);
-    width: 60%;
+    width: 90%;
 }
 
 .searcher-btn {
@@ -225,11 +225,11 @@ img.appointment_logo, .appointment_title {
 .search-btn {
     background: #46bfa8;
     color: #fff;
-    margin-top: 1em;
-    margin-left: 23%;}
+    margin-top: 2em;
+    margin-left: 33%;}
 
 .dropdown-inline[_ngcontent-c7] {
-    width: 60%;
+    width: 90%;
 }
 
 .availability{
@@ -252,4 +252,34 @@ img.appointment_logo, .appointment_title {
 
 .hour_separator:last-child{
     display: none;
+}
+
+.daterangepicker {
+    border: 2px solid #46bfa8 !important;
+    background: rgba(255, 255, 255, 0.51) !important;
+    width: 80% !important;
+}
+
+.date-range-divider {
+    border-top: 1px solid #46bfa8 !important;
+    margin-top: 1em !important;
+    text-align: center !important;
+}
+
+.datepicker-div {
+    margin-left: 10%;
+    margin-top: -5%;
+}
+
+.dropdown-menu {
+    width: 100% !important;
+}
+.dropdown-menu > li > a > span{
+    font-size: 11px !important;
+}
+
+.aqua-input {
+    border: 2px solid #46bfa8 !important;
+    background: rgba(255, 255, 255, 0.51) !important;
+    width: 90% !important;
 }

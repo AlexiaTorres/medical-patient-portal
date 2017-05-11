@@ -40,6 +40,35 @@
                         <ss-multiselect-dropdown [options]="gender" [texts]="genderTexts" [settings]="mySettings"
                                                  [(ngModel)]="gender_model"></ss-multiselect-dropdown>
 
+                        <label for="dr_name">
+                            Dr. name
+                        </label>
+                        <input id="dr_name"
+                               type="text"
+                               class="form-control aqua-input"
+                               name="dr_name"
+                        >
+                        <br/>
+                        <label class="date-range-divider"> Appointment date range</label>
+                        <div class="datepicker-div">
+                            <label for="start_range">
+                                <i class="fa fa-clock"></i>
+                            </label>
+                            <input id="start_range"
+                                   type="date"
+                                   class="form-control daterangepicker"
+                                   name="start_range"
+                            >
+                            <span>to</span>
+                            <label for="end_range">
+                                <i class="fa fa-clock"></i>
+                            </label>
+                            <input id="end_range"
+                                   type="date"
+                                   class="form-control daterangepicker"
+                                   name="end_range"
+                            >
+                        </div>
                     </div>
                     <button class="btn search-btn">
                         Search
