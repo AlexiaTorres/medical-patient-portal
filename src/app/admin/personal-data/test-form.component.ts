@@ -1,3 +1,4 @@
+/*
 import {Component} from '@angular/core';
 import {FhirClient} from 'ng-fhir/FhirClient';
 
@@ -118,3 +119,4 @@ export class TestFormComponent {
         return JSON.stringify(obj, null, '  ');
     }
 }
+*/
