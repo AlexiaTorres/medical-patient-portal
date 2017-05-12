@@ -22,6 +22,10 @@ ss-multiselect-dropdown {
     margin-bottom: 2em;
 }
 
+ss-multiselect-dropdown.patient-input-confirmation{
+    margin: 0;
+}
+
 /*
 hr.style15 {
     border-top: 4px double #46bfa8;
@@ -226,7 +230,27 @@ img.appointment_logo, .appointment_title {
     background: #46bfa8;
     color: #fff;
     margin-top: 2em;
-    margin-left: 33%;}
+    margin-left: 33%;
+}
+.aqua-btn {
+    background: #46bfa8;
+    color: #fff;
+    opacity: 0.7;
+}
+.cancel-btn {
+    background: rgba(215, 15, 15, 0.87);
+    color: #000;
+    opacity: 0.7;
+}
+.aqua-btn:hover {
+    opacity: 1;
+}
+.cancel-btn:hover {
+    opacity: 1;
+}
+.confirm-btns{
+    margin-left: 35%;
+}
 
 .dropdown-inline[_ngcontent-c7] {
     width: 90%;
@@ -309,4 +333,25 @@ img.appointment_logo, .appointment_title {
 .card-content {
     padding: 20px;
     min-height: 200px;
+}
+
+.aqua-text {
+    color: #46bfa8;
+}
+.aqua-text > div > div > i {
+    font-size: 14px;
+}
+.padding-right {
+    padding: 0 !important;
+    margin-left: -10% !important;
+}
+.padding-left {
+    padding-left: 25% !important;
+}
+/*.card-content {
+  margin-left: 30%;
+}*/
+
+.appointment-data-confirmation{
+    font-size: 16px;
 }

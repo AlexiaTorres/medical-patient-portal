@@ -113,7 +113,7 @@
                                             <div class="flexbox">
                                                 <div class="appointment_hours availability-list">
                                                     <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       (click)="onHourSelected()">
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
                                                         {{hour}}{{isLast ? '' : ' | ' }}
                                                         <span *ngIf="availability_hours.indexOf(hour) === 2">
                                                             <br/>
@@ -159,7 +159,7 @@
                                             <div class="flexbox">
                                                 <div class="appointment_hours availability-list">
                                                     <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       (click)="onHourSelected()">
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
                                                         {{hour}}{{isLast ? '' : ' | ' }}
                                                         <span *ngIf="availability_hours.indexOf(hour) === 2">
                                                             <br/>
@@ -205,7 +205,7 @@
                                             <div class="flexbox">
                                                 <div class="appointment_hours availability-list">
                                                     <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       (click)="onHourSelected()">
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
                                                         {{hour}}{{isLast ? '' : ' | ' }}
                                                         <span *ngIf="availability_hours.indexOf(hour) === 2">
                                                             <br/>

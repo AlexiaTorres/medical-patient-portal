@@ -33,7 +33,7 @@ export class AppointmentConfirmationComponent implements OnInit {
             checked: 'item selected',
             checkedPlural: 'items selected',
             searchPlaceholder: 'Find',
-            defaultTitle: 'Select',
+            defaultTitle: 'Alexander Pierce',
             allSelected: 'All selected',
         };
      }
