@@ -29,6 +29,8 @@ export class NewAppointmentComponent implements OnInit {
     page = 2;
     mobile_query = window.matchMedia('(max-width: 768px)');
     showing_searcher = false;
+    startDate = '12-05-2017';
+    endDate = '';
 
     constructor(config: NgbPaginationConfig) {
         config.size = 'sm';
@@ -36,6 +38,7 @@ export class NewAppointmentComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log(this.endDate.setDate(this.startDate.getDate() + 14));
         if (this.mobile_query.matches) {
             $('div.appointment_hours.availability_mobile').addClass('availability_mobile').removeClass('availability_desktop');
             $('button.searcher-btn').show();
