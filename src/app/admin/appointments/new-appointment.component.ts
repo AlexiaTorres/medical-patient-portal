@@ -39,7 +39,6 @@ export class NewAppointmentComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.endDate.setDate(this.startDate.getDate() + 14));
         if (this.mobile_query.matches) {
             $('div.appointment_hours.availability_mobile').addClass('availability_mobile').removeClass('availability_desktop');
             $('button.searcher-btn').show();
