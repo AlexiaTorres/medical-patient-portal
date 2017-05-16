@@ -1,0 +1,84 @@
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="card col-md-10">
+
+                    <div class="card-header"></div>
+
+                    <div class="card-content">
+
+                        <h3 class="aqua-text">
+                            <div class="row">
+                                <div class="col-md-6 padding-left">
+                                    Patient <i class="fa fa-chevron-right"></i>
+                                </div>
+                                <div class="col-md-6 padding-right">
+                                    <ss-multiselect-dropdown class="patient-input-confirmation"
+                                                             [options]="patient"
+                                                             [texts]="myTexts" [settings]="mySettings"
+                                                             [(ngModel)]="patient_model"></ss-multiselect-dropdown>
+
+                                </div>
+                            </div>
+                        </h3>
+                        <h3 class="aqua-text">
+                            <div class="row">
+                                <div class="col-md-6 padding-left">
+                                    Cita <i class="fa fa-chevron-right"></i>
+                                </div>
+                                <div class="col-md-6 padding-right">
+                                    <span class="appointment-data-confirmation text-muted">Wednesday, May 24th, 2017, 10:11 </span>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3 class="aqua-text">
+                            <div class="row">
+                                <div class="col-md-6 padding-left">
+                                    Doctor <i class="fa fa-chevron-right"></i>
+                                </div>
+                                <div class="col-md-6 padding-right">
+                            <span class="appointment-data-confirmation text-muted">
+                                Kyle O'Connor
+                            </span>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3 class="aqua-text">
+                            <div class="row">
+                                <div class="col-md-6 padding-left">
+                                    Hospital <i class="fa fa-chevron-right"></i>
+                                </div>
+                                <div class="col-md-6 padding-right">
+                            <span class="appointment-data-confirmation text-muted">
+                                Hospital General de Villalba
+                            </span>
+                                </div>
+                            </div>
+                        </h3>
+                        <br/>
+                        <div class="row confirm-btns">
+                            <div class="col-sm-2">
+                                <button class="btn aqua-btn pull-left"
+                                        [routerLink]="['/admin/appointments']">
+                                    Confirm
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn cancel-btn pull-left"
+                                        [routerLink]="['/admin/new-appointment']">
+                                    Cancel
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+

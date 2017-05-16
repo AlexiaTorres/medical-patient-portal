@@ -113,7 +113,7 @@
                                             <div class="flexbox">
                                                 <div class="appointment_hours availability-list">
                                                     <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       (click)="onHourSelected()">
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
                                                         {{hour}}{{isLast ? '' : ' | ' }}
                                                         <span *ngIf="availability_hours.indexOf(hour) === 2">
                                                             <br/>
@@ -155,18 +155,18 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4 availability">
-                                            <strong>{{availability_moment}}</strong>
+                                            <!--<strong>{{availability_moment}}</strong>
                                             <div class="flexbox">
                                                 <div class="appointment_hours availability-list">
                                                     <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       (click)="onHourSelected()">
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
                                                         {{hour}}{{isLast ? '' : ' | ' }}
                                                         <span *ngIf="availability_hours.indexOf(hour) === 2">
                                                             <br/>
                                                         </span>
                                                     </a>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -201,18 +201,18 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4 availability">
-                                            <strong>{{availability_moment}}</strong>
+                                            <!--<strong>{{availability_moment}}</strong>
                                             <div class="flexbox">
                                                 <div class="appointment_hours availability-list">
                                                     <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       (click)="onHourSelected()">
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
                                                         {{hour}}{{isLast ? '' : ' | ' }}
                                                         <span *ngIf="availability_hours.indexOf(hour) === 2">
                                                             <br/>
                                                         </span>
                                                     </a>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>

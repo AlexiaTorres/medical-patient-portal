@@ -15,8 +15,9 @@ import {Dashboard1Component} from './dashboard1/dashboard1.component';
 import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
 import {AppointmentsComponent} from './appointments/appointments.component';
 import {NewAppointmentComponent} from './appointments/new-appointment.component';
+import {AppointmentConfirmationComponent} from './appointments/appointment-confirmation.component';
 import {CalendarComponent} from './calendar/calendar.component';
-import {TestFormComponent} from './personal-data/test-form.component';
+//import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
     imports: [
@@ -37,8 +38,9 @@ import {TestFormComponent} from './personal-data/test-form.component';
         PersonalData,
         AppointmentsComponent,
         NewAppointmentComponent,
-        CalendarComponent,
-        TestFormComponent
+        AppointmentConfirmationComponent,
+        CalendarComponent
+        //TestFormComponent
     ],
     providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
     exports: [AdminComponent]

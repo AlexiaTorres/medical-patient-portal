@@ -17,6 +17,7 @@ export class NewAppointmentComponent implements OnInit {
     speciality: IMultiSelectOption[];
     department: IMultiSelectOption[];
     gender: IMultiSelectOption[];
+    patient: IMultiSelectOption[];
     mySettings: IMultiSelectSettings;
     genderSettings: IMultiSelectSettings;
     genderTexts: IMultiSelectTexts;
