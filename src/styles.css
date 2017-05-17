@@ -4,6 +4,7 @@
 @import "app/admin/main-side/main-side.component.css";
 @import "app/admin/dashboard1/dashboard1.component.css";
 @import "app/admin/personal-data/data-form.component.css";
+@import "app/admin/patient/patient.component.css";
 @import "app/admin/calendar/calendar.component.css";
 @import "app/admin/appointments/appointments.component.css";
 @import "app/admin/admin.component.css";

@@ -7,6 +7,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AdminRoutingModule} from './admin-routing.module';
 import {AdminComponent} from './admin.component';
+import {PatientComponent} from './patient/patient.component';
 import {MainSideComponent} from './main-side/main-side.component';
 import {MainHeaderComponent} from './main-header/main-header.component';
 import {FooterComponent} from './footer/footer.component';
@@ -30,6 +31,7 @@ import {CalendarComponent} from './calendar/calendar.component';
     ],
     declarations: [
         AdminComponent,
+        PatientComponent,
         MainSideComponent,
         MainHeaderComponent,
         FooterComponent,

@@ -5,6 +5,7 @@ import {AdminComponent} from './admin.component';
 import {Dashboard1Component} from './dashboard1/dashboard1.component';
 import {DataFormComponent as PersonalData} from './personal-data/data-form.component';
 import {AppointmentsComponent} from './appointments/appointments.component';
+import {PatientComponent} from './patient/patient.component';
 import {NewAppointmentComponent} from './appointments/new-appointment.component';
 import {AppointmentConfirmationComponent} from "./appointments/appointment-confirmation.component";
 // import {TestFormComponent} from './personal-data/test-form.component';
@@ -39,6 +40,10 @@ import {AppointmentConfirmationComponent} from "./appointments/appointment-confi
                     {
                         path: 'new-appointment/confirmation',
                         component: AppointmentConfirmationComponent
+                    },
+                    {
+                        path: 'patient',
+                        component: PatientComponent
                     }
                     /*,
                     {
