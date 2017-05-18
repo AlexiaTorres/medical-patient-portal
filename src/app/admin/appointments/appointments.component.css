@@ -188,6 +188,27 @@ hr.style15:after {
     .flexbox > .appointment_day {
         margin-bottom: 6%;
     }
+    ss-multiselect-dropdown.patient-input-confirmation{
+        margin-left: 0.5em !important;
+    }
+    .fa-chevron-right.chevron{
+        display: none;
+    }
+    .appointment-data-confirmation{
+        margin-left: 1em !important;
+    }
+    .aqua-text > div.row > div.col-md-6.padding-left{
+        margin-left: -3em !important;
+    }
+    .card-header{
+        margin-bottom: -40% !important;
+    }
+    .confirm-btns{
+        margin-left: 0 !important;
+    }
+    .cancel-btn{
+        margin-left: 0.5em !important;
+    }
 }
 
 .result_body {

@@ -3,141 +3,53 @@
     <section class="content">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 user-details">
+                <div class="col-md-12">
                     <div class="user-image">
                         <img src="http://www.gravatar.com/avatar/2ab7b2009d27ec37bffee791819a090c?s=100&d=mm&r=g"
                              alt="Karan Singh Sisodia" title="Karan Singh Sisodia" class="img-circle">
                     </div>
-                    <div class="user-info-block">
-                        <div class="user-heading">
-                            <h3 class="patient-title">Alexander Pierce</h3>
-                        </div>
-                        <ul class="patient-navigation">
-                            <li class="active">
-                                <a data-toggle="tab" href="#personalData">
-                                    <span class="fa fa-user"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#address">
-                                    <span class="fa fa-home"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#contact">
-                                    <span class="fa fa-address-card-o"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#appointments">
-                                    <span class="fa fa-stethoscope"></span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="user-body">
-                            <div class="tab-content">
-                                <div id="personalData" class="tab-pane active">
-                                    <h3>Personal Data</h3>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="ibox float-e-margins">
-                                                <div class="ibox-content">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 b-r">
-                                                            <div class="form-group">
-                                                                <label for="first_name">First Name</label>
-                                                                <input type="text" class="form-control disabled-input"
-                                                                       id="first_name"
-                                                                       required
-                                                                       disabled
-                                                                       [(ngModel)]="model.first_name" name="first_name"
-                                                                       placeholder="{{model.first_name}}">
-                                                                <div [hidden]="!model.first_name.valid || !model.first_name.disabled"
-                                                                     class="alert alert-danger">
-                                                                    field required
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="last_name">Last name</label>
-                                                                <input type="text" class="form-control disabled-input"
-                                                                       id="last_name"
-                                                                       required
-                                                                       disabled
-                                                                       [(ngModel)]="model.last_name" name="last_name"
-                                                                       #last_name="ngModel"
-                                                                       placeholder="{{model.last_name}}">
-                                                                <div [hidden]="last_name.valid || last_name.disabled"
-                                                                     class="alert alert-danger">
-                                                                    field required
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="birthday">
-                                                                    Date of Birth
-                                                                    <i class="fa fa-birthday-cake"></i>
-                                                                </label>
-                                                                <input id="birthday"
-                                                                       type="date"
-                                                                       class="form-control disabled-input"
-                                                                       disabled
-                                                                       uib-datepicker-popup
-                                                                       [(ngModel)]="model.birthDate" name="birthday"
-                                                                       #birthday="ngModel"
-                                                                >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label for="gender">Gender</label>
-                                                                <select class="form-control disabled-select" id="gender"
-                                                                        [(ngModel)]="model.gender"
-                                                                        name="gender"
-                                                                        #gender="ngModel"
-                                                                        disabled>
-                                                                    <option value=''>- Please choose -</option>
-                                                                    <option value="female">Female</option>
-                                                                    <option value="male">Male</option>
-                                                                    <option value="unknown">Unknown</option>
-                                                                </select>
-                                                            </div>
+                    <div class="user-heading">
+                        <h3 class="patient-title">Alexander Pierce</h3>
+                    </div>
+                    <ul class="patient-navigation">
+                        <li class="active">
+                            <a data-toggle="tab" href="#personalData">
+                                <span class="fa fa-user"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#address">
+                                <span class="fa fa-home"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#contact">
+                                <span class="fa fa-address-card-o"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#appointments">
+                                <span class="fa fa-stethoscope"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="user-body">
+                        <div class="tab-content">
+                            <div id="personalData" class="tab-pane active">
+                                <h3>Personal Data</h3>
+                                <patient-personal></patient-personal>
+                            </div>
+                            <div id="address" class="tab-pane">
+                                <h3>Address</h3>
+                                <patient-address></patient-address>
+                            </div>
+                            <div id="contact" class="tab-pane">
+                                <h3>Contact</h3>
+                                <patient-contact></patient-contact>
+                            </div>
+                            <div id="appointments" class="tab-pane">
+                                <h3>Appointments</h3>
 
-                                                            <div class="form-group">
-                                                                <label for="doc_type">Document Type</label>
-                                                                <select class="form-control disabled-select"
-                                                                        id="doc_type"
-                                                                        [(ngModel)]="model.doc_type"
-                                                                        name="doc_type"
-                                                                        disabled>
-                                                                    <option value=''>- DNI/NIE -</option>
-                                                                    <option value="DNI">DNI</option>
-                                                                    <option value="NIE">NIE</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="doc_num">Document number</label>
-                                                                <input type="text"
-                                                                       class="form-control disabled-input"
-                                                                       id="doc_num"
-                                                                       [(ngModel)]="model.doc_num"
-                                                                       name="doc_num"
-                                                                       disabled>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="address" class="tab-pane">
-                                    <h3>Address</h3>
-                                </div>
-                                <div id="contact" class="tab-pane">
-                                    <h3>Contact</h3>
-                                </div>
-                                <div id="appointments" class="tab-pane">
-                                    <h3>Appointments</h3>
-                                </div>
                             </div>
                         </div>
                     </div>

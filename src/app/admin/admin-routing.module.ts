@@ -26,8 +26,16 @@ import {AppointmentConfirmationComponent} from "./appointments/appointment-confi
                         component: Dashboard1Component
                     },
                     {
+                        path: 'new-appointment/confirmation',
+                        component: AppointmentConfirmationComponent
+                    },
+                    {
                         path: 'personal-data',
                         component: PersonalData
+                    },
+                    {
+                        path: 'patient',
+                        component: PatientComponent
                     },
                     {
                         path: 'appointments',
@@ -36,14 +44,6 @@ import {AppointmentConfirmationComponent} from "./appointments/appointment-confi
                     {
                         path: 'new-appointment',
                         component: NewAppointmentComponent
-                    },
-                    {
-                        path: 'new-appointment/confirmation',
-                        component: AppointmentConfirmationComponent
-                    },
-                    {
-                        path: 'patient',
-                        component: PatientComponent
                     }
                     /*,
                     {

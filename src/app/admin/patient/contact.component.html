@@ -1,0 +1,79 @@
+<div class="col-md-6">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h4>Contact Data</h4>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <div class="form-group">
+                        <label
+                                for="phone_type_1">Phone
+                            Type
+                            1</label>
+                        <select class="form-control disabled-select"
+                                disabled
+                                id="phone_type_1"
+                                name="phone_type_1"
+                                [(ngModel)]="model.phone_type_1"
+                                #phone_type_1="ngModel"
+                                (change)="onChange($event.target.value)"
+                        >
+                            <option *ngFor="let phone_type_1 of phone_types_1"
+                                    [value]="phone_type_1">
+                                {{phone_type_1}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label
+                                for="phone_type_2">Phone
+                            Type
+                            2</label>
+                        <select class="form-control disabled-select"
+                                disabled
+                                id="phone_type_2"
+                                name="phone_type_2"
+                                [(ngModel)]="model.phone_type_2"
+                                #phone_type_2="ngModel"
+                                (change)="onChange($event.target.value)"
+                        >
+                            <option *ngFor="let phone_type_2 of phone_types_2"
+                                    [value]="phone_type_2">
+                                {{phone_type_2}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6 b-r">
+                    <div class="form-group">
+                        <label
+                                for="phone_1">Phone
+                            1</label>
+                        <input type="text"
+                               class="form-control disabled-input"
+                               id="phone_1"
+                               name="phone_1"
+                               disabled
+                               [(ngModel)]="model.phone_1"
+                               #phone_1="ngModel"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label
+                                for="phone_2">Phone
+                            2</label>
+                        <input type="text"
+                               class="form-control disabled-input"
+                               id="phone_2"
+                               name="phone_2"
+                               disabled
+                               [(ngModel)]="model.phone_2"
+                               #phone_2="ngModel"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

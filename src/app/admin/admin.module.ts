@@ -18,6 +18,11 @@ import {AppointmentsComponent} from './appointments/appointments.component';
 import {NewAppointmentComponent} from './appointments/new-appointment.component';
 import {AppointmentConfirmationComponent} from './appointments/appointment-confirmation.component';
 import {CalendarComponent} from './calendar/calendar.component';
+import {PersonalComponent} from './patient/personal.component';
+import {AddressComponent} from './patient/address.component';
+import {ContactComponent} from './patient/contact.component';
+import {AppointmentsComponent as PatientAppointmentsComponent} from './appointments/appointments.component';
+
 //import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
@@ -41,7 +46,11 @@ import {CalendarComponent} from './calendar/calendar.component';
         AppointmentsComponent,
         NewAppointmentComponent,
         AppointmentConfirmationComponent,
-        CalendarComponent
+        CalendarComponent,
+        PersonalComponent,
+        AddressComponent,
+        PatientAppointmentsComponent,
+        ContactComponent
         //TestFormComponent
     ],
     providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],

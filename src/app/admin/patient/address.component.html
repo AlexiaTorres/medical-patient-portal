@@ -1,0 +1,87 @@
+<div class="col-md-6">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h4>Address</h4>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <div class="form-group">
+                        <label for="city">Country</label>
+                        <select class="form-control disabled-select" id="country"
+                                required
+                                disabled
+                                [(ngModel)]="model.country" name="country"
+                                #country="ngModel">
+                            <option *ngFor="let country of countries" [value]="country">
+                                {{country}}
+                            </option>
+                        </select>
+                        <div [hidden]="country.valid || country.pristine"
+                             class="alert alert-danger">
+                            Country is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">County</label>
+                        <select class="form-control disabled-select" id="county"
+                                required
+                                disabled
+                                [(ngModel)]="model.county" name="county"
+                                #county="ngModel">
+                            <option *ngFor="let county of counties" [value]="county">{{county}}
+                            </option>
+                        </select>
+                        <div [hidden]="county.valid || county.pristine" class="alert alert-danger">
+                            County is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ad1">Address
+                            Line 1</label>
+                        <input type="text"
+                               class="form-control disabled-input"
+                               id="ad1"
+                               disabled
+                               [(ngModel)]="model.ad1" name="ad1">
+                    </div>
+                </div>
+                <div class="col-sm-6 b-r">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <select class="form-control disabled-select" id="city"
+                                required
+                                disabled
+                                [(ngModel)]="model.city" name="city"
+                                #city="ngModel">
+                            <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                        </select>
+                        <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+                            City is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pc">Postal Code</label>
+                        <input type="text"
+                               class="form-control disabled-input"
+                               id="pc"
+                               [(ngModel)]="model.pc"
+                               name="pc"
+                               disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="patient_ad2">Address
+                            Line 2</label>
+                        <input type="text"
+                               class="form-control disabled-input"
+                               id="patient_ad2"
+                               [(ngModel)]="model.patient_ad2"
+                               name="patient_ad2"
+                               disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

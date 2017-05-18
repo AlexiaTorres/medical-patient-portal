@@ -35,15 +35,10 @@
     position: relative !important;
 }
 
-.user-details {
-    position: relative;
-    padding: 0;
-}
-
-.user-details .user-image {
+.user-image {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 90%;
     text-align: center;
 }
 
@@ -53,23 +48,13 @@
     position: relative;
 }
 
-.user-details .user-info-block {
-    width: 100%;
-    position: absolute;
-    top: 55px;
-    border: 2px solid #2c3b41;
-    background: rgba(255, 255, 255, 0.51);
-    z-index: 0;
-    padding-top: 35px;
-}
-
-.user-info-block .user-heading {
-    width: 100%;
+.user-heading {
+    width: 90%;
     text-align: center;
     margin: 10px 0 0;
 }
 
-.user-info-block .patient-navigation {
+.patient-navigation {
     float: left;
     width: 100%;
     margin: 0;
@@ -100,9 +85,9 @@
     color: #fff;
 }
 
-.user-info-block .user-body {
+.user-body {
     float: left;
-    padding: 5%;
+    margin: 5%;
     width: 90%;
 }
 
