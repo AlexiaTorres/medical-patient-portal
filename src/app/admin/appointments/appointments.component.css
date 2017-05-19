@@ -84,18 +84,15 @@ hr.style15:after {
 }
 
 .result_line {
-    background-color: #D7EAF7;
-    border-left: 1px solid #2c3b41 !important;
-    border-right: 1px solid #2c3b41 !important;
-    border-top: 1px solid #2c3b41 !important;
+    background-color: #46bfa8;
+    margin-top: 1em !important;
 }
 
 .img_block {
     background-color: lightgrey;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    border: 1px solid #46bfa8;
-    border-radius: 5px;
+    border-radius: 50%;
     height: 80px;
     left: 10px;
     margin-top: -41px;
@@ -107,6 +104,7 @@ hr.style15:after {
 .name {
     font-weight: bold;
     font-size: 16px;
+    color: #fff !important;
 }
 
 .appointment_day {
@@ -138,15 +136,15 @@ hr.style15:after {
 .speciality {
     margin-top: 10px;
     margin-right: 10px;
-    color: #46bfa8;
+    color: #fff;
     font-weight: bold;
 }
 
-.appointment_labels {
+/*.appointment_labels {
     font-size: 14px;
     color: #46bfa8;
     margin-left: 1.5em !important;
-}
+}*/
 
 .appointment_labels > label:first-child{
     margin-top: 2em !important;
@@ -211,12 +209,6 @@ hr.style15:after {
     }
 }
 
-.result_body {
-    border-left: 1px solid #2c3b41 !important;
-    border-right: 1px solid #2c3b41 !important;
-    border-bottom: 1px solid #2c3b41 !important;
-}
-
 img.logo-searcher {
     margin-top: 7%;
     opacity: 0.3;
@@ -237,9 +229,13 @@ img.appointment_logo, .appointment_title {
 }
 
 .btn-aqua {
-    border: 2px solid #46bfa8 !important;
-    background: rgba(255, 255, 255, 0.51);
-    width: 90%;
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    color: #777 !important;
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) !important;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
 }
 
 .searcher-btn {
@@ -299,16 +295,14 @@ img.appointment_logo, .appointment_title {
     display: none;
 }
 
-.daterangepicker {
-    border: 2px solid #46bfa8 !important;
-    background: rgba(255, 255, 255, 0.51) !important;
-    width: 80% !important;
-}
-
-.date-range-divider {
-    border-top: 1px solid #46bfa8 !important;
-    margin-top: 1em !important;
-    text-align: center !important;
+.form-control.daterangepicker {
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    color: #777 !important;
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) !important;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
 }
 
 .datepicker-div {
@@ -323,11 +317,11 @@ img.appointment_logo, .appointment_title {
     font-size: 11px !important;
 }
 
-.aqua-input {
+/*.aqua-input {
     border: 2px solid #46bfa8 !important;
     background: rgba(255, 255, 255, 0.51) !important;
     width: 90% !important;
-}
+}*/
 
 .card {
     display: inline-block;
@@ -375,4 +369,8 @@ img.appointment_logo, .appointment_title {
 
 .appointment-data-confirmation{
     font-size: 16px;
+}
+
+td > a > span.badge{
+    cursor: pointer;
 }
