@@ -24,6 +24,26 @@
 .bg-aqua > .text > p{
     text-align: center;
 }
+
+.small-box {
+    border-radius: 5%;
+}
+
+.small-box-footer{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.small-box.bg-tomato {
+    background: #F07171 !important;
+}
+.small-box.bg-blue {
+    background: #97AAE6 !important;
+}
+
+.small-box.bg-purple{
+    background: #C2A9C6 !important;
+}
 .small-box.bg-light-grey{
     background: #d2d6de !important;
 }
