@@ -182,4 +182,11 @@ export class DataFormComponent implements OnInit {
         $('.disabled-input').attr('disabled', 'disabled');
         $('.disabled-select').attr('disabled', 'disabled');
     }
+
+    onCancel(model) {
+        this.model.last_name = model.last_name;
+        this.editing = false;
+        $('.disabled-input').attr('disabled', 'disabled');
+        $('.disabled-select').attr('disabled', 'disabled');
+    }
 }
