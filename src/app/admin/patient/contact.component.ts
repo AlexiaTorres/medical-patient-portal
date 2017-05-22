@@ -48,4 +48,9 @@ export class ContactComponent implements OnInit {
         $('.disabled-input').attr('disabled', 'disabled');
         $('.disabled-select').attr('disabled', 'disabled');
     }
+    onCancel(model) {
+        this.editing = false;
+        $('.disabled-input').attr('disabled', 'disabled');
+        $('.disabled-select').attr('disabled', 'disabled');
+    }
 }
