@@ -49,28 +49,11 @@
                                name="dr_name"
                         >
                         <br/>
-                        <label class="date-range-divider"> Appointment date range</label>
-                        <div class="datepicker-div">
-                            <label for="start_range">
-                                <i class="fa fa-clock"></i>
-                            </label>
-                            <input id="start_range"
-                                   type="date"
-                                   class="form-control daterangepicker"
-                                   name="start_range"
-                            >
-                            <span>to</span>
-                            <label for="end_range">
-                                <i class="fa fa-clock"></i>
-                            </label>
-                            <input id="end_range"
-                                   type="date"
-                                   class="form-control daterangepicker"
-                                   name="end_range"
-                            >
+                        <div [hidden]="!showing_calendar">
+                            <div id="appointmentCalendar" style="width: 100%"></div>
                         </div>
                     </div>
-                    <button class="btn search-btn">
+                    <button class="btn search-btn" (click)="searchAvailability()">
                         Search
                         <i class="fa fa-search"></i>
                     </button>
@@ -79,55 +62,60 @@
             <div class="col-md-8">
                 <div class="flexbox">
                     <div class="result_div">
-                        <div class="result_list">
+                        <!--<div class="no-results" [hidden]="showing_results">
+                            <img src="../../../assets/img/logos/logo_3.png" class="img-responsive">
+                        </div>-->
+                        <div class="result_list" *ngFor="let doctor of doctors">
                             <div>
                                 <a class="result_line">
                                     <div class="img_block"
-                                         style="background-image: url('../../../assets/img/dr_1.jpg'); background-size: auto 80px;"></div>
+                                         style="background-image: url('../../../assets/img/dr_3.jpg'); background-size: auto 80px;"></div>
                                     <div class="name">
-                                        Dr. Kadar
+                                        {{doctor.name}}
                                     </div>
                                     <div class="speciality">
-                                        Cardiac - Gynaecological - Surgery
+                                        {{doctor.speciality}}
                                     </div>
                                 </a>
+                                <div class="month_divider">
+                                    <strong>April 2017</strong>
+                                </div>
                                 <div class="result_body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong class="month_divider">April 2017</strong>
                                             <table class="table table-hover table-striped">
                                                 <tbody>
-                                                <tr *ngFor="let day of available_days">
-                                                    <td>{{day}}</td>
+                                                <tr>
+                                                    <td><span class="badge badge-day">Wednesday 13th</span></td>
                                                     <td>
                                                         <a (click)="showMorningAvailability()">
-                                                            <span class="badge badge-warning">Morning</span>
+                                                            <span class="badge badge-morning">Morning</span>
                                                         </a>
                                                         <a (click)="showAfternoonAvailability()">
-                                                            <span class="badge badge-warning">Afternoon</span>
+                                                            <span class="badge badge-afternoon">Afternoon</span>
                                                         </a>
                                                         <a (click)="showEveningAvailability()">
-                                                            <span class="badge badge-warning">Evening</span>
+                                                            <span class="badge badge-evening">Evening</span>
                                                         </a>
+                                                    </td>
+                                                    <td>
+                                                        <ul class="nav navbar-nav hours-dropdown">
+                                                            <li class="dropdown">
+                                                                <a href="#" class="dropdown-toggle"
+                                                                   data-toggle="dropdown">
+                                                                    <span class="hidden-xs">10:11</span>
+                                                                </a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a href="#">10:39</a></li>
+                                                                    <li><a href="#">11:17</a></li>
+                                                                    <li><a href="#">11:41</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
                                                     </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
-
-
-
-                                           <!-- <div *ngFor="let day of available_days">
-                                                <div class="flexbox">
-                                                    <div class="appointment_day">{{day}}</div>
-                                                    <div class="appointment_hours moments">
-                                                        <a (click)="showMorningAvailability()">Morning</a>
-                                                        <span class="hour_separator">|</span>
-                                                        <a (click)="showAfternoonAvailability()">Afternoon</a>
-                                                        <span class="hour_separator">|</span>
-                                                        <a (click)="showEveningAvailability()">Evening</a>
-                                                    </div>
-                                                </div>
-                                            </div>-->
                                         </div>
                                         <div class="col-md-4 availability">
                                             <strong>{{availability_moment}}</strong>
@@ -146,175 +134,34 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div>
-                                <a class="result_line" [hidden]="displaying_hours">
-                                    <div class="img_block"
-                                         style="background-image: url('../../../assets/img/dr_2.jpg'); background-size: auto 80px;"></div>
-                                    <div class="name">
-                                        Dr. Jhonson
-                                    </div>
-                                    <div class="speciality">
-                                        Ophthalmology - Laryngological - Gynaecological
-                                    </div>
-                                </a>
-                                <div class="result_body">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <strong class="month_divider">May 2017</strong>
-                                            <div *ngFor="let day of available_days">
-                                                <div class="flexbox">
-                                                    <div class="appointment_day">{{day}}</div>
-                                                    <div class="appointment_hours moments">
-                                                        <a (click)="showMorningAvailability()">Morning</a>
-                                                        <span class="hour_separator">|</span>
-                                                        <a (click)="showAfternoonAvailability()">Afternoon</a>
-                                                        <span class="hour_separator">|</span>
-                                                        <a (click)="showEveningAvailability()">Evening</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 availability">
-                                            <!--<strong>{{availability_moment}}</strong>
-                                            <div class="flexbox">
-                                                <div class="appointment_hours availability-list">
-                                                    <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       [routerLink]="['/admin/new-appointment/confirmation']">
-                                                        {{hour}}{{isLast ? '' : ' | ' }}
-                                                        <span *ngIf="availability_hours.indexOf(hour) === 2">
-                                                            <br/>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a class="result_line">
-                                    <div class="img_block"
-                                         style="background-image: url('../../../assets/img/dr_3.jpg'); background-size: auto 80px;"></div>
-                                    <div class="name">
-                                        Dr. Kyle
-                                    </div>
-                                    <div class="speciality">
-                                        Dental - Cardiac - Health Care
-                                    </div>
-                                </a>
-                                <div class="result_body">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <strong class="month_divider">April 2017</strong>
-                                            <div *ngFor="let day of available_days">
-                                                <div class="flexbox">
-                                                    <div class="appointment_day">{{day}}</div>
-                                                    <div class="appointment_hours moments">
-                                                        <a (click)="showMorningAvailability()">Morning</a>
-                                                        <span class="hour_separator">|</span>
-                                                        <a (click)="showAfternoonAvailability()">Afternoon</a>
-                                                        <span class="hour_separator">|</span>
-                                                        <a (click)="showEveningAvailability()">Evening</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 availability">
-                                            <!--<strong>{{availability_moment}}</strong>
-                                            <div class="flexbox">
-                                                <div class="appointment_hours availability-list">
-                                                    <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       [routerLink]="['/admin/new-appointment/confirmation']">
-                                                        {{hour}}{{isLast ? '' : ' | ' }}
-                                                        <span *ngIf="availability_hours.indexOf(hour) === 2">
-                                                            <br/>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <ngb-pagination [pageSize]="15" [collectionSize]="80" [(page)]="page"></ngb-pagination>
             </div>
-            <!--<div class="col-md-6" [hidden]="displaying_hours">
-                <div class="flexbox">
-                    <div class="result_div">
-                        <div class="result_list">
-                            <a class="result_line">
-                                <div class="img_block"
-                                     style="background-image: url('../../../assets/img/dr_2.jpg'); background-size: auto 80px;"></div>
-                                <div class="name">
-                                    Dr. Jhonson
-                                </div>
-                                <div class="speciality">
-                                    Ophthalmology - Laryngological - Gynaecological
-                                </div>
-                                <div class="flexbox">
-                                    <div class="appointment_day">Wednesday 13:</div>
-                                    <div class="appointment_hours">
-                                        11:11 <span class="hour_separator">|</span> 11:31 <span
-                                            class="hour_separator">|</span> 14:23
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a class="result_line">
-                                <div class="img_block"
-                                     style="background-image: url('../../../assets/img/dr_1.jpg'); background-size: auto 80px;"></div>
-                                <div class="name">
-                                    Dr. Kadar
-                                </div>
-                                <div class="speciality">
-                                    Cardiac - Gynaecological - Surgery
-                                </div>
-                                <div class="flexbox">
-                                    <div class="appointment_day">Wednesday 13:</div>
-                                    <div class="appointment_hours">
-                                        11:11 <span class="hour_separator">|</span> 11:31 <span
-                                            class="hour_separator">|</span> 14:23
-                                    </div>
-                                </div>
-                                <div class="flexbox">
-                                    <div class="appointment_day">Tuesday 14:</div>
-                                    1
-                                    <div class="appointment_hours">
-                                        11:13 <span class="hour_separator">|</span> 11:48 <span
-                                            class="hour_separator">|</span> 13:17
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a class="result_line">
-                                <div class="img_block"
-                                     style="background-image: url('../../../assets/img/dr_3.jpg'); background-size: auto 80px;"></div>
-                                <div class="name">
-                                    Dr. Kyle
-                                </div>
-                                <div class="speciality">
-                                    Dental - Cardiac - Health Care
-                                </div>
-                                <div class="flexbox">
-                                    <div class="appointment_day">Monday 11:</div>
-                                    <div class="appointment_hours">
-                                        16:11 <span class="hour_separator">|</span> 16:37 <span
-                                            class="hour_separator">|</span> 17:21
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
         </div>
 
 
     </section>
     <!-- /.content -->
 </div>
+<!--<label class="date-range-divider"> Appointment date range</label>
+                        <div class="datepicker-div">
+                            <label for="start_range">
+                                <i class="fa fa-clock"></i>
+                            </label>
+                            <input id="start_range"
+                                   type="date"
+                                   class="form-control daterangepicker"
+                                   name="start_range"
+                            >
+                            <span>to</span>
+                            <label for="end_range">
+                                <i class="fa fa-clock"></i>
+                            </label>
+                            <input id="end_range"
+                                   type="date"
+                                   class="form-control daterangepicker"
+                                   name="end_range"
+                            >
+                        </div>-->

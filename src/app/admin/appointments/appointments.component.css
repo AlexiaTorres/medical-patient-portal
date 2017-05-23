@@ -104,7 +104,8 @@ hr.style15:after {
 .name {
     font-weight: bold;
     font-size: 16px;
-    color: #fff !important;
+    color: #000 !important;
+    margin-top: 1em;
 }
 
 .appointment_day {
@@ -128,9 +129,12 @@ hr.style15:after {
     width: 300px !important;
 }
 
-.month_divider {
+.month_divider{
+    background-color: rgba(70, 191, 168, 0.45);
+}
+
+.month_divider > strong{
     margin-left: 0.5em;
-    border-bottom: 1px solid black;
 }
 
 .speciality {
@@ -247,6 +251,7 @@ img.appointment_logo, .appointment_title {
     background: #46bfa8;
     color: #fff;
     margin-top: 2em;
+    margin-bottom: 1em;
     margin-left: 33%;
 }
 .aqua-btn {
@@ -317,11 +322,9 @@ img.appointment_logo, .appointment_title {
     font-size: 11px !important;
 }
 
-/*.aqua-input {
-    border: 2px solid #46bfa8 !important;
-    background: rgba(255, 255, 255, 0.51) !important;
+.aqua-input {
     width: 90% !important;
-}*/
+}
 
 .card {
     display: inline-block;
@@ -373,4 +376,43 @@ img.appointment_logo, .appointment_title {
 
 td > a > span.badge{
     cursor: pointer;
+}
+
+td > a > span.badge-morning{
+    background-color: #46bfa8;
+}
+td > a > span.badge-afternoon{
+    background-color: #79a3d8;
+}
+td > a > span.badge-evening{
+    background-color: #CAA8D4;
+}
+
+
+.no-results > img{
+    opacity: 0.5;
+    margin-top: 6%;
+    margin-left: 10%;
+}
+
+#appointmentCalendar{
+    margin-left: 15%;
+}
+
+.appointment_searcher{
+    background: #fff;
+}
+
+.hours-dropdown{
+    list-style: none;
+}
+
+.hours-dropdown > .dropdown > a:hover,
+.hours-dropdown > .dropdown > a:focus,
+.hours-dropdown > .dropdown > a:active{
+    background: #F5D86F !important;
+}
+.hours-dropdown > .dropdown{
+    border: 2px solid #f5d149 !important;
+    background: rgba(245, 216, 111, 0.39) !important;
 }

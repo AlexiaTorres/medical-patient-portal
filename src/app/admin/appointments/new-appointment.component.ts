@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
 import {NgbPaginationConfig} from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
     selector: 'new-appointment',
     templateUrl: './new-appointment.component.html',
@@ -27,9 +26,32 @@ export class NewAppointmentComponent implements OnInit {
     availability_hours = [];
     hour_selected = false;
     available_days = ['Wednesday 13th', 'Tuesday 14th', 'Monday 18th', 'Thursday 19th'];
+    doctors = [
+        {
+            id: 1,
+            name: 'Dr. Khadar',
+            speciality: 'Cardiac - Gynaecological - Surgery',
+            photo: 'dr_1'
+        },
+        {
+            id: 2,
+            name: 'Dr. Johnson',
+            speciality: 'Ophthalmology - Laryngological - Gynaecological',
+            photo: 'dr_2'
+        },
+        {
+            id: 3,
+            name: 'Dr. Kyle',
+            speciality: 'Dental - Cardiac - Health Care',
+            photo: 'dr_3'
+        }
+    ];
     page = 2;
     mobile_query = window.matchMedia('(max-width: 768px)');
     showing_searcher = false;
+    showing_calendar = false;
+    showing_results = false;
+    calendar: JQuery;
     startDate = '12-05-2017';
     endDate = '';
 
@@ -128,6 +150,8 @@ export class NewAppointmentComponent implements OnInit {
             {id: 2, name: 'Male doctor'}
         ];
 
+        this.calendar = jQuery('#appointmentCalendar').datepicker();
+
         /* $('input[name="daterange"]').daterangepicker({
          timePicker: true,
          timePickerIncrement: 30,
@@ -173,6 +197,10 @@ export class NewAppointmentComponent implements OnInit {
         } else {
             $('.appointment_searcher').hide();
         }
+    }
+    searchAvailability() {
+        this.showing_calendar = true;
+        this.showing_results = true;
     }
 }
 
