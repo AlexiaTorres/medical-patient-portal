@@ -78,7 +78,6 @@ hr.style15:after {
     border-top-right-radius: 10px !important;
 }
 
-
 .result_line {
     display: block;
     color: black;
@@ -185,6 +184,12 @@ hr.style15:after {
 }*/
 
 @media (max-width: 768px) {
+    .hours-dropdown > .dropdown {
+        width: 60% !important;
+        margin-left: 1em;
+        margin-top: -10px !important;
+    }
+
     img.appointment_logo, .appointment_title {
         opacity: 0.4;
         letter-spacing: 1px;
@@ -424,6 +429,7 @@ td > a > span.badge-afternoon {
     border: 1px solid #79a3d8;
     background-color: #fff;
     color: #777;
+    margin-left: -1em;
 }
 
 td > a > span.badge-evening {
@@ -442,6 +448,7 @@ td > a > span.badge-afternoon.afternoon_selected,
 td > a > span.badge-afternoon:hover {
     background-color: #79a3d8 !important;
     color: #fff;
+    margin-left: -1em;
 }
 
 td > a > span.badge-evening.evening_selected,
@@ -466,6 +473,7 @@ td > a > span.badge-evening:hover {
 
 .hours-dropdown {
     list-style: none;
+    z-index: 999 !important;
 }
 
 .hours-dropdown > .badge.dropdown:hover,
@@ -501,6 +509,14 @@ td > a > span.badge-evening:hover {
     font-family: 'Open Sans', sans-serif !important;
     font-size: 12px !important;
     cursor: pointer;
+}
+
+.hours-dropdown > li > .dropdown-menu {
+    z-index: 999 !important;
+}
+
+.hours-dropdown > li.badge.dropdown > a > span.hidden-xs {
+    display: block !important;
 }
 
 .confirm-date {

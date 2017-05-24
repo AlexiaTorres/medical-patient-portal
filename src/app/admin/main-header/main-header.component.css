@@ -20,3 +20,7 @@
 .skin-blue .main-header .navbar .nav > li > a {
     color: #888888 !important;
 }
+
+header.main-header > .navbar.navbar-static-top > .navbar-custom-menu{
+    margin-top: 1em !important;
+}

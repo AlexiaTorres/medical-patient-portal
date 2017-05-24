@@ -87,17 +87,25 @@
                                                 <tbody>
                                                 <tr>
                                                     <td><span class="badge badge-day">Wednesday 13th</span></td>
+                                                </tr>
+                                                <tr>
                                                     <td>
                                                         <a (click)="showMorningAvailability()">
                                                             <span class="badge badge-morning morning_selected">Morning</span>
                                                         </a>
+                                                    </td>
+                                                    <td>
                                                         <a (click)="showAfternoonAvailability()">
                                                             <span class="badge badge-afternoon">Afternoon</span>
                                                         </a>
+                                                    </td>
+                                                    <td>
                                                         <a (click)="showEveningAvailability()">
                                                             <span class="badge badge-evening">Evening</span>
                                                         </a>
                                                     </td>
+                                                </tr>
+                                                <tr>
                                                     <td>
                                                         <ul class="nav navbar-nav hours-dropdown">
                                                             <li class="badge dropdown">
@@ -116,7 +124,8 @@
                                                     <td>
                                                         <button class="btn confirm-date"
                                                                 [routerLink]="['/admin/new-appointment/confirmation']"
-                                                        >Confirm</button>
+                                                        >Confirm
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 </tbody>

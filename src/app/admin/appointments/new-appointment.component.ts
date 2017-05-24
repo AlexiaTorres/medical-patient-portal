@@ -66,13 +66,11 @@ export class NewAppointmentComponent implements OnInit {
 
     ngOnInit() {
         if (this.mobile_query.matches) {
-            $('div.appointment_hours.availability_mobile').addClass('availability_mobile').removeClass('availability_desktop');
             $('button.searcher-btn').show();
             if (!this.showing_searcher) {
                 $('.appointment_searcher').hide();
             }
         } else {
-            $('div.appointment_hours.availability_mobile').addClass('availability_desktop').removeClass('availability_mobile');
             $('button.searcher-btn').hide();
         }
         // Settings configuration
