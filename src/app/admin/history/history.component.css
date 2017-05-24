@@ -1,0 +1,117 @@
+.small-box > .inner {
+    padding: 10px;
+    height: 111px !important;
+}
+
+.bg-aqua {
+    background: #46bfa8 !important;
+}
+
+.bg-aqua > div > .icon {
+    position: relative;
+    margin-left: 2%;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.bg-aqua > .text {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 20px;
+    margin-top: 5%;
+    font-weight: 200;
+}
+
+.bg-aqua > .text > p {
+    text-align: center;
+}
+
+.small-box.bg-light-grey {
+    background: #d2d6de !important;
+}
+
+.small-box .icon {
+    position: relative !important;
+}
+
+.user-image {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    text-align: center;
+}
+
+.user-image img {
+    clear: both;
+    margin: auto;
+    position: relative;
+}
+
+.user-heading {
+    width: 90%;
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+.patient-navigation {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #46bfa8;
+    border-top: 1px solid #46bfa8;
+    background-color: #2c3b41;
+}
+
+.patient-navigation li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.patient-navigation li a {
+    padding: 20px 30px;
+    float: left;
+}
+
+.patient-navigation li.active a {
+    background: #46bfa8;
+    color: #fff;
+}
+
+.patient-navigation li a{
+    color: #fff;
+}
+
+.user-body {
+    float: left;
+    margin: 5%;
+    width: 90%;
+}
+
+.user-body .tab-content > div {
+    float: left;
+    width: 100%;
+}
+
+.user-body .tab-content h4 {
+    width: 100%;
+    margin: 10px 0;
+    color: #333;
+}
+
+.patient-title {
+    color: #2c3b41;
+}
+
+div#personalData > h3, div#address > h3, div#contact > h3, div#appointments > h3 {
+    color: #46bfa8 !important;
+    margin-top: -0.5em !important;
+}
+.row.patient-bg {
+    background: #f9f9f9;
+    border-left: 1px solid #2c3b41;
+    border-bottom: 1px solid #2c3b41;
+}

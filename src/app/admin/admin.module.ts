@@ -8,6 +8,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AdminRoutingModule} from './admin-routing.module';
 import {AdminComponent} from './admin.component';
 import {PatientComponent} from './patient/patient.component';
+import {HistoryComponent} from './history/history.component';
 import {MainSideComponent} from './main-side/main-side.component';
 import {MainHeaderComponent} from './main-header/main-header.component';
 import {FooterComponent} from './footer/footer.component';
@@ -37,6 +38,7 @@ import {AppointmentsComponent as PatientAppointmentsComponent} from './appointme
     declarations: [
         AdminComponent,
         PatientComponent,
+        HistoryComponent,
         MainSideComponent,
         MainHeaderComponent,
         FooterComponent,

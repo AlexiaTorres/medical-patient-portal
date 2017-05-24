@@ -1,0 +1,54 @@
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row patient-bg">
+                <div class="col-md-12">
+                    <ul class="patient-navigation">
+                        <li class="active">
+                            <a data-toggle="tab" href="#personalData">
+                                <span class="fa fa-user"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#address">
+                                <span class="fa fa-home"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#contact">
+                                <span class="fa fa-address-card-o"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#appointments">
+                                <span class="fa fa-stethoscope"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="user-body">
+                        <div class="tab-content">
+                            <div id="personalData" class="tab-pane active">
+                                <h3>Personal Data</h3>
+                                <patient-personal></patient-personal>
+                            </div>
+                            <div id="address" class="tab-pane">
+                                <h3>Address</h3>
+                                <patient-address></patient-address>
+                            </div>
+                            <div id="contact" class="tab-pane">
+                                <h3>Contact</h3>
+                                <patient-contact></patient-contact>
+                            </div>
+                            <div id="appointments" class="tab-pane">
+                                <h3>Appointments</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
