@@ -22,7 +22,7 @@ ss-multiselect-dropdown {
     margin-bottom: 2em;
 }
 
-ss-multiselect-dropdown.patient-input-confirmation{
+ss-multiselect-dropdown.patient-input-confirmation {
     margin: 0;
 }
 
@@ -62,9 +62,22 @@ hr.style15:after {
     width: 100%;
 }
 
-.result_list > div {
+.result_list > div,
+.result_list > div > .result_body > div > div > table > tbody > tr {
     margin-bottom: 0.5em;
+    background: #fff;
 }
+
+.result_list > div {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+.result_list > div > a {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
 
 .result_line {
     display: block;
@@ -99,11 +112,12 @@ hr.style15:after {
     position: absolute;
     top: 50%;
     width: 80px;
+    opacity: 0.9;
 }
 
 .name {
-    font-weight: bold;
-    font-size: 16px;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 15px;
     color: #000 !important;
     margin-top: 1em;
 }
@@ -129,11 +143,11 @@ hr.style15:after {
     width: 300px !important;
 }
 
-.month_divider{
-    background-color: rgba(70, 191, 168, 0.45);
+.result_div > .result_list > div > .month_divider {
+    background-color: rgba(70, 191, 168, 0.45) !important;
 }
 
-.month_divider > strong{
+.month_divider > span {
     margin-left: 0.5em;
 }
 
@@ -141,7 +155,7 @@ hr.style15:after {
     margin-top: 10px;
     margin-right: 10px;
     color: #fff;
-    font-weight: bold;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 /*.appointment_labels {
@@ -150,12 +164,14 @@ hr.style15:after {
     margin-left: 1.5em !important;
 }*/
 
-.appointment_labels > label:first-child{
+.appointment_labels > label:first-child {
     margin-top: 2em !important;
 }
-.appointment_labels > .btn-aqua:last-child{
+
+.appointment_labels > .btn-aqua:last-child {
     margin-bottom: 2em !important;
 }
+
 .appointment_labels > label {
     margin-top: 0.5em;
 }
@@ -176,6 +192,7 @@ hr.style15:after {
         color: #46bfa8;
         font-size: 18px;
     }
+
     .appointment_hours.moments {
         -webkit-flex: 1;
         flex: 1;
@@ -187,28 +204,36 @@ hr.style15:after {
         position: absolute;
         left: 10%;
     }
+
     .flexbox > .appointment_day {
         margin-bottom: 6%;
     }
-    ss-multiselect-dropdown.patient-input-confirmation{
+
+    ss-multiselect-dropdown.patient-input-confirmation {
         margin-left: 0.5em !important;
     }
-    .fa-chevron-right.chevron{
+
+    .fa-chevron-right.chevron {
         display: none;
     }
-    .appointment-data-confirmation{
+
+    .appointment-data-confirmation {
         margin-left: 1em !important;
     }
-    .aqua-text > div.row > div.col-md-6.padding-left{
+
+    .aqua-text > div.row > div.col-md-6.padding-left {
         margin-left: -3em !important;
     }
-    .card-header{
+
+    .card-header {
         margin-bottom: -40% !important;
     }
-    .confirm-btns{
+
+    .confirm-btns {
         margin-left: 0 !important;
     }
-    .cancel-btn{
+
+    .cancel-btn {
         margin-left: 0.5em !important;
     }
 }
@@ -223,7 +248,6 @@ img.logo-searcher {
 .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
     background: #46bfa8 !important;
 }
-
 
 img.appointment_logo, .appointment_title {
     opacity: 0.4;
@@ -254,23 +278,28 @@ img.appointment_logo, .appointment_title {
     margin-bottom: 1em;
     margin-left: 33%;
 }
+
 .aqua-btn {
     background: #46bfa8;
     color: #fff;
     opacity: 0.7;
 }
+
 .cancel-btn {
     background: rgba(215, 15, 15, 0.87);
     color: #000;
     opacity: 0.7;
 }
+
 .aqua-btn:hover {
     opacity: 1;
 }
+
 .cancel-btn:hover {
     opacity: 1;
 }
-.confirm-btns{
+
+.confirm-btns {
     margin-left: 35%;
 }
 
@@ -278,25 +307,27 @@ img.appointment_logo, .appointment_title {
     width: 90%;
 }
 
-.availability{
+.availability {
     margin-left: -10%;
 }
 
-.availability-list{
+.availability-list {
     overflow-y: auto;
     height: 60px;
 }
+
 @media (max-width: 1184px) {
-    .availability{
+    .availability {
         margin-left: 0.5em;
         margin-top: 1em;
     }
-    .result_div{
+
+    .result_div {
         margin-top: 1em;
     }
 }
 
-.hour_separator:last-child{
+.hour_separator:last-child {
     display: none;
 }
 
@@ -318,7 +349,8 @@ img.appointment_logo, .appointment_title {
 .dropdown-menu {
     width: 100% !important;
 }
-.dropdown-menu > li > a > span{
+
+.dropdown-menu > li > a > span {
     font-size: 11px !important;
 }
 
@@ -333,8 +365,8 @@ img.appointment_logo, .appointment_title {
     position: relative;
     margin-bottom: 50px;
     transition: all .2s ease-in-out;
-    box-shadow: 0 5px 22px 0 rgba(0,0,0,.25);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 5px 22px 0 rgba(0, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     margin-bottom: 54px;
 }
 
@@ -356,63 +388,125 @@ img.appointment_logo, .appointment_title {
 .aqua-text {
     color: #46bfa8;
 }
+
 .aqua-text > div > div > i {
     font-size: 14px;
 }
+
 .padding-right {
     padding: 0 !important;
     margin-left: -10% !important;
 }
+
 .padding-left {
     padding-left: 25% !important;
 }
+
 /*.card-content {
   margin-left: 30%;
 }*/
 
-.appointment-data-confirmation{
+.appointment-data-confirmation {
     font-size: 16px;
 }
 
-td > a > span.badge{
+td > a > span.badge {
     cursor: pointer;
 }
 
-td > a > span.badge-morning{
-    background-color: #46bfa8;
-}
-td > a > span.badge-afternoon{
-    background-color: #79a3d8;
-}
-td > a > span.badge-evening{
-    background-color: #CAA8D4;
+td > a > span.badge-morning {
+    border: 1px solid #46bfa8;
+    background-color: #fff;
+    color: #777;
 }
 
+td > a > span.badge-afternoon {
+    border: 1px solid #79a3d8;
+    background-color: #fff;
+    color: #777;
+}
 
-.no-results > img{
+td > a > span.badge-evening {
+    border: 1px solid #CAA8D4;
+    background-color: #fff;
+    color: #777;
+}
+
+td > a > span.badge-morning.morning_selected,
+td > a > span.badge-morning:hover {
+    background-color: #46bfa8 !important;
+    color: #fff;
+}
+
+td > a > span.badge-afternoon.afternoon_selected,
+td > a > span.badge-afternoon:hover {
+    background-color: #79a3d8 !important;
+    color: #fff;
+}
+
+td > a > span.badge-evening.evening_selected,
+td > a > span.badge-evening:hover {
+    background-color: #CAA8D4 !important;
+    color: #fff;
+}
+
+.no-results > img {
     opacity: 0.5;
     margin-top: 6%;
     margin-left: 10%;
 }
 
-#appointmentCalendar{
+#appointmentCalendar {
     margin-left: 15%;
 }
 
-.appointment_searcher{
+.appointment_searcher {
     background: #fff;
 }
 
-.hours-dropdown{
+.hours-dropdown {
     list-style: none;
 }
 
-.hours-dropdown > .dropdown > a:hover,
-.hours-dropdown > .dropdown > a:focus,
-.hours-dropdown > .dropdown > a:active{
+.hours-dropdown > .badge.dropdown:hover,
+.hours-dropdown > .badge.dropdown:focus,
+.hours-dropdown > .badge.dropdown:active,
+.hours-dropdown > .badge.dropdown > a:hover,
+.hours-dropdown > .badge.dropdown > a:focus,
+.hours-dropdown > .badge.dropdown > a:active {
     background: #F5D86F !important;
 }
-.hours-dropdown > .dropdown{
+
+.hours-dropdown > .dropdown {
     border: 2px solid #f5d149 !important;
     background: rgba(245, 216, 111, 0.39) !important;
+}
+
+.hours-dropdown > .badge.dropdown {
+    height: 18px !important;
+}
+
+.badge {
+    font-weight: normal !important;
+}
+
+.nav > li > a {
+    padding: 0px 15px !important;
+    margin-top: -5px !important;
+    color: #777 !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.hours-dropdown > li > .dropdown-menu > li > a {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    cursor: pointer;
+}
+
+.confirm-date {
+    padding: 0px 15px !important;
+    margin-top: -5px !important;
+    color: #fff !important;
+    font-family: 'Open Sans', sans-serif !important;
+    background: #0bafbf;
 }

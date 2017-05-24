@@ -24,7 +24,6 @@ export class NewAppointmentComponent implements OnInit {
     separator = `<span class="hour_separator">|</span>`;
     availability_moment: string;
     availability_hours = [];
-    hour_selected = false;
     available_days = ['Wednesday 13th', 'Tuesday 14th', 'Monday 18th', 'Thursday 19th'];
     doctors = [
         {
@@ -54,6 +53,11 @@ export class NewAppointmentComponent implements OnInit {
     calendar: JQuery;
     startDate = '12-05-2017';
     endDate = '';
+    hours = ['10:39', '11:17', '11:41'];
+    selected_hour = '10:11';
+    morning_hours = ['10:39', '11:17', '11:41'];
+    afternoon_hours = ['12:39', '13:17', '15:41'];
+    evening_hours = ['19:39', '20:17', '20:41'];
 
     constructor(config: NgbPaginationConfig) {
         config.size = 'sm';
@@ -165,28 +169,32 @@ export class NewAppointmentComponent implements OnInit {
         console.log(this.hospital_model);
     }
 
-    onHourSelected() {
-        this.hour_selected = true;
+    onSelectedHour(hour) {
+        this.selected_hour = hour;
     }
 
     showMorningAvailability() {
-        this.availability_hours = ['09:11', '09:48', '10:17', '11:13'];
-        this.availability_moment = 'Morning';
+        this.selected_hour = '10:11';
+        this.hours = this.morning_hours;
+        $('a > span.badge.badge-morning').addClass('morning_selected');
+        $('a > span.badge.badge-afternoon').removeClass('afternoon_selected');
+        $('a > span.badge.badge-evening').removeClass('evening_selected');
     }
 
     showAfternoonAvailability() {
-        this.availability_hours = ['12:17', '13:21', '14:39']
-        this.availability_moment = 'Afternoon';
+        this.selected_hour = '12:39';
+        this.hours = this.afternoon_hours;
+        $('a > span.badge.badge-afternoon').addClass('afternoon_selected');
+        $('a > span.badge.badge-morning').removeClass('morning_selected');
+        $('a > span.badge.badge-evening').removeClass('evening_selected');
     }
 
     showEveningAvailability() {
-        this.availability_hours = [
-            '20:21', '20:29', '21:03', '21:11',
-            '20:21', '20:29', '21:03', '21:11',
-            '20:21', '20:29', '21:03', '21:11',
-            '20:21', '20:29', '21:03', '21:11',
-            '20:21', '20:29', '21:03', '21:11'];
-        this.availability_moment = 'Evening';
+        this.selected_hour = '19:39';
+        this.hours = this.evening_hours;
+        $('a > span.badge.badge-evening').addClass('evening_selected');
+        $('a > span.badge.badge-morning').removeClass('morning_selected');
+        $('a > span.badge.badge-afternoon').removeClass('afternoon_selected');
     }
 
     showSearcher() {
@@ -198,6 +206,7 @@ export class NewAppointmentComponent implements OnInit {
             $('.appointment_searcher').hide();
         }
     }
+
     searchAvailability() {
         this.showing_calendar = true;
         this.showing_results = true;

@@ -78,18 +78,18 @@
                                     </div>
                                 </a>
                                 <div class="month_divider">
-                                    <strong>April 2017</strong>
+                                    <span>April 2017</span>
                                 </div>
                                 <div class="result_body">
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-10">
                                             <table class="table table-hover table-striped">
                                                 <tbody>
                                                 <tr>
                                                     <td><span class="badge badge-day">Wednesday 13th</span></td>
                                                     <td>
                                                         <a (click)="showMorningAvailability()">
-                                                            <span class="badge badge-morning">Morning</span>
+                                                            <span class="badge badge-morning morning_selected">Morning</span>
                                                         </a>
                                                         <a (click)="showAfternoonAvailability()">
                                                             <span class="badge badge-afternoon">Afternoon</span>
@@ -100,36 +100,27 @@
                                                     </td>
                                                     <td>
                                                         <ul class="nav navbar-nav hours-dropdown">
-                                                            <li class="dropdown">
+                                                            <li class="badge dropdown">
                                                                 <a href="#" class="dropdown-toggle"
                                                                    data-toggle="dropdown">
-                                                                    <span class="hidden-xs">10:11</span>
+                                                                    <span class="hidden-xs">{{selected_hour}}</span>
                                                                 </a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a href="#">10:39</a></li>
-                                                                    <li><a href="#">11:17</a></li>
-                                                                    <li><a href="#">11:41</a></li>
+                                                                    <li *ngFor="let hour of hours">
+                                                                        <a (click)="onSelectedHour(hour)">{{hour}}</a>
+                                                                    </li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
                                                     </td>
+                                                    <td>
+                                                        <button class="btn confirm-date"
+                                                                [routerLink]="['/admin/new-appointment/confirmation']"
+                                                        >Confirm</button>
+                                                    </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                        <div class="col-md-4 availability">
-                                            <strong>{{availability_moment}}</strong>
-                                            <div class="flexbox">
-                                                <div class="appointment_hours availability-list">
-                                                    <a *ngFor="let hour of availability_hours; let isLast = last"
-                                                       [routerLink]="['/admin/new-appointment/confirmation']">
-                                                        {{hour}}{{isLast ? '' : ' | ' }}
-                                                        <span *ngIf="availability_hours.indexOf(hour) === 2">
-                                                            <br/>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,7 +136,8 @@
     </section>
     <!-- /.content -->
 </div>
-<!--<label class="date-range-divider"> Appointment date range</label>
+<!--
+<label class="date-range-divider"> Appointment date range</label>
                         <div class="datepicker-div">
                             <label for="start_range">
                                 <i class="fa fa-clock"></i>
@@ -164,4 +156,21 @@
                                    class="form-control daterangepicker"
                                    name="end_range"
                             >
-                        </div>-->
+                        </div>
+
+                        <div class="col-md-4 availability">
+                                            <strong>{{availability_moment}}</strong>
+                                            <div class="flexbox">
+                                                <div class="appointment_hours availability-list">
+                                                    <a *ngFor="let hour of availability_hours; let isLast = last"
+                                                       [routerLink]="['/admin/new-appointment/confirmation']">
+                                                        {{hour}}{{isLast ? '' : ' | ' }}
+                                                        <span *ngIf="availability_hours.indexOf(hour) === 2">
+                                                            <br/>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                        -->
