@@ -108,4 +108,10 @@
 
 div#personalData > h3, div#address > h3, div#contact > h3, div#appointments > h3 {
     color: #46bfa8 !important;
+    margin-top: -0.5em !important;
+}
+.row.patient-bg {
+    background: #f9f9f9;
+    border-left: 1px solid #2c3b41;
+    border-bottom: 1px solid #2c3b41;
 }
