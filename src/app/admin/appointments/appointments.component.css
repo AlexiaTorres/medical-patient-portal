@@ -230,7 +230,7 @@ hr.style15:after {
         margin-left: -3em !important;
     }
 
-    .card-header {
+    .confirm-card.card-header {
         margin-bottom: -40% !important;
     }
 
@@ -363,7 +363,7 @@ img.appointment_logo, .appointment_title {
     width: 90% !important;
 }
 
-.card {
+.confirm-card.card {
     display: inline-block;
     /*box-shadow: 0 4px 5px 0 #46bfa8;*/
     margin: 20px;
@@ -375,17 +375,17 @@ img.appointment_logo, .appointment_title {
     margin-bottom: 54px;
 }
 
-.card-header {
+.confirm-card.card-header {
     transition: all .2s ease-in-out;
     background: url("../../../assets/img/logos/logo_2.png") no-repeat center;
 }
 
-.card-header {
+.confirm-card.card-header {
     height: 200px;
     opacity: 0.5;
 }
 
-.card-content {
+.confirm-card.card-content {
     padding: 20px;
     min-height: 200px;
 }
@@ -407,7 +407,7 @@ img.appointment_logo, .appointment_title {
     padding-left: 25% !important;
 }
 
-/*.card-content {
+/*.confirm-card.card-content {
   margin-left: 30%;
 }*/
 
