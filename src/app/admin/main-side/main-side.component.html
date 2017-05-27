@@ -59,10 +59,20 @@
                 </a>
             </li>
             <li routerLinkActive="active">
+                <a [routerLink]="['/admin/my-history']">
+                    <i class="fa fa-line-chart"></i> <span>My Test Results</span>
+                </a>
+            </li>
+            <li routerLinkActive="active">
                 <a [routerLink]="['/admin/appointments']">
                     <i class="fa fa-stethoscope"></i> <span>My Appointments</span>
                     <span class="pull-right-container">
             </span>
+                </a>
+            </li>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/admin/my-history']">
+                    <i class="fa fa-newspaper-o"></i> <span>Last Updates</span>
                 </a>
             </li>
         </ul>

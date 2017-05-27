@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from 'angular2-schema-form';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PdfViewerComponent } from 'ng2-pdf-viewer/dist/pdf-viewer.component';
 
 import {AdminRoutingModule} from './admin-routing.module';
 import {AdminComponent} from './admin.component';
 import {PatientComponent} from './patient/patient.component';
 import {HistoryComponent} from './history/history.component';
+import {HistoryPDFComponent} from './history/pdf-viewer.component';
 import {MainSideComponent} from './main-side/main-side.component';
 import {MainHeaderComponent} from './main-header/main-header.component';
 import {FooterComponent} from './footer/footer.component';
@@ -36,9 +38,11 @@ import {AppointmentsComponent as PatientAppointmentsComponent} from './appointme
         NgbModule.forRoot()
     ],
     declarations: [
+        PdfViewerComponent,
         AdminComponent,
         PatientComponent,
         HistoryComponent,
+        HistoryPDFComponent,
         MainSideComponent,
         MainHeaderComponent,
         FooterComponent,

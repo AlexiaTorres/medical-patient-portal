@@ -1,34 +1,203 @@
 <div class="content-wrapper history">
     <section class="content">
+        <h3 class="history-title center">
+            <i class="fa fa-user-md"></i> My History
+            <i class="fa fa-user-md"></i>
+        </h3>
         <div class="box box-default collapsed-box">
             <div class="box-header with-border">
                 <h3 class="box-title">
-                    <div class="row">
-                        <div class="col-md-3 history-date">
-                            <strong>10/08/2015</strong>
-                        </div>
-                        <div class="col-md-3 history-date">
-                            <strong>25/09/2015</strong>
-                        </div>
-                        <div class="col-md-3 inpatient-case">
-                            <strong>Inpatient Case</strong>
-                        </div>
-                        <div class="col-md-3 history-follow">
-                            Follow up
-                        </div>
-                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr class="case-header">
+                            <th>From:  15/10/2016
+                            </th>
+                            <th>To:  16/10/2016
+                            </th>
+                            <th>Case HWDE007185
+                            </th>
+                            <th>Outpatient Case
+                            </th>
+                            <th>First Visit
+                            </th>
+                            <th>
+                                <a class="btn btn-expandable-history"
+                                   data-widget="collapse"
+                                >
+                                    <i class="fa fa-chevron-down"></i>
+                                </a>
+                            </th>
+                        </tr>
+                        </thead>
+                        <!--<tbody>
+                        <tr class="second-header">
+                            <td>15/10/2016</td>
+                            <td>16/10/2016</td>
+                            <td>HWDE007185</td>
+                            <td>Outpatient Case</td>
+                            <td>First Visit</td>
+                            <td><a class="btn btn-expandable-history"
+                                   data-widget="collapse"
+                            >
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            </td>
+                        </tr>
+                        </tbody>-->
+                    </table>
                 </h3>
-                <div class="box-tools pull-right">
-                    <a class="btn btn-expandable-history"
-                       data-widget="collapse"
-                    >
-                        <i class="fa fa-chevron-down"></i>
-                    </a>
-                </div>
             </div>
             <div class="box-body">
-                The body of the box
+                <!-- box body -->
+                <div class="panel panel-default table-responsive">
+                    <table class="table table-striped" id="responsiveTable">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Department</th>
+                            <th>Category</th>
+                            <th>Attending consultant</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>15/10/2016</td>
+                            <td>10:00</td>
+                            <td>Outpatient</td>
+                            <td>Visit</td>
+                            <td>Dr. Joseph Richmond</td>
+                            <td><a class="label label-visit" target="_blank"
+                                   [routerLink]="['/admin/my-history/case-HWDE000183']"><i
+                                    class="fa fa-user-md"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15/10/2016</td>
+                            <td>11:00</td>
+                            <td>Imaging</td>
+                            <td>Imaging Test</td>
+                            <td>Dr. Mark Klecker</td>
+                            <td><a class="label label-imaging" target="_blank"
+                                   [routerLink]="['/admin/my-history/case-HWDE000183']"><i class="fa fa-image"></i></a>
+                                <a class="label label-visit" target="_blank"
+                                   [routerLink]="['/admin/my-history/case-HWDE000183']"><i
+                                        class="fa fa-user-md"></i></a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16/10/2016</td>
+                            <td>08:15</td>
+                            <td>Laboratory</td>
+                            <td>Laboratory Test</td>
+                            <td>Dr. David Brown</td>
+                            <td><a class="label label-lab" target="_blank"
+                                   [routerLink]="['/admin/my-history/case-HWDE000183']"><i class="fa fa-flask"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+
+        <!--<div class="panel-body">-->
+        <!--<div class="row">-->
+        <!--<div class="col-md-6">-->
+        <!--<select class="input-sm form-control inline">-->
+        <!--<option value="0" disabled>Order by:</option>-->
+        <!--<option value="1">Date</option>-->
+        <!--<option value="2">Time</option>-->
+        <!--<option value="3">Attending consultant</option>-->
+        <!--<option value="4">Department</option>-->
+        <!--<option value="5">Case</option>-->
+        <!--</select>-->
+        <!--<a class="btn btn-default btn-sm">Apply</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="box box-default collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr class="case-header">
+                            <th>From:  13/11/2016</th>
+                            <th>To:  13/11/2016</th>
+                            <th>Case HWDE016885</th>
+                            <th>Outpatient Case</th>
+                            <th>Follow up</th>
+                            <th><a class="btn btn-expandable-history"
+                                   data-widget="collapse"
+                            >
+                                <i class="fa fa-chevron-down"></i>
+                            </a></th>
+                        </tr>
+                        </thead>
+                        <!--<tbody>
+                        <tr class="second-header">
+                            <td>13/11/2016</td>
+                            <td>13/11/2016</td>
+                            <td>HWDE016885</td>
+                            <td>Outpatient Case</td>
+                            <td>Follow up</td>
+                            <td><a class="btn btn-expandable-history"
+                                   data-widget="collapse"
+                            >
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            </td>
+                        </tr>
+                        </tbody>-->
+                    </table>
+                </h3>
+            </div>
+            <div class="box-body">
+                <!-- box body -->
+                <div class="panel panel-default table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Department</th>
+                            <th>Category</th>
+                            <th>Attending consultant</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>13/11/2016</td>
+                            <td>10:00</td>
+                            <td>Outpatient</td>
+                            <td>Visit</td>
+                            <td>Dr. Joseph Richmond</td>
+                            <td><a class="label label-visit" target="_blank"
+                                   [routerLink]="['/admin/my-history/case-HWDE000183']"><i
+                                    class="fa fa-user-md"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer clearfix">
+            <ul class="pagination pagination-xs m-top-none pull-right">
+                <li class="disabled"><a href="#">Previous</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>Next</a></li>
+            </ul>
+        </div>
+
     </section>
 </div>

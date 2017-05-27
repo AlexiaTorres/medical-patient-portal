@@ -1,23 +1,115 @@
-.content-wrapper.history {
-    background: #f9f9f9;
+/*.box-title {
+    width: 100% !important;
+    background: transparent !important;
+    height: 80px !important;
+}*/
+
+.content-wrapper.history,
+.content-wrapper.history > .content {
+    background: #f2f2f2 !important;
 }
 
 .btn-expandable-history > i {
-    color: #46bfa8;
+    color: #fff;
 }
 
 .inpatient-case {
-    color: #367fa9;
+    margin-top: 1em;
+    color: #79a3d8;
     font-family: 'Open Sans', sans-serif !important;
     font-size: 13px;
 }
 
 .history-date, .history-follow {
+    margin-top: 1em;
     font-family: 'Open Sans', sans-serif !important;
     font-size: 13px;
+    margin-left: 5%;
+    color: #46bfa8
 }
 
 .box-header.with-border {
+    background: #f2f2f2 !important;
+}
+
+.box-body, .box-body > .panel.panel-default.table-responsive {
+    width: 100%;
+    padding: 0.2em;
+    margin-top: -12px !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.box {
+    position: relative;
+    background: #ffffff;
+    border-top: none !important;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: none !important;
+}
+
+.pagination.pagination-xs.m-top-none > li.active {
+    background: #46bfa8 !important;
+}
+
+.table-responsive > .panel-body > div > div > a.btn.btn-default {
+    background: #79a3d8;
+    color: #fff;
+}
+
+.table-responsive > .panel-body > div > div > a.btn.btn-download-all {
+    background: #dd4b39;
+    color: #fff;
+    position: absolute;
+    right: 5px;
+}
+
+.table-responsive > .panel-body > div > div > select.input-sm.form-control.inline {
+    width: 30% !important;
+}
+
+.panel-footer {
+    background-color: #fff !important;
+}
+
+.case-header {
+    background: #46bfa8 !important;
+}
+
+.case-header > td {
+    font-weight: bold;
+}
+
+thead > tr {
+    background: #f2f2f2;
+}
+
+thead > tr.case-header > th {
+    color: #fff !important;
+}
+
+a.label-visit {
+    background: #79a3d8;
+}
+
+a.label-lab {
+    background: #3c763d;
+}
+
+a.label-imaging {
+    background: #2c3b41;
+}
+
+tbody > tr.second-header {
     background: transparent !important;
-    border: 2px solid #46bfa8;
+}
+
+
+.panel-footer{
+    background: transparent !important;
+}
+
+.content > h3.history-title{
+    color: #46bfa8 !important;
 }

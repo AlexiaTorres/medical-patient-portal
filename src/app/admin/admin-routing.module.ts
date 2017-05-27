@@ -7,6 +7,7 @@ import {DataFormComponent as PersonalData} from './personal-data/data-form.compo
 import {AppointmentsComponent} from './appointments/appointments.component';
 import {PatientComponent} from './patient/patient.component';
 import {HistoryComponent} from './history/history.component';
+import {HistoryPDFComponent} from './history/pdf-viewer.component';
 import {NewAppointmentComponent} from './appointments/new-appointment.component';
 import {AppointmentConfirmationComponent} from "./appointments/appointment-confirmation.component";
 // import {TestFormComponent} from './personal-data/test-form.component';
@@ -49,6 +50,10 @@ import {AppointmentConfirmationComponent} from "./appointments/appointment-confi
                     {
                         path: 'my-history',
                         component: HistoryComponent
+                    },
+                    {
+                        path: 'my-history/case-HWDE000183',
+                        component: HistoryPDFComponent
                     }
                     /*,
                     {

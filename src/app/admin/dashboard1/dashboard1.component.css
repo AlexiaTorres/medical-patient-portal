@@ -47,6 +47,12 @@
 .small-box.bg-light-grey{
     background: #d2d6de !important;
 }
+.small-box.bg-green{
+    background: #53de70 !important;
+}
+.small-box.bg-yellow{
+    background: #deda68 !important;
+}
 .small-box .icon {
     position: relative !important;
 }
