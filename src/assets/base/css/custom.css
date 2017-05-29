@@ -4,7 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Open Sans',sans-serif !important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .c-content-feature-home {
@@ -32,6 +32,7 @@ body {
         border-radius: 50% !important;
         display: block !important;
     }
+
     .c-content-feature-home > a > h1 {
         font-size: 12px !important;
         margin-top: 80% !important;

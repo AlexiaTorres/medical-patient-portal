@@ -12,6 +12,16 @@
 @import "app/register/register.component.css";
 @import "assets/base/css/custom.css";
 
+body, html {
+    height: 100% !important;
+}
+
+.wrapper {
+    height: 100% !important;
+    margin: 0px auto !important;
+    overflow: auto !important;
+}
+
 .center {
     text-align: center !important;
 }
@@ -20,3 +30,4 @@
     border: 2px solid #46bfa8 !important;
     box-shadow: none;
 }
+
