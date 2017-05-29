@@ -15,6 +15,7 @@ export class TestFormComponent {
             fullUrl: {
                 'type': 'string',
                 'description': 'url'
+                
             },
             resource: {
                 'type': 'object',
