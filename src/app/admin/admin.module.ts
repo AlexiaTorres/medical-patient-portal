@@ -26,7 +26,7 @@ import {AddressComponent} from './patient/address.component';
 import {ContactComponent} from './patient/contact.component';
 import {AppointmentsComponent as PatientAppointmentsComponent} from './appointments/appointments.component';
 
-// import {TestFormComponent} from './personal-data/test-form.component';
+import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
     imports: [
@@ -56,8 +56,8 @@ import {AppointmentsComponent as PatientAppointmentsComponent} from './appointme
         PersonalComponent,
         AddressComponent,
         PatientAppointmentsComponent,
-        ContactComponent
-        // TestFormComponent
+        ContactComponent,
+        TestFormComponent
     ],
     providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
     exports: [AdminComponent]

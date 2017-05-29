@@ -5,7 +5,9 @@ import {HomeComponent} from './home.component';
 import {AdminComponent} from './admin/admin.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+/*
 import {DataFormComponent as PersonalData} from './admin/personal-data/data-form.component';
+*/
 
 @NgModule({
     imports: [

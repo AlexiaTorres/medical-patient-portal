@@ -10,7 +10,7 @@ import {HistoryComponent} from './history/history.component';
 import {HistoryPDFComponent} from './history/pdf-viewer.component';
 import {NewAppointmentComponent} from './appointments/new-appointment.component';
 import {AppointmentConfirmationComponent} from "./appointments/appointment-confirmation.component";
-// import {TestFormComponent} from './personal-data/test-form.component';
+import {TestFormComponent} from './personal-data/test-form.component';
 
 @NgModule({
     imports: [
@@ -55,11 +55,11 @@ import {AppointmentConfirmationComponent} from "./appointments/appointment-confi
                         path: 'my-history/case-HWDE000183',
                         component: HistoryPDFComponent
                     }
-                    /*,
+                    ,
                     {
                         path: 'test',
                         component: TestFormComponent
-                    }*/
+                    }
                 ]
             }
         ])

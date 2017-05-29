@@ -1,4 +1,3 @@
-/*
 import {Component} from '@angular/core';
 import {FhirClient} from 'ng-fhir/FhirClient';
 
@@ -108,7 +107,7 @@ export class TestFormComponent {
         this.client = new FhirClient(this.config);
         this.client.search({type: 'Patient', query: {}}).then((response) => {
             if (response.data) {
-                this.patient = (response.data.entry[0].resource);
+                this.patient = (response.data.entry[0]);
             }
         }, (err) => {
             console.log(err);
@@ -119,4 +118,3 @@ export class TestFormComponent {
         return JSON.stringify(obj, null, '  ');
     }
 }
-*/
