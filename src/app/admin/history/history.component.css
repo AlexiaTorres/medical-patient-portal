@@ -1,8 +1,8 @@
-/*.box-title {
+.box-history-title {
     width: 100% !important;
     background: transparent !important;
     height: 80px !important;
-}*/
+}
 
 .content-wrapper.history,
 .content-wrapper.history > .content {
